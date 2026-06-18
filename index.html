@@ -457,7 +457,6 @@
         </div>
     </section>
 
-    <!-- 9. PRICELIST KATALOG (MENGGUNAKAN ID UNIK) -->
     <section id="pricelist" class="py-16 bg-[#FAFAFA]">
         <div class="max-w-6xl mx-auto px-6">
             
@@ -469,10 +468,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                 
-                <!-- GAMBAR PRICE LIST 1 -->
                 <div class="bg-white p-3 rounded-2xl border border-neutral-200/80 shadow-xs hover:shadow-md transition duration-300 group">
-                    <!-- Perbaikan kelas aspek rasio ke standar Tailwind modern -->
-                    <div class="overflow-hidden rounded-xl bg-neutral-100 aspect-[3/2] flex items-center justify-center relative">
+                    <div onclick="openModal(this.querySelector('img').src)" class="overflow-hidden rounded-xl bg-neutral-100 aspect-[3/2] flex items-center justify-center relative cursor-pointer">
                         <img src="assets/PL2.png" alt="Pricelist Domba Tanduk Garut" class="w-full h-full object-cover group-hover:scale-102 transition duration-500" loading="lazy">
                     </div>
                     <div class="p-3 text-center">
@@ -481,10 +478,8 @@
                     </div>
                 </div>
 
-                <!-- GAMBAR PRICE LIST 2 -->
                 <div class="bg-white p-3 rounded-2xl border border-neutral-200/80 shadow-xs hover:shadow-md transition duration-300 group">
-                    <!-- Perbaikan kelas aspek rasio ke standar Tailwind modern -->
-                    <div class="overflow-hidden rounded-xl bg-neutral-100 aspect-[3/2] flex items-center justify-center relative">
+                    <div onclick="openModal(this.querySelector('img').src)" class="overflow-hidden rounded-xl bg-neutral-100 aspect-[3/2] flex items-center justify-center relative cursor-pointer">
                         <img src="assets/PL1.png" alt="Pricelist Domba Jenis Lain" class="w-full h-full object-cover group-hover:scale-102 transition duration-500" loading="lazy">
                     </div>
                     <div class="p-3 text-center">
@@ -499,13 +494,46 @@
                 <a href="https://wa.me/6287729727309?text=Halo%20Kang%20Iky,%20saya%20tertarik%20dengan%20pricelist%20qurban%20nya.%20Mau%20tanya-tanya%20lebih%20lanjut..." target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-[#478A14] text-white font-medium text-xs rounded-xl shadow-md hover:bg-[#3d7511] hover:shadow-lg transition duration-300">
                     <span>Hubungi via WhatsApp Untuk Booking</span>
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                        <path d="M24 12c0 6.627-5.373 12-12 12-1.956 0-3.79-.466-5.415-1.291L0 24l1.32-6.397C.474 15.95 0 14.032 0 12 0 5.373 5.373 0 12 0s12 5.373 12 12z"/>
+                        <path d="M24 12c0 6.627-5.373 12-12 12-1.956 0-3.79-.466-5.415-1.291L0 24l1.32-6.397C.474 15.95 0 14.032 0 12 0s12 5.373 12 0s12 5.373 12 12z"/>
                     </svg>
                 </a>
             </div>
 
         </div>
     </section>
+
+    <div id="imageModal" class="fixed inset-0 bg-black/85 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <button onclick="closeModal()" class="absolute top-5 right-5 text-white text-4xl font-light cursor-pointer hover:text-neutral-300 transition select-none">&times;</button>
+        
+        <div class="max-w-[92%] max-h-[85vh] flex items-center justify-center">
+            <img id="modalImg" src="" alt="Pricelist Zoom" class="max-w-full max-h-[80vh] rounded-xl object-contain shadow-2xl border border-neutral-800">
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+
+        function openModal(imageSrc) {
+            modalImg.src = imageSrc;
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden'; // Kunci scroll layar utama
+        }
+
+        function closeModal() {
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'auto';  // Aktifkan kembali scroll
+        }
+
+        // Tutup modal otomatis jika pengguna klik area hitam di luar gambar
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
 
     <!-- 10. TESTIMONI -->
     <section id="testimoni" class="py-16 sm:py-24 bg-[#FAFAFA] border-t border-neutral-100" x-data="{ bukaUlasan: false }">
@@ -826,6 +854,15 @@
             </svg>
         </a>
     </footer>
-
+<!-- Modal untuk Memperbesar Gambar -->
+<div id="imageModal" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+    <!-- Tombol Close -->
+    <button onclick="closeModal()" class="absolute top-5 right-5 text-white text-3xl font-bold cursor-pointer hover:text-neutral-300 transition">&times;</button>
+    
+    <!-- Wadah Gambar Besar -->
+    <div class="max-w-[90%] max-h-[85vh] p-2">
+        <img id="modalImg" src="" alt="Pricelist Besar" class="max-w-full max-h-[80vh] rounded-xl object-contain shadow-2xl">
+    </div>
+</div>
 </body>
 </html>
