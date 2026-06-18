@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulator Tabungan — Kandang Kang Iky</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#1E3E2B', accent: '#8C7654', slateBg: '#FAFAFA' },
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slateBg text-neutral-900 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER NAVIGATION BACK LINK -->
+    <header class="bg-white border-b border-neutral-100 h-20 flex items-center">
+        <div class="max-w-4xl mx-auto w-full px-6 flex items-center justify-between">
+            <a href="index.html" class="text-xs font-semibold tracking-wider uppercase text-neutral-500 hover:text-primary flex items-center gap-2 transition">
+                &larr; Kembali ke Beranda
+            </a>
+            <span class="text-xs font-bold tracking-[0.15em] uppercase text-primary">Simulasi Keuangan</span>
+        </div>
+    </header>
+
+    <!-- MAIN CALCULATOR INTERFACE -->
+    <main class="py-16 flex-grow flex items-center">
+        <div class="max-w-xl mx-auto w-full px-6">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-100 shadow-[0_20px_50px_rgba(0,0,0,0.02)]">
+                <div class="text-center mb-10">
+                    <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-accent mb-2 block">Interactive Calculator</span>
+                    <h1 class="text-2xl font-medium text-primary tracking-tight">Rencana Tabungan Berjangka</h1>
+                </div>
+
+                <!-- Input Form Grid -->
+                <div class="space-y-6 mb-8">
+                    <div>
+                        <label class="block text-[11px] font-bold tracking-wider text-neutral-400 uppercase mb-2.5">Pilihan Paket Domba</label>
+                        <select id="pilih-domba" class="w-full border border-neutral-200 rounded-xl px-4 py-3 bg-white text-xs font-medium text-neutral-700 focus:outline-none focus:border-primary appearance-none transition-all">
+                            <!-- Data dimuat dinamis dari js/calculator.js -->
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold tracking-wider text-neutral-400 uppercase mb-2.5">Jangka Waktu Setoran (Tenor)</label>
+                        <select id="pilih-tenor" class="w-full border border-neutral-200 rounded-xl px-4 py-3 bg-white text-xs font-medium text-neutral-700 focus:outline-none focus:border-primary appearance-none transition-all">
+                            <option value="3">3 Bulan</option>
+                            <option value="6">6 Bulan</option>
+                            <option value="9">9 Bulan</option>
+                            <option value="12">12 Bulan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Output Display Window -->
+                <div class="py-8 text-center border-t border-b border-neutral-100 my-8 bg-neutral-50/50 rounded-2xl">
+                    <span class="text-xs text-neutral-400 block mb-1 font-light">Estimasi Setoran Amanah / Bulan</span>
+                    <span id="hasil-cicilan" class="text-3xl font-semibold text-primary tracking-tight">Rp0</span>
+                </div>
+
+                <!-- Call to Action WhatsApp Connector -->
+                <a id="btn-wa-kalkulator" href="#" target="_blank" class="block text-center bg-primary hover:bg-opacity-95 text-white font-medium text-xs tracking-wider uppercase py-4 rounded-xl transition duration-300 shadow-xs">
+                    Konfirmasi via WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- SIMPLE FOOTER -->
+    <!-- 10. REAL COMPREHENSIVE FOOTER (Berdasarkan Screenshot 2026-06-17 at 16.24.42.png) -->
+    <footer class="bg-[#0B1320] text-neutral-400 pt-16 pb-8 border-t border-neutral-800/40 relative">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            
+            <!-- Kolom 1: Profil Singkat -->
+            <div>
+                <h3 class="text-white font-semibold text-base mb-4 tracking-wide">Kandang Kang Iky</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                    Peternakan domba amanah, bersih, dan sesuai syariat. Menyediakan kebutuhan Qurban, Aqiqah, dan Pembibitan berkualitas tinggi.
+                </p>
+            </div>
+
+            <!-- Kolom 2: Navigasi Internal -->
+            <div>
+                <h3 class="text-white font-semibold text-sm mb-4 tracking-wide">Navigasi</h3>
+                <ul class="space-y-2.5 text-xs font-light">
+                    <li><a href="#layanan" class="hover:text-white transition-colors duration-200">Layanan Kami</a></li>
+                    <li><a href="#aktivitas" class="hover:text-white transition-colors duration-200">Galeri Kandang</a></li>
+                    <li><a href="#katalog" class="hover:text-white transition-colors duration-200">Katalog Harga</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Kontak & Alamat Fisik -->
+            <div>
+                <h3 class="text-white font-semibold text-sm mb-4 tracking-wide">Kontak & Alamat</h3>
+                <ul class="space-y-3 text-xs font-light">
+                    <li class="flex items-start gap-2">
+                        <span>📍</span>
+                        <span>Jl. Kampung Domba No. 12, Area Peternakan Hijau</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span>📞</span>
+                        <span>WhatsApp: +62 812-3456-789</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Kolom 4: Media Sosial -->
+            <div>
+                <h3 class="text-white font-semibold text-sm mb-4 tracking-wide">Ikuti Kami</h3>
+                <a href="https://instagram.com/kandangkangiky" target="_blank" class="text-xs font-light text-emerald-500 hover:text-emerald-400 hover:underline transition-all">
+                    @kandangkangiky
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Garis Tipis & Hak Cipta Bawah -->
+        <div class="max-w-6xl mx-auto px-6 border-t border-neutral-800/60 pt-8 text-center text-xs text-neutral-500 font-light tracking-wide">
+            &copy; 2026 Kandang Kang Iky. All Rights Reserved. Built Professionally.
+        </div>
+
+        <!-- FLOATING WHATSAPP BUTTON (Pojok Kanan Bawah) -->
+        <a href="https://wa.me/628123456789" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#20ba56] hover:scale-105 transition-all duration-300 z-50 group" aria-label="Hubungi via WhatsApp">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.896 0c3.181.001 6.171 1.242 8.42 3.496 2.248 2.253 3.487 5.244 3.484 8.425-.004 6.571-5.329 11.896-11.898 11.896-2.003-.001-3.971-.505-5.717-1.464L0 24zm6.59-4.846c1.66.986 3.288 1.488 4.704 1.49 5.351 0 9.702-4.347 9.704-9.699.002-2.593-1.008-5.032-2.844-6.87C16.32 2.236 13.883 1.002 11.29 1c-5.356 0-9.704 4.349-9.707 9.701-.001 1.48.513 2.973 1.527 4.36l-.999 3.647 3.737-.98c1.373.748 2.5 1.154 3.992 1.154l-.004-.028zm10.743-7.516c-.297-.15-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            </svg>
+            <!-- Label tooltip tipis saat di-hover -->
+            <span class="absolute right-16 bg-[#0B1320] text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-sm border border-neutral-800">
+                Chat WA
+            </span>
+        </a>
+    </footer>
+
+    <!-- LOGIC INTEGRATION SCRIPT -->
+    <script src="js/calculator.js"></script>
+    <script>
+        // Logika menangkap parameter URL (?type=ekonomis / ?type=premium)
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const typeParam = urlParams.get('type');
+            const selectDomba = document.getElementById('pilih-domba');
+
+            if (typeParam && selectDomba) {
+                // Berikan jeda milidetik agar render opsi defaultDombaData dari file js/calculator.js selesai lebih dulu
+                setTimeout(() => {
+                    for (let i = 0; i < selectDomba.options.length; i++) {
+                        if (selectDomba.options[i].text.toLowerCase().includes(typeParam)) {
+                            selectDomba.selectedIndex = i;
+                            break;
+                        }
+                    }
+                    if (typeof hitungSimulasi === "function") {
+                        hitungSimulasi();
+                    }
+                }, 50);
+            }
+        });
+    </script>
+</body>
+</html>
