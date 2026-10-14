@@ -67,12 +67,14 @@
                 </div>
             </a>
 
-            <!-- Menu Desktop (Simple: Profil, Tabungan, Katalog, Kontak) -->
+            <!-- Menu Desktop -->
             <div
-                class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-wider uppercase text-neutral-500">
+                class="hidden md:flex items-center gap-5 lg:gap-7 text-xs font-semibold tracking-wider uppercase text-neutral-500">
                 <a href="#tentang" class="hover:text-accent transition duration-200">Profil</a>
                 <a href="#tabungan" class="hover:text-accent transition duration-200">Tabungan</a>
                 <a href="#pricelist" class="hover:text-accent transition duration-200">Katalog</a>
+                <a href="#konsultasi" class="hover:text-accent transition duration-200">Konsultasi Insinyur</a>
+                <a href="#dampak-sosial" class="hover:text-accent transition duration-200">Dampak Sosial</a>
                 <a href="#kontak" class="hover:text-accent transition duration-200">Kontak</a>
             </div>
 
@@ -106,6 +108,8 @@
             <a href="#tentang" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Profil</a>
             <a href="#tabungan" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Tabungan</a>
             <a href="#pricelist" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Katalog</a>
+            <a href="#konsultasi" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Konsultasi Insinyur</a>
+            <a href="#dampak-sosial" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Dampak Sosial</a>
             <a href="#kontak" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Kontak</a>
             <div class="pt-2 border-t border-neutral-100 flex gap-2">
                 <a href="https://kandangkangiky.vercel.app/track" target="_blank" rel="noopener noreferrer"
@@ -126,27 +130,38 @@
 
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10 pt-10 pb-16">
             <span
-                class="text-[11px] font-extrabold tracking-[0.3em] uppercase text-primary/90 mb-4 inline-block bg-white/70 backdrop-blur-xs px-4 py-1.5 rounded-full border border-neutral-200/50 shadow-2xs">
-                Premium Livestock Bogor
+                class="text-[11px] font-extrabold tracking-[0.25em] uppercase text-primary/90 mb-4 inline-block bg-white/80 backdrop-blur-xs px-4 py-1.5 rounded-full border border-neutral-200/50 shadow-2xs">
+                🌾 Peternakan Berbasis Sains & Pemberdayaan • Parung, Bogor
             </span>
             <h1
                 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-primary tracking-tight leading-[1.2] sm:leading-[1.15] mb-6 [text-shadow:_0_2px_12px_rgba(255,255,255,0.7)]">
-                Cari Domba Sehat & Sesuai Syariat?<br>
-                <span class="font-serif italic font-normal text-accent">Kandang Kang Iky Solusinya!</span>
+                Peternakan Domba Modern<br>
+                <span class="font-serif italic font-normal text-accent">Berbasis Sains, Syariat & Dampak Sosial</span>
             </h1>
             <p
-                class="text-neutral-800 text-xs sm:text-base max-w-2xl mx-auto mb-10 leading-relaxed font-medium bg-white/40 backdrop-blur-xs py-2.5 px-6 rounded-full inline-block border border-white/60">
-                Menyediakan domba qurban dan aqiqah berkualitas tinggi di Parung Bogor, dirawat dengan amanah dan
-                terpercaya.
+                class="text-neutral-800 text-xs sm:text-base max-w-3xl mx-auto mb-10 leading-relaxed font-medium bg-white/70 backdrop-blur-xs py-3 px-6 rounded-2xl sm:rounded-full inline-block border border-white/80 shadow-2xs">
+                Dipimpin oleh <strong>Ir. Rizky Ayuna Budiman, S.Pt</strong> di Parung Bogor — Menghadirkan domba qurban & aqiqah unggul, riset pakan inovatif, layanan konsultasi peternakan modern, serta kemitraan sirkular pemberdayaan peternak lokal.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
+            <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 max-w-3xl mx-auto">
                 <a href="#pricelist"
-                    class="w-full sm:w-auto bg-primary hover:bg-[#152e20] text-white font-semibold text-xs tracking-wider uppercase px-8 py-4 rounded-full transition duration-300 shadow-md hover:shadow-lg">
-                    Lihat Katalog Harga
+                    class="w-full sm:w-auto bg-primary hover:bg-[#152e20] text-white font-semibold text-xs tracking-wider uppercase px-7 py-3.5 rounded-full transition duration-300 shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2">
+                    <span>🐑</span>
+                    <span>Beli & Tabung Domba</span>
                 </a>
-                <a href="https://kandangkangiky.vercel.app/" target="_blank" rel="noopener noreferrer"
-                    class="w-full sm:w-auto bg-white hover:bg-neutral-50 text-primary border border-neutral-200/80 font-semibold text-xs tracking-wider uppercase px-7 py-4 rounded-full transition duration-300 shadow-2xs">
-                    🔍 Track Dombamu
+                <button onclick="sendWhatsapp('consult')"
+                    class="w-full sm:w-auto bg-accent hover:bg-[#3d7711] text-white font-semibold text-xs tracking-wider uppercase px-7 py-3.5 rounded-full transition duration-300 shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2 cursor-pointer">
+                    <span>🔬</span>
+                    <span>Konsultasi Insinyur</span>
+                </button>
+                <button onclick="sendWhatsapp('social')"
+                    class="w-full sm:w-auto bg-white hover:bg-neutral-50 text-primary border border-neutral-200/80 font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-2xs inline-flex items-center justify-center gap-2 cursor-pointer">
+                    <span>🤝</span>
+                    <span>Dampak Sosial</span>
+                </button>
+                <a href="https://kandangkangiky.vercel.app/track" target="_blank" rel="noopener noreferrer"
+                    class="w-full sm:w-auto bg-accent/10 hover:bg-accent/20 text-accent font-bold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 inline-flex items-center justify-center gap-2">
+                    <span>🔍</span>
+                    <span>Track Dombamu</span>
                 </a>
             </div>
         </div>
@@ -1210,6 +1225,25 @@
                 closeModal();
             }
         });
+
+        // Dynamic WhatsApp Router
+        function sendWhatsapp(intent) {
+            const phone = (window.KANDANG_CONFIG && window.KANDANG_CONFIG.whatsapp) ? window.KANDANG_CONFIG.whatsapp : "6287729727309";
+            let message = "";
+
+            if (intent === 'consult') {
+                message = "Halo Ir. Rizky / Tim Kandang Kang Iky, saya ingin berkonsultasi mengenai peternakan domba modern (formulasi pakan Complete Feed / tata kelola kandang). Mohon informasi ketersediaan jadwal konsultasi. Terima kasih!";
+            } else if (intent === 'social') {
+                message = "Halo Kang Iky & Tim, saya tertarik untuk mendiskusikan peluang kolaborasi kemitraan peternak lokal / program CSR & dampak sosial bersama Kandang Kang Iky. Terima kasih!";
+            } else if (intent === 'buy') {
+                message = "Halo Kang Iky, saya tertarik dengan informasi pembelian domba qurban/aqiqah atau program tabungan domba di Kandang Kang Iky. Mohon informasi katalog terbaru. Terima kasih!";
+            } else {
+                message = "Halo Kandang Kang Iky, saya ingin mendapatkan informasi lebih lanjut mengenai layanan peternakan Anda. Terima kasih!";
+            }
+
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
     </script>
 </body>
 

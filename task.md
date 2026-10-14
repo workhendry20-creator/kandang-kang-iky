@@ -60,14 +60,14 @@ Meningkatkan landing page Kandang Kang Iky (`index.html`) untuk menonjolkan 3 pi
 ---
 
 ### Phase 1: Navigation, Hero & WhatsApp Router (`index.html`)
-- [ ] **Task 1.1**: Update `<nav>` di `index.html`:
+- [x] **Task 1.1**: Update `<nav>` di `index.html`:
   - Tambahkan link navigasi: `#konsultasi` ("Konsultasi Insinyur") dan `#dampak-sosial` ("Dampak Sosial").
   - PERTAHANKAN link navigasi lama (Log Titipan, Tabungan, Katalog).
-- [ ] **Task 1.2**: Update Section Hero di `index.html`:
+- [x] **Task 1.2**: Update Section Hero di `index.html`:
   - Perbarui *headline* & *subheadline* untuk mencakup elemen Insinyur Peternakan, Konsultasi, dan Dampak Sosial.
   - Tambahkan Dual/Triple CTA Buttons (misal: `Beli/Tabung Domba`, `Konsultasi Peternakan`, `Kolaborasi Sosial`).
   - Pertahankan visual background & style yang ada.
-- [ ] **Task 1.3**: Buat script JavaScript sederhana di bagian bawah `index.html` untuk fungsi WhatsApp Router dinamis (`sendWhatsapp(intent)`):
+- [x] **Task 1.3**: Buat script JavaScript sederhana di bagian bawah `index.html` untuk fungsi WhatsApp Router dinamis (`sendWhatsapp(intent)`):
   - `intent === 'buy'` -> Pesan seputar pembelian/tabungan domba.
   - `intent === 'consult'` -> Pesan seputar konsultasi sains peternakan.
   - `intent === 'social'` -> Pesan seputar program kemitraan/kolaborasi CSR.
