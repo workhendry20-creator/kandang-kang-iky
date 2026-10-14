@@ -3,144 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel — Kandang Kang Iky</title>
+    <title>Pusat Kendali Admin — Kandang Kang Iky</title>
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        :root {
-            --primary: #1E3E2B;
-            --accent: #478A14;
-            --slateBg: #FAFAFA;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3E2B',
+                        accent: '#478A14',
+                        dark: '#0B1320',
+                        slateBg: '#FAFAFA'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+                    }
+                }
+            }
         }
-    </style>
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-[#FAFAFA] text-neutral-800 antialiased font-sans">
+<body class="bg-[#FAFAFA] text-neutral-800 antialiased font-sans min-h-screen flex flex-col justify-between">
 
     <!-- NAVBAR ADMIN -->
-    <nav class="bg-[#1E3E2B] text-white px-6 py-4 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <header class="bg-[#1E3E2B] text-white px-6 py-4 sticky top-0 z-40 shadow-sm border-b border-[#2c593e]">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
             <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm">👑</div>
+                <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-white aspect-square shrink-0">
+                    <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky" class="w-full h-full object-cover">
+                </div>
                 <div>
                     <h1 class="text-sm font-bold tracking-wide">Kandang Kang Iky</h1>
-                    <p class="text-[10px] text-neutral-300">Pusat Kendali Konten v1.0</p>
+                    <p class="text-[11px] text-emerald-200/80 font-light">Pusat Kendali Konten & Katalog Hewan</p>
                 </div>
             </div>
-            <a href="index.html" class="text-xs bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition font-medium tracking-wide">
-                ← Lihat Web Utama
-            </a>
+            <div class="flex items-center gap-3 text-xs">
+                <a href="simulasi.html" class="bg-white/10 hover:bg-white/20 px-3.5 py-2 rounded-xl transition font-medium">
+                    🧮 Cek Simulator
+                </a>
+                <a href="index.html" class="bg-[#478A14] hover:bg-[#3d7511] text-white px-4 py-2 rounded-xl transition font-semibold shadow-xs">
+                    ← Lihat Website Utama
+                </a>
+            </div>
         </div>
-    </nav>
+    </header>
 
     <!-- MAIN CONTENT -->
-    <main class="max-w-7xl mx-auto px-6 py-10">
-        <div class="grid md:grid-cols-12 gap-8">
+    <main class="max-w-7xl mx-auto px-6 py-8 flex-grow w-full">
+        <div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-neutral-200/80 pb-4">
+            <div>
+                <h2 class="text-xl font-bold text-[#1E3E2B] tracking-tight">Manajemen Informasi & Paket</h2>
+                <p class="text-xs text-neutral-500 font-light mt-0.5">Ubah teks banner, kontak WhatsApp, dan harga domba. Perubahan tersimpan secara lokal dan otomatis tercermin di kalkulator simulasi.</p>
+            </div>
+            <div class="flex items-center gap-2">
+                <button id="btnReset" type="button" class="text-xs text-neutral-500 hover:text-red-600 px-3 py-2 rounded-lg transition font-medium border border-neutral-200 hover:border-red-200 bg-white">
+                    Reset ke Default
+                </button>
+                <button id="btnSave" type="button" class="text-xs bg-[#1E3E2B] hover:bg-opacity-95 text-white font-bold px-5 py-2.5 rounded-xl transition shadow-xs flex items-center gap-1.5">
+                    <span>💾</span>
+                    <span>Simpan Pengaturan</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
             
-            <!-- SISI KIRI: INPUT FORM MODIFIKASI -->
-            <div class="md:col-span-7 space-y-6">
+            <!-- SISI KIRI: INPUT FORM (8 Kolom) -->
+            <div class="lg:col-span-7 space-y-6">
                 
-                <!-- KARTU 1: HEADLINE & BANNER -->
-                <div class="bg-white p-6 rounded-2xl border border-neutral-200/60 shadow-xs">
-                    <h2 class="text-sm font-bold text-[#1E3E2B] uppercase tracking-wider mb-4 flex items-center gap-2">
-                        📝 Teks Utama & Banner
-                    </h2>
-                    <div class="space-y-4">
+                <!-- KARTU 1: KONTEN HERO & BANNER -->
+                <section class="bg-white p-6 rounded-2xl border border-neutral-200/70 shadow-2xs space-y-4">
+                    <h3 class="text-xs font-bold text-[#1E3E2B] uppercase tracking-wider flex items-center gap-2">
+                        <span>📝</span> Teks Utama (Hero Banner)
+                    </h3>
+                    <div class="space-y-3">
                         <div>
-                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Judul Utama (Hero Text)</label>
-                            <input type="text" id="inputTitle" value="Cari Domba Sehat & Sesuai Syariat?" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3 py-2.5 rounded-xl text-xs font-light focus:outline-none focus:border-[#478A14] focus:bg-white transition">
+                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Judul Utama (Heading)</label>
+                            <input type="text" id="inputHeroTitle" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3.5 py-2.5 rounded-xl text-xs font-medium focus:outline-none focus:border-[#478A14] focus:bg-white transition">
                         </div>
                         <div>
-                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Sub-Judul Promosi</label>
-                            <textarea id="inputSubtitle" rows="2" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3 py-2.5 rounded-xl text-xs font-light focus:outline-none focus:border-[#478A14] focus:bg-white transition resize-none">Menyediakan domba qurban dan aqiqah berkualitas tinggi, dirawat dengan amanah dan terpercaya.</textarea>
+                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Sub-Judul Aksen</label>
+                            <input type="text" id="inputHeroSubtitle" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3.5 py-2.5 rounded-xl text-xs font-medium focus:outline-none focus:border-[#478A14] focus:bg-white transition">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Deskripsi Singkat</label>
+                            <textarea id="inputHeroDescription" rows="2" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3.5 py-2.5 rounded-xl text-xs font-light focus:outline-none focus:border-[#478A14] focus:bg-white transition resize-none"></textarea>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <!-- KARTU 2: KATALOG HARGA DOMBA -->
-                <div class="bg-white p-6 rounded-2xl border border-neutral-200/60 shadow-xs">
-                    <h2 class="text-sm font-bold text-[#1E3E2B] uppercase tracking-wider mb-4 flex items-center gap-2">
-                        💰 Update Harga & Paket
-                    </h2>
+                <!-- KARTU 2: KONTAK & INFORMASI PETIKAN -->
+                <section class="bg-white p-6 rounded-2xl border border-neutral-200/70 shadow-2xs space-y-4">
+                    <h3 class="text-xs font-bold text-[#1E3E2B] uppercase tracking-wider flex items-center gap-2">
+                        <span>📞</span> Kontak Resmi & Lokasi
+                    </h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Harga Paket Qurban (Mulai Dari)</label>
-                            <input type="text" id="priceQurban" value="Rp 2.500.000" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3 py-2.5 rounded-xl text-xs font-light focus:outline-none focus:border-[#478A14] focus:bg-white transition">
+                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">WhatsApp (Format: 628...)</label>
+                            <input type="text" id="inputWhatsapp" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3.5 py-2.5 rounded-xl text-xs font-medium focus:outline-none focus:border-[#478A14] focus:bg-white transition">
                         </div>
                         <div>
-                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Harga Paket Aqiqah (Mulai Dari)</label>
-                            <input type="text" id="priceAqiqah" value="Rp 1.900.000" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3 py-2.5 rounded-xl text-xs font-light focus:outline-none focus:border-[#478A14] focus:bg-white transition">
+                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Instagram (Username)</label>
+                            <input type="text" id="inputInstagram" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3.5 py-2.5 rounded-xl text-xs font-medium focus:outline-none focus:border-[#478A14] focus:bg-white transition">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Alamat Email</label>
+                            <input type="email" id="inputEmail" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3.5 py-2.5 rounded-xl text-xs font-medium focus:outline-none focus:border-[#478A14] focus:bg-white transition">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Lokasi Peternakan</label>
+                            <input type="text" id="inputAddress" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3.5 py-2.5 rounded-xl text-xs font-medium focus:outline-none focus:border-[#478A14] focus:bg-white transition">
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <!-- TOMBOL GENERATE -->
-                <button onclick="generateJSON()" class="w-full bg-[#1E3E2B] hover:bg-opacity-90 text-white font-bold text-xs tracking-widest uppercase py-4 rounded-xl transition shadow-sm cursor-pointer">
-                    ⚙️ Proses & Perbarui Data Website
-                </button>
+                <!-- KARTU 3: HARGA MULAI DARI (RINGKASAN CEPAT) -->
+                <section class="bg-white p-6 rounded-2xl border border-neutral-200/70 shadow-2xs space-y-4">
+                    <h3 class="text-xs font-bold text-[#1E3E2B] uppercase tracking-wider flex items-center gap-2">
+                        <span>🏷️</span> Ringkasan Label Harga Mulai Dari
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Paket Qurban</label>
+                            <input type="text" id="inputPriceQurban" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3.5 py-2.5 rounded-xl text-xs font-medium focus:outline-none focus:border-[#478A14] focus:bg-white transition">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-neutral-400 mb-1">Paket Aqiqah</label>
+                            <input type="text" id="inputPriceAqiqah" class="w-full bg-[#FAFAFA] border border-neutral-200 px-3.5 py-2.5 rounded-xl text-xs font-medium focus:outline-none focus:border-[#478A14] focus:bg-white transition">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- KARTU 4: DAFTAR PAKET DOMBA & SIMULASI -->
+                <section class="bg-white p-6 rounded-2xl border border-neutral-200/70 shadow-2xs space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xs font-bold text-[#1E3E2B] uppercase tracking-wider flex items-center gap-2">
+                            <span>🐑</span> Daftar Paket Domba (Kalkulator Simulasi)
+                        </h3>
+                        <span class="text-[10px] text-neutral-400 font-light">Tersambung langsung ke simulasi.html</span>
+                    </div>
+                    <div id="packagesContainer" class="space-y-3">
+                        <!-- Dimuat otomatis oleh js/admin-panel.js -->
+                    </div>
+                </section>
 
             </div>
 
-            <!-- SISI KANAN: OUTPUT HASIL KODE -->
-            <div class="md:col-span-5 space-y-6">
-                <div class="bg-white p-6 rounded-2xl border border-neutral-200/60 shadow-xs sticky top-24">
-                    <div class="flex justify-between items-center mb-3">
-                        <h2 class="text-sm font-bold text-[#1E3E2B] uppercase tracking-wider flex items-center gap-2">
-                            📦 Hasil Kode JSON
-                        </h2>
-                        <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold uppercase">Copy-Paste</span>
+            <!-- SISI KANAN: JSON OUTPUT & TOOLS (5 Kolom) -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-6 rounded-2xl border border-neutral-200/70 shadow-2xs sticky top-24">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-xs font-bold text-[#1E3E2B] uppercase tracking-wider flex items-center gap-2">
+                            <span>📦</span> Data Konfigurasi JSON
+                        </h3>
+                        <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold uppercase">Sync Otomatis</span>
                     </div>
-                    <p class="text-neutral-400 text-[11px] font-light mb-4 leading-relaxed">
-                        Setiap kali kamu mengubah data di sebelah kiri, klik tombol proses, lalu salin kode di bawah ini ke bagian atas script <code class="bg-neutral-100 px-1 rounded text-red-500 font-mono">index.html</code>.
+                    
+                    <p class="text-neutral-500 text-[11px] font-light mb-4 leading-relaxed">
+                        Data ini diperbarui otomatis saat Anda mengisi form di sebelah kiri. Anda dapat menyalin kode ini untuk ditempatkan ke file <code class="bg-neutral-100 px-1 py-0.5 rounded text-amber-700 font-mono">js/config.js</code> jika ingin menjadikan perubahan ini sebagai default permanen.
                     </p>
 
-                    <!-- KOTAK OUTPUT KODE -->
-                    <textarea id="jsonOutput" readonly rows="8" class="w-full bg-neutral-900 text-green-400 p-4 rounded-xl text-xs font-mono border border-neutral-800 focus:outline-none resize-none" placeholder="// Kode konfigurasi akan muncul di sini..."></textarea>
-                    
-                    <button onclick="copyToClipboard()" class="w-full mt-4 bg-[#478A14] hover:bg-opacity-90 text-white font-bold text-xs tracking-widest uppercase py-3 rounded-xl transition shadow-xs cursor-pointer">
-                        📋 Salin Kode JSON
-                    </button>
-                    <p id="copyStatus" class="text-center text-[11px] text-emerald-600 font-medium mt-2 opacity-0 transition-opacity">Kode berhasil disalin!</p>
+                    <!-- TEXTAREA KODE JSON -->
+                    <textarea id="jsonOutput" readonly rows="12" class="w-full bg-neutral-900 text-emerald-400 p-4 rounded-xl text-[11px] font-mono border border-neutral-800 focus:outline-none resize-none leading-relaxed"></textarea>
+
+                    <div class="space-y-2 mt-4">
+                        <button id="btnCopy" type="button" class="w-full bg-[#478A14] hover:bg-[#3d7511] text-white font-bold text-xs tracking-wider uppercase py-3 rounded-xl transition shadow-xs flex items-center justify-center gap-2 cursor-pointer">
+                            <span>📋</span>
+                            <span>Salin Kode JSON</span>
+                        </button>
+                    </div>
+
+                    <!-- TIPS PENGGUNAAN -->
+                    <div class="mt-6 pt-6 border-t border-neutral-100 text-[11px] text-neutral-500 space-y-2">
+                        <div class="font-bold text-neutral-700 uppercase tracking-wider text-[10px]">💡 Petunjuk Singkat:</div>
+                        <ul class="list-disc pl-4 space-y-1 font-light leading-relaxed">
+                            <li>Klik <strong>Simpan Pengaturan</strong> untuk menyimpan perubahan ke browser ini.</li>
+                            <li>Buka <strong>Kalkulator Simulasi</strong> untuk melihat harga dan tenor terbaru secara langsung.</li>
+                            <li>Klik <strong>Reset</strong> jika ingin kembali ke data awal bawaan.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- JAVASCRIPT LOGIC -->
-    <script>
-        function generateJSON() {
-            // Mengambil semua data input dari form
-            const data = {
-                title: document.getElementById('inputTitle').value,
-                subtitle: document.getElementById('inputSubtitle').value,
-                priceQurban: document.getElementById('priceQurban').value,
-                priceAqiqah: document.getElementById('priceAqiqah').value,
-                lastUpdated: new Date().toLocaleDateString('id-ID')
-            };
+    <!-- FOOTER ADMIN -->
+    <footer class="bg-white border-t border-neutral-200 py-4 px-6 text-center text-xs text-neutral-400">
+        &copy; 2026 Kandang Kang Iky — Panel Administrasi Konten & Katalog
+    </footer>
 
-            // Mengubah objek data menjadi string teks JSON yang rapi
-            const jsonString = JSON.stringify(data, null, 4);
-            
-            // Memasukkan hasil ke kotak hitam (textarea kanan)
-            document.getElementById('jsonOutput').value = `const WEB_CONFIG = ${jsonString};`;
-        }
+    <!-- TOAST NOTIFICATION -->
+    <div id="toastNotification" class="fixed bottom-6 left-1/2 -translate-x-1/2 px-6 py-3 rounded-xl text-xs font-semibold shadow-xl transition-all duration-300 z-50 opacity-0 pointer-events-none"></div>
 
-        function copyToClipboard() {
-            const copyText = document.getElementById("jsonOutput");
-            if(!copyText.value) return alert("Silakan klik tombol Proses terlebih dahulu!");
-            
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); // Untuk perangkat mobile
-            navigator.clipboard.writeText(copyText.value);
-            
-            // Animasi notifikasi berhasil disalin
-            const status = document.getElementById("copyStatus");
-            status.classList.remove("opacity-0");
-            setTimeout(() => status.classList.add("opacity-0"), 2000);
-        }
-
-        // Jalankan sekali saat halaman pertama kali dibuka biar langsung terisi bawaannya
-        window.onload = generateJSON;
-    </script>
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script src="js/admin-panel.js"></script>
 </body>
 </html>

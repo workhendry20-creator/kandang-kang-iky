@@ -1,57 +1,119 @@
-// Data default jika database belum terhubung (Nanti disinkronkan dengan admin-panel.js)
-const defaultDombaData = [
-    { id: "ekonomis", nama: "Tipe Ekonomis (20-25 kg)", harga: 2500000 },
-    { id: "premium", nama: "Tipe Premium (26-35 kg)", harga: 3800000 },
-    { id: "giant", nama: "Tipe Super Giant (36-50+ kg)", harga: 5500000 }
-];
+/**
+ * Kandang Kang Iky - Tabungan & Simulasi Qurban Calculator
+ * Logika perhitungan cicilan / tabungan qurban berjangka otomatis
+ */
 
-// Fungsi format angka ke Rupiah
-function formatRupiah(angka) {
-    return new Intl.NumberFormat('id-ID', {
-        style: 'currency',
-        currency: 'IDR',
-        minimumFractionDigits: 0
-    }).format(angka);
-}
+document.addEventListener('DOMContentLoaded', () => {
+    // Ambil konfigurasi domba aktif dari window.KandangConfig jika tersedia
+    const config = (window.KandangConfig && typeof window.KandangConfig.getAppConfig === 'function')
+        ? window.KandangConfig.getAppConfig()
+        : {
+            whatsapp: "6287729727309",
+            dombaPackages: [
+                { id: "nontanduk", nama: "Domba Non-Tanduk (Ekonomis)", bobot: "20-25 kg", harga: 2500000, tipe: "nontanduk" },
+                { id: "tanduk", nama: "Domba Tanduk Garut (Standar)", bobot: "26-35 kg", harga: 3800000, tipe: "tanduk" },
+                { id: "texel", nama: "Domba Cross Texel / Dorper (Premium)", bobot: "36-45 kg", harga: 4800000, tipe: "texel" },
+                { id: "giant", nama: "Domba Super Giant (Jumbo)", bobot: "46-60+ kg", harga: 6500000, tipe: "giant" }
+            ]
+        };
 
-// Fungsi utama kalkulator
-function hitungSimulasi() {
     const dombaSelect = document.getElementById('pilih-domba');
     const tenorSelect = document.getElementById('pilih-tenor');
     const hasilElement = document.getElementById('hasil-cicilan');
-    const wakatotiButton = document.getElementById('btn-wa-kalkulator');
+    const totalElement = document.getElementById('total-harga');
+    const waButton = document.getElementById('btn-wa-kalkulator');
+    const ringkasanPaket = document.getElementById('ringkasan-paket');
 
-    if (!dombaSelect || !tenorSelect || !hasilElement) return;
+    if (!dombaSelect || !tenorSelect) return;
 
-    // Ambil harga dari opsi yang dipilih
-    const hargaSelected = parseInt(dombaSelect.value);
-    const tipeNama = dombaSelect.options[dombaSelect.selectedIndex].text.split(' - ')[0];
-    const tenorBulan = parseInt(tenorSelect.value);
+    // Helper format rupiah
+    const formatRp = (angka) => {
+        if (window.KandangConfig && typeof window.KandangConfig.formatRupiah === 'function') {
+            return window.KandangConfig.formatRupiah(angka);
+        }
+        return 'Rp ' + Number(angka).toLocaleString('id-ID');
+    };
 
-    // Rumus Matematika: $ Cicilan = Harga / Tenor $
-    const estimasiCicilan = Math.round(hargaSelected / tenorBulan);
+    // Render opsi domba ke dalam element <select>
+    dombaSelect.innerHTML = config.dombaPackages.map(pkg => {
+        return `<option value="${pkg.harga}" data-id="${pkg.id}" data-nama="${pkg.nama}" data-bobot="${pkg.bobot || ''}">
+            ${pkg.nama} (${pkg.bobot ? pkg.bobot + ' — ' : ''}${formatRp(pkg.harga)})
+        </option>`;
+    }).join('');
 
-    // Tampilkan hasil ke layar
-    hasilElement.innerText = `${formatRupiah(estimasiCicilan)} / bulan`;
+    // Baca parameter dari URL (misal: ?type=nontanduk atau ?type=tanduk atau ?tenor=6)
+    const urlParams = new URLSearchParams(window.location.search);
+    const typeParam = (urlParams.get('type') || '').toLowerCase();
+    const tenorParam = urlParams.get('tenor');
 
-    // Update teks otomatis untuk tombol WhatsApp
-    const pesanWA = encodeURIComponent(`Halo Kang Iky, saya sudah mencoba simulasi di website dan tertarik ikutan program Tabungan/Cicilan untuk *${tipeNama}* dengan tenor *${tenorBulan} Bulan* (${formatRupiah(estimasiCicilan)}/bln). Mohon info pendaftarannya ya!`);
-    wakatotiButton.href = `https://wa.me/628123456789?text=${pesanWA}`;
-}
+    if (typeParam) {
+        for (let i = 0; i < dombaSelect.options.length; i++) {
+            const opt = dombaSelect.options[i];
+            const optId = (opt.getAttribute('data-id') || '').toLowerCase();
+            const optText = opt.text.toLowerCase();
+            if (optId.includes(typeParam) || optText.includes(typeParam)) {
+                dombaSelect.selectedIndex = i;
+                break;
+            }
+        }
+    }
 
-// Inisialisasi awal saat halaman selesai dimuat
-document.addEventListener('DOMContentLoaded', () => {
-    const dombaSelect = document.getElementById('pilih-domba');
-    
-    // Render opsi domba ke dalam select HTML
-    dombaSelect.innerHTML = defaultDombaData.map(d => 
-        `<option value="${d.harga}">${d.nama} - ${formatRupiah(d.harga)}</option>`
-    ).join('');
+    if (tenorParam) {
+        for (let i = 0; i < tenorSelect.options.length; i++) {
+            if (tenorSelect.options[i].value === tenorParam) {
+                tenorSelect.selectedIndex = i;
+                break;
+            }
+        }
+    }
 
-    // Jalankan hitungan pertama kali
-    hitungSimulasi();
+    // Fungsi kalkulasi simulasi tabungan
+    function hitungSimulasi() {
+        const selectedOption = dombaSelect.options[dombaSelect.selectedIndex];
+        if (!selectedOption) return;
 
-    // Pasang event listener agar hitungan berubah otomatis saat user mengganti pilihan
+        const hargaTotal = parseInt(dombaSelect.value, 10) || 0;
+        const tenorBulan = parseInt(tenorSelect.value, 10) || 1;
+        const namaPaket = selectedOption.getAttribute('data-nama') || selectedOption.text.split(' (')[0];
+        const bobotPaket = selectedOption.getAttribute('data-bobot') || '';
+
+        // Rumus cicilan: Harga Total / Tenor (Bulan)
+        const estimasiCicilan = Math.ceil(hargaTotal / tenorBulan);
+
+        // Tampilkan hasil ke DOM
+        if (hasilElement) {
+            hasilElement.innerText = `${formatRp(estimasiCicilan)} / bulan`;
+        }
+
+        if (totalElement) {
+            totalElement.innerText = formatRp(hargaTotal);
+        }
+
+        if (ringkasanPaket) {
+            ringkasanPaket.innerText = `${namaPaket} ${bobotPaket ? '(' + bobotPaket + ')' : ''} — Tenor ${tenorBulan} Bulan`;
+        }
+
+        // Susun teks WhatsApp yang ramah dan siap dikirim
+        const waNumber = config.whatsapp || "6287729727309";
+        const pesanWA = `Halo Kang Iky, saya ingin mendaftar program *Tabungan Qurban 2026* di Kandang Kang Iky:
+
+📌 *Pilihan:* ${namaPaket}
+⚖️ *Estimasi Bobot:* ${bobotPaket || 'Sesuai Standar'}
+💵 *Total Harga:* ${formatRp(hargaTotal)}
+🗓️ *Rencana Tenor:* ${tenorBulan} Bulan
+💰 *Estimasi Setoran:* ${formatRp(estimasiCicilan)} / bulan
+
+Mohon info nomor rekening resmi dan panduan pendaftarannya. Terima kasih!`;
+
+        if (waButton) {
+            waButton.href = `https://wa.me/${waNumber}?text=${encodeURIComponent(pesanWA)}`;
+        }
+    }
+
+    // Pasang listener pada perubahan select box
     dombaSelect.addEventListener('change', hitungSimulasi);
     tenorSelect.addEventListener('change', hitungSimulasi);
+
+    // Jalankan kalkulasi saat halaman selesai dimuat
+    hitungSimulasi();
 });
