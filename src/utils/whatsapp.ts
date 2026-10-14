@@ -46,6 +46,8 @@ export function createWhatsAppLink(intent: ContactIntent, options: WhatsAppLinkO
   return `https://wa.me/${OFFICIAL_WHATSAPP_NUMBER}?text=${encodedText}`;
 }
 
+export const getWhatsappUrl = createWhatsAppLink;
+
 /**
  * Shortcut khusus untuk link konsultasi per layanan
  */

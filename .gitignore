@@ -21,6 +21,9 @@ yarn-error.log*
 .temp/
 .cache/
 
+# Dependencies
+node_modules/
+
 # Local configuration overrides
 .env
 .env.local
