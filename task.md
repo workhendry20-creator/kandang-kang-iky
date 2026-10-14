@@ -54,8 +54,8 @@ Meningkatkan landing page Kandang Kang Iky (`index.html`) untuk menonjolkan 3 pi
 ## 🛠️ Step-by-Step Task Breakdown
 
 ### Phase 0: Cleanup & Workspace Preparation
-- [ ] **Task 0.1**: Hapus semua file `.tsx` / `.ts` / folder React baru yang tidak sengaja dibuat di iterasi sebelumnya (jika ada).
-- [ ] **Task 0.2**: Pastikan repositori bersih dan fokus penuh pada `index.html` serta aset lokal pendukung.
+- [x] **Task 0.1**: Hapus semua file `.tsx` / `.ts` / folder React baru yang tidak sengaja dibuat di iterasi sebelumnya (jika ada).
+- [x] **Task 0.2**: Pastikan repositori bersih dan fokus penuh pada `index.html` serta aset lokal pendukung.
 
 ---
 
