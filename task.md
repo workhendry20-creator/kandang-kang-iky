@@ -1,27 +1,30 @@
 # 📋 Task Breakdown & Agent Execution Rules: Kandang Kang Iky Enhancement
 
 ## 🎯 Project Goal
-Meningkatkan landing page Kandang Kang Iky untuk menonjolkan 3 pilar utama:
-1. **Penyediaan/Tabungan Domba** (E-Commerce / B2C Komersial)
-2. **Konsultasi Peternakan Modern** (Latar Belakang Insinyur Peternakan)
-3. **Kolaborasi & Impact Sosial** (Penggerak Pemberdayaan Masyarakat)
+Meningkatkan landing page Kandang Kang Iky (`index.html`) untuk menonjolkan 3 pilar utama:
+1. **Penyediaan & Tabungan Domba** (Komersial B2C / Qurban & Aqiqah)
+2. **Konsultasi Peternakan Modern** (Kepakaran Insinyur Peternakan & Formulasi Complete Feed)
+3. **Kolaborasi & Impact Sosial** (Pemberdayaan Peternakan Lokal & Zero Waste Organic)
 
 ---
 
 ## 🛑 Agent Operating Rules (STRICT)
 
-1. **Preserve Existing Theme & Design System**:
-   - DILARANG MENGUBAH warna utama (Emerald/Forest Green, Accent Yellow/Gold, Neutral Dark/Light Slate).
-   - DILARANG MENGUBAH struktur folder dasar atau membuang komponen yang sudah ada (misal: sistem log Google Sheets, katalog tabungan).
-   - Pertahankan skema Tailwind CSS dan icon set (`lucide-react`) yang sedang digunakan.
+1. **Vanilla HTML/JS Architecture Only**:
+   - DILARANG membuat file React (`.tsx`, `.jsx`) atau menginstal modul build baru.
+   - Semua penambahan komponen UI dilakukan langsung di dalam file `index.html` menggunakan kelas Tailwind CSS dan Lucide Icons / Font Awesome yang sudah terpasang.
 
-2. **Output Token Economy (Hemat Token)**:
+2. **Preserve Existing Theme & Locked Features**:
+   - **Colors**: DILARANG mengubah warna utama (Emerald/Forest Green `#0F5132`, Accent Yellow/Gold, Neutral Slate/Gray).
+   - **🔒 UNTOUCHED FEATURES**: DILARANG MENGUBAH / MENGHAPUS integrasi Google Sheets (`Log Titipan`, `Katalog Tabungan`, `Kalkulator/Skema Setoran`). Fitur-fitur ini WAJIB tetap berjalan normal tanpa error.
+
+3. **Output Token Economy (Hemat Token)**:
    - Berikan respon SINGKAT & PADAT (Maksimal 3-5 kalimat per konfirmasi/laporan).
-   - Jangan tampilkan ulang seluruh isi file jika hanya mengubah beberapa baris; cukup tunjukkan diff atau fungsi/komponen yang diperbarui.
+   - Jangan tampilkan ulang seluruh isi file HTML jika hanya mengubah beberapa baris; cukup tunjukkan diff atau snippet komponen yang diperbarui.
    - Tidak perlu memberikan penjelasan teoretis panjang lebar.
 
-3. **Self-Verification Protocol (Cek Hasil)**:
-   - Sebelum menandai task selesai (`[x]`), jalankan `npm run dev` atau `npm run build` / type-check (`tsc --noEmit` jika ada) untuk memastikan tidak ada *breaking changes* / *syntax error*.
+4. **Self-Verification Protocol (Cek Hasil)**:
+   - Sebelum menandai task selesai (`[x]`), pastikan struktur tag HTML tertutup dengan benar, tidak ada sintaks JavaScript broken di console, dan tampilan responsive (Mobile & Desktop).
    - Konfirmasikan bahwa fitur lama (seperti Log Titipan/Katalog Domba) tetap berfungsi normal.
 
 ---
@@ -29,74 +32,73 @@ Meningkatkan landing page Kandang Kang Iky untuk menonjolkan 3 pilar utama:
 ## 🚀 Git & Auto-Deployment Protocol (Vercel Integration)
 
 1. **Mandatory Commit & Push per Task**:
-   - Setelah setiap task selesai dibuat dan lolos uji verifikasi (`build` / `type-check`), Agent WAJIB langsung melakukan **Git Commit** dan **Git Push** ke branch utama (`main` / `master`).
-   - Gunakan format pesan commit yang jelas dan terstruktur:
-     - `feat: add data schema for consultation & social impact (Task 1)`
-     - `feat: add consultation section & dynamic whatsapp router (Task 2)`
-     - `refactor: update navbar & hero cta for multi-value proposition (Task 3)`
+   - Setelah setiap task selesai dibuat dan lolos uji verifikasi, Agent WAJIB langsung melakukan **Git Commit** dan **Git Push** ke branch utama (`main` / `master`).
+   - Gunakan format pesan commit yang jelas:
+     - `fix: cleanup tsx files and prepare index.html structure`
+     - `feat: update navbar, hero section, and dynamic whatsapp router (Task 1)`
+     - `feat: add expertise and consultation sections (Task 2)`
+     - `feat: add social impact section and complete navigation links (Task 3)`
 
 2. **Automated Vercel Deployment Check**:
-   - Pastikan setiap *push* ke GitHub berhasil memicu *Automatic Deployment* di Vercel tanpa ada error pada proses *build*.
-   - Jika *build* di Vercel gagal, Agent wajib memprioritaskan perbaikan bug (*fix*) sebelum melanjutkan ke task berikutnya.
+   - Pastikan setiap *push* ke GitHub berhasil memicu *Automatic Deployment* di Vercel tanpa ada error.
 
 3. **Short Deployment Status Reporting**:
-   - Pada setiap laporan akhir task, Agent wajib mencantumkan status Git & Deploy secara singkat.
-   - Contoh format laporan singkat Agent:
+   - Pada setiap laporan akhir task, Agent wajib mencantumkan status Git & Deploy secara singkat:
      > ✅ **Task X Selesai & Terverifikasi.**
      > 📌 **Commit:** `feat: ...`
      > 🚀 **Git Status:** Pushed to GitHub (`main`) → Auto-deploying to Vercel.
      > Ready to proceed to Task Y?
 
+---
+
 ## 🛠️ Step-by-Step Task Breakdown
 
-### Phase 1: Data Architecture & Types (Non-Breaking)
-- [ ] **Task 1.1**: Buat type definitions baru di `src/types/landing.ts` untuk:
-  - `ConsultationService` (id, title, description, targetAudience, icon)
-  - `SocialProgram` (id, title, impactMetrics, description, image)
-  - `ExpertProfile` (name, title, bio, credentials, metrics)
-  - `ContactIntent` (`'buy' | 'consult' | 'social'`)
-- [ ] **Task 1.2**: Buat file data statis `src/data/consultationData.ts` yang berisi daftar paket/layanan konsultasi insinyur.
-- [ ] **Task 1.3**: Buat file data statis `src/data/socialImpactData.ts` yang berisi program pemberdayaan masyarakat & statistik dampak.
-- [ ] **Task 1.4**: Buat utilitas helper `src/utils/whatsapp.ts` untuk me-generate link WhatsApp dinamis berdasarkan `ContactIntent` dan template pesan yang relevan.
+### Phase 0: Cleanup & Workspace Preparation
+- [ ] **Task 0.1**: Hapus semua file `.tsx` / `.ts` / folder React baru yang tidak sengaja dibuat di iterasi sebelumnya (jika ada).
+- [ ] **Task 0.2**: Pastikan repositori bersih dan fokus penuh pada `index.html` serta aset lokal pendukung.
 
 ---
 
-### Phase 2: Navigation & Hero Refactoring
-- [ ] **Task 2.1**: Update `src/components/Navbar.tsx`:
-  - Tambahkan link navigasi: `Konsultasi Insinyur` dan `Dampak Sosial`.
-  - Update tombol CTA header agar mendukung pilihan *intent* (Modal/Dropdown sederhana atau redirect WA langsung).
-- [ ] **Task 2.2**: Refactor `src/components/Hero.tsx`:
-  - Perbarui *headline* dan *subheadline* untuk mencakup elemen Insinyur Peternakan & Pemberdayaan Sosial.
-  - Tambahkan Dual/Triple CTA Button (Misal: `Pilih Domba`, `Konsultasi Peternakan`, `Kolaborasi CSR`).
+### Phase 1: Navigation, Hero & WhatsApp Router (`index.html`)
+- [ ] **Task 1.1**: Update `<nav>` di `index.html`:
+  - Tambahkan link navigasi: `#konsultasi` ("Konsultasi Insinyur") dan `#dampak-sosial` ("Dampak Sosial").
+  - PERTAHANKAN link navigasi lama (Log Titipan, Tabungan, Katalog).
+- [ ] **Task 1.2**: Update Section Hero di `index.html`:
+  - Perbarui *headline* & *subheadline* untuk mencakup elemen Insinyur Peternakan, Konsultasi, dan Dampak Sosial.
+  - Tambahkan Dual/Triple CTA Buttons (misal: `Beli/Tabung Domba`, `Konsultasi Peternakan`, `Kolaborasi Sosial`).
   - Pertahankan visual background & style yang ada.
+- [ ] **Task 1.3**: Buat script JavaScript sederhana di bagian bawah `index.html` untuk fungsi WhatsApp Router dinamis (`sendWhatsapp(intent)`):
+  - `intent === 'buy'` -> Pesan seputar pembelian/tabungan domba.
+  - `intent === 'consult'` -> Pesan seputar konsultasi sains peternakan.
+  - `intent === 'social'` -> Pesan seputar program kemitraan/kolaborasi CSR.
 
 ---
 
-### Phase 3: New Feature Components Development
-- [ ] **Task 3.1**: Buat komponen `src/components/ExpertiseSection.tsx`:
-  - Menampilkan profil Kang Iky sebagai Insinyur Peternakan.
-  fotonya ambil dari folder assets yang profile.jpg
-  dengan data diri:
-  Nama: Ir. Rizky Ayuna Budiman, S.Pt
-  - Highlight keunggulan sains (pakan formulasi, riset genetik, tata kelola kandang).
-  - Integrasikan ke `src/App.tsx` / `src/pages/Home.tsx`.
-- [ ] **Task 3.2**: Buat komponen `src/components/ConsultationSection.tsx`:
-  - Tampilkan card-card layanan konsultasi (Formulasi Pakan, Audit Kandang, Training).
-  - Setiap card memiliki CTA button langsung ke WhatsApp dengan preset message konsultasi.
-  - Integrasikan ke `App.tsx`.
-- [ ] **Task 3.3**: Buat komponen `src/components/SocialImpactSection.tsx`:
-  - Tampilkan pilar pemberdayaan peternak lokal & pengolahan limbah (zero waste).
-  - Sertukan counter/metrik statistik dampak sosial.
-  - Sediakan CTA khusus kolaborasi/CSR.
-  - Integrasikan ke `App.tsx`.
+### Phase 2: Expertise & Consultation Sections (`index.html`)
+- [ ] **Task 2.1**: Tambahkan Section Kepakaran Insinyur (`<section id="keahlian">`):
+  - Foto profil: Gunakan gambar profil yang ada di aset (`profile.jpg` atau dari folder assets).
+  - Data Diri: **Ir. Rizky Ayuna Budiman, S.Pt** (Insinyur Peternakan & Penggerak Sosial).
+  - Highlight keunggulan sains: Formulasi *Complete Feed* berbasis limbah pertanian, standar *Triple Health Check*, dan riset genetik (Dorper, Cross Texel, Garut).
+- [ ] **Task 2.2**: Tambahkan Section Layanan Konsultasi (`<section id="konsultasi">`):
+  - Buat Grid Card Layanan: *Formulasi Pakan & Nutrisi*, *Audit & Design Management Kandang*, dan *Pelatihan Agropreneur*.
+  - Setiap card memiliki tombol CTA yang memanggil fungsi `sendWhatsapp('consult')`.
 
 ---
 
-### Phase 4: Integration, Audit & Verification
-- [ ] **Task 4.1**: Lakukan audit keterbacaan & alur navigasi dari Hero hingga Footer. Pastikan urutan section logis:
+### Phase 3: Social Impact Section & Footer Integration (`index.html`)
+- [ ] **Task 3.1**: Tambahkan Section Dampak Sosial (`<section id="dampak-sosial">`):
+  - Tampilkan 3 pilar gerakan: *Pemberdayaan Peternak Lokal*, *Sirkular Ekonomi & Zero Waste Organic*, dan *Edukasi Pemuda*.
+  - Sertakan counter/metrik statistik dampak sosial (misal: Jumlah peternak binaan, tonase limbah pertanian terolah).
+  - Sediakan tombol CTA khusus kolaborasi: `sendWhatsapp('social')`.
+- [ ] **Task 3.2**: Perbarui Footer untuk memastikan alamat, kontak, dan tautan sosial media mencakup seluruh pilar layanan.
+
+---
+
+### Phase 4: Audit & Verification
+- [ ] **Task 4.1**: Audit keterbacaan & alur scroll dari Hero hingga Footer. Pastikan urutan section intuitif:
   `Hero -> Expertise/Authority -> Catalog (Beli/Nabung) -> Consultation -> Social Impact -> Log Titipan -> Footer`
-- [ ] **Task 4.2**: Jalankan verifikasi responsivitas UI (Mobile & Desktop).
-- [ ] **Task 4.3**: Jalankan build check (`npm run build` atau `npx tsc`) dan pastikan 0 error.
+- [ ] **Task 4.2**: Jalankan verifikasi responsivitas UI di tampilan mobile (viewport 375px) dan desktop (viewport 1440px).
+- [ ] **Task 4.3**: Pastikan integrasi Google Sheets (Log Titipan) tetap berjalan 100% tanpa error di console.
 
 ---
 
@@ -105,8 +107,7 @@ Di setiap akhir pengerjaan *sub-task*, Agent HARUS memberikan respon singkat den
 
 ```text
 ✅ [Task ID] Selesai
-- File diubah/dibuat: [path/file.ext]
-- Hasil Verifikasi: Pass (Build OK / No Type Errors)
-- Status Ringkas: [1 kalimat penjelas singkat]
+- File diubah/dibuat: index.html
+- Status Git & Deploy: Pushed to main -> Auto-deploying to Vercel
+- Hasil Verifikasi: Pass (No Broken HTML / Google Sheets Log OK)
 - Next Task: [Task ID selanjutnya]
-```
