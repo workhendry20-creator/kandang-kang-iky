@@ -95,9 +95,10 @@ Meningkatkan landing page Kandang Kang Iky (`index.html`) untuk menonjolkan 3 pi
 ---
 
 ### Phase 4: Audit & Verification
-- [ ] **Task 4.1**: Audit keterbacaan & alur scroll dari Hero hingga Footer. 
-- [ ] **Task 4.2**: Jalankan verifikasi responsivitas UI di tampilan mobile (viewport 375px) dan desktop (viewport 1440px).
-- [ ] **Task 4.3**: Pastikan integrasi Google Sheets (Log Titipan) tetap berjalan 100% tanpa error di console.
+- [x] **Task 4.1**: Audit keterbacaan & alur scroll dari Hero hingga Footer. Pastikan urutan section intuitif:
+  `Hero -> Expertise/Authority -> Catalog (Beli/Nabung) -> Consultation -> Social Impact -> Log Titipan -> Footer`
+- [x] **Task 4.2**: Jalankan verifikasi responsivitas UI di tampilan mobile (viewport 375px) dan desktop (viewport 1440px).
+- [x] **Task 4.3**: Pastikan integrasi Google Sheets (Log Titipan) tetap berjalan 100% tanpa error di console.
 
 ---
 
