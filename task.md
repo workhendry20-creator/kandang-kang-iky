@@ -86,17 +86,16 @@ Meningkatkan landing page Kandang Kang Iky (`index.html`) untuk menonjolkan 3 pi
 ---
 
 ### Phase 3: Social Impact Section & Footer Integration (`index.html`)
-- [ ] **Task 3.1**: Tambahkan Section Dampak Sosial (`<section id="dampak-sosial">`):
+- [x] **Task 3.1**: Tambahkan Section Dampak Sosial (`<section id="dampak-sosial">`):
   - Tampilkan 3 pilar gerakan: *Pemberdayaan Peternak Lokal*, *Sirkular Ekonomi & Zero Waste Organic*, dan *Edukasi Pemuda*.
   - Sertakan counter/metrik statistik dampak sosial (misal: Jumlah peternak binaan, tonase limbah pertanian terolah).
   - Sediakan tombol CTA khusus kolaborasi: `sendWhatsapp('social')`.
-- [ ] **Task 3.2**: Perbarui Footer untuk memastikan alamat, kontak, dan tautan sosial media mencakup seluruh pilar layanan.
+- [x] **Task 3.2**: Perbarui Footer untuk memastikan alamat, kontak, dan tautan sosial media mencakup seluruh pilar layanan.
 
 ---
 
 ### Phase 4: Audit & Verification
-- [ ] **Task 4.1**: Audit keterbacaan & alur scroll dari Hero hingga Footer. Pastikan urutan section intuitif:
-  `Hero -> Expertise/Authority -> Catalog (Beli/Nabung) -> Consultation -> Social Impact -> Log Titipan -> Footer`
+- [ ] **Task 4.1**: Audit keterbacaan & alur scroll dari Hero hingga Footer. 
 - [ ] **Task 4.2**: Jalankan verifikasi responsivitas UI di tampilan mobile (viewport 375px) dan desktop (viewport 1440px).
 - [ ] **Task 4.3**: Pastikan integrasi Google Sheets (Log Titipan) tetap berjalan 100% tanpa error di console.
 
