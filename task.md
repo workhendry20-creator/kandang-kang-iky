@@ -75,11 +75,11 @@ Meningkatkan landing page Kandang Kang Iky (`index.html`) untuk menonjolkan 3 pi
 ---
 
 ### Phase 2: Expertise & Consultation Sections (`index.html`)
-- [ ] **Task 2.1**: Tambahkan Section Kepakaran Insinyur (`<section id="keahlian">`):
+- [x] **Task 2.1**: Tambahkan Section Kepakaran Insinyur (`<section id="keahlian">`):
   - Foto profil: Gunakan gambar profil yang ada di aset (`profile.jpg` atau dari folder assets).
   - Data Diri: **Ir. Rizky Ayuna Budiman, S.Pt** (Insinyur Peternakan & Penggerak Sosial).
   - Highlight keunggulan sains: Formulasi *Complete Feed* berbasis limbah pertanian, standar *Triple Health Check*, dan riset genetik (Dorper, Cross Texel, Garut).
-- [ ] **Task 2.2**: Tambahkan Section Layanan Konsultasi (`<section id="konsultasi">`):
+- [x] **Task 2.2**: Tambahkan Section Layanan Konsultasi (`<section id="konsultasi">`):
   - Buat Grid Card Layanan: *Formulasi Pakan & Nutrisi*, *Audit & Design Management Kandang*, dan *Pelatihan Agropreneur*.
   - Setiap card memiliki tombol CTA yang memanggil fungsi `sendWhatsapp('consult')`.
 
