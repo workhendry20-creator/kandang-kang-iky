@@ -41,6 +41,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-none {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 
     <!-- Alpine.js Core -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -307,23 +316,23 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-12">
+            <div class="flex md:grid md:grid-cols-3 gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-none mt-12 pb-2 md:pb-0">
                 <div
-                    class="bg-[#FAFAFA] border border-neutral-200/70 p-6 rounded-2xl text-center shadow-2xs card-hover-lift">
+                    class="min-w-[85%] md:min-w-full snap-center shrink-0 bg-[#FAFAFA] border border-neutral-200/70 p-6 rounded-2xl text-center shadow-2xs card-hover-lift">
                     <div class="text-3xl mb-2">🐑</div>
                     <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-1">Jenis Dorper</h3>
                     <p class="text-[11px] text-neutral-500 font-light">Ras domba daging premium, adaptif, pertumbuhan
                         bobot sangat cepat dan daging padat.</p>
                 </div>
                 <div
-                    class="bg-[#FAFAFA] border border-neutral-200/70 p-6 rounded-2xl text-center shadow-2xs card-hover-lift">
+                    class="min-w-[85%] md:min-w-full snap-center shrink-0 bg-[#FAFAFA] border border-neutral-200/70 p-6 rounded-2xl text-center shadow-2xs card-hover-lift">
                     <div class="text-3xl mb-2">🐑</div>
                     <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-1">Cross Texel</h3>
                     <p class="text-[11px] text-neutral-500 font-light">Persilangan bibit unggul dengan rasio karkas
                         tinggi, tekstur daging empuk berlemak tipis.</p>
                 </div>
                 <div
-                    class="bg-[#FAFAFA] border border-neutral-200/70 p-6 rounded-2xl text-center shadow-2xs card-hover-lift">
+                    class="min-w-[85%] md:min-w-full snap-center shrink-0 bg-[#FAFAFA] border border-neutral-200/70 p-6 rounded-2xl text-center shadow-2xs card-hover-lift">
                     <div class="text-3xl mb-2">🐑</div>
                     <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-1">Domba Garut</h3>
                     <p class="text-[11px] text-neutral-500 font-light">Ikon domba gagah bertanduk seni, berpostur kokoh,
@@ -357,11 +366,11 @@
             </div>
 
             <!-- 3 Card Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <div class="flex md:grid md:grid-cols-3 gap-4 md:gap-8 items-stretch overflow-x-auto snap-x snap-mandatory scrollbar-none pb-4 md:pb-0">
 
                 <!-- CARD 1: JUAL & TABUNG DOMBA -->
                 <div
-                    class="bg-white rounded-3xl p-7 sm:p-8 border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 flex flex-col justify-between group card-hover-lift relative overflow-hidden">
+                    class="min-w-[85%] md:min-w-full snap-center shrink-0 bg-white rounded-3xl p-7 sm:p-8 border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 flex flex-col justify-between group card-hover-lift relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1.5 bg-accent"></div>
                     <div>
                         <div class="flex items-center justify-between mb-5">
@@ -414,7 +423,7 @@
 
                 <!-- CARD 2: KONSULTASI PETERNAKAN -->
                 <div
-                    class="bg-white rounded-3xl p-7 sm:p-8 border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 flex flex-col justify-between group card-hover-lift relative overflow-hidden">
+                    class="min-w-[85%] md:min-w-full snap-center shrink-0 bg-white rounded-3xl p-7 sm:p-8 border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 flex flex-col justify-between group card-hover-lift relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1.5 bg-primary"></div>
                     <div>
                         <div class="flex items-center justify-between mb-5">
@@ -467,7 +476,7 @@
 
                 <!-- CARD 3: KOLABORASI & CSR -->
                 <div
-                    class="bg-white rounded-3xl p-7 sm:p-8 border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 flex flex-col justify-between group card-hover-lift relative overflow-hidden">
+                    class="min-w-[85%] md:min-w-full snap-center shrink-0 bg-white rounded-3xl p-7 sm:p-8 border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 flex flex-col justify-between group card-hover-lift relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1.5 bg-emerald-600"></div>
                     <div>
                         <div class="flex items-center justify-between mb-5">
@@ -534,43 +543,41 @@
                     utama peternakan kami.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 bg-[#FAFAFA] rounded-2xl border border-neutral-100 card-hover-lift">
-                    <div class="text-accent font-extrabold text-xl mb-3">01</div>
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Jaminan Daging Premium</h3>
-                    <p class="text-xs text-neutral-500 leading-relaxed font-light">Hewan dibesarkan dengan pakan
-                        Complete Feed tinggi nutrisi untuk menghasilkan daging lebih empuk dan padat (bukan gemuk air).
-                    </p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+                <div class="p-3.5 sm:p-5 bg-[#FAFAFA] rounded-2xl border border-neutral-100 card-hover-lift flex flex-col justify-between">
+                    <div>
+                        <div class="text-accent font-extrabold text-base sm:text-xl mb-1.5 sm:mb-2">01</div>
+                        <h3 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary mb-1 sm:mb-2">Jaminan Daging Premium</h3>
+                        <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed font-light">Hewan dibesarkan dengan pakan Complete Feed tinggi nutrisi untuk menghasilkan daging empuk dan padat.</p>
+                    </div>
                 </div>
-                <div class="p-6 bg-[#FAFAFA] rounded-2xl border border-neutral-100 card-hover-lift">
-                    <div class="text-accent font-extrabold text-xl mb-3">02</div>
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Garansi Tukar Baru 1x24 Jam
-                    </h3>
-                    <p class="text-xs text-neutral-500 leading-relaxed font-light">Kami menjamin seluruh kondisi fisik
-                        hewan akurat sesuai foto dan video. Jika tidak sesuai deskripsi, langsung kami ganti unit baru!
-                    </p>
+                <div class="p-3.5 sm:p-5 bg-[#FAFAFA] rounded-2xl border border-neutral-100 card-hover-lift flex flex-col justify-between">
+                    <div>
+                        <div class="text-accent font-extrabold text-base sm:text-xl mb-1.5 sm:mb-2">02</div>
+                        <h3 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary mb-1 sm:mb-2">Garansi Tukar Baru</h3>
+                        <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed font-light">Jaminan kondisi fisik hewan 100% akurat. Jika tidak sesuai deskripsi, langsung tukar unit baru dalam 1x24 jam.</p>
+                    </div>
                 </div>
-                <div class="p-6 bg-[#FAFAFA] rounded-2xl border border-neutral-100 card-hover-lift">
-                    <div class="text-accent font-extrabold text-xl mb-3">03</div>
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Sistem Live Update Kondisi
-                    </h3>
-                    <p class="text-xs text-neutral-500 leading-relaxed font-light">Konsumen dapat memantau perkembangan
-                        fisik hewan titipan kapan saja melalui laporan berkala foto dan video dari tim kandang.</p>
+                <div class="p-3.5 sm:p-5 bg-[#FAFAFA] rounded-2xl border border-neutral-100 card-hover-lift flex flex-col justify-between">
+                    <div>
+                        <div class="text-accent font-extrabold text-base sm:text-xl mb-1.5 sm:mb-2">03</div>
+                        <h3 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary mb-1 sm:mb-2">Live Update Berkala</h3>
+                        <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed font-light">Pantau perkembangan hewan titipan kapan saja lewat update berkala foto dan video dari tim kandang.</p>
+                    </div>
                 </div>
-                <div class="p-6 bg-[#FAFAFA] rounded-2xl border border-neutral-100 card-hover-lift">
-                    <div class="text-accent font-extrabold text-xl mb-3">04</div>
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Gratis Ongkos Kirim Penuh
-                    </h3>
-                    <p class="text-xs text-neutral-500 leading-relaxed font-light">Layanan pengantaran gratis (Free
-                        Shipping) khusus wilayah Jabodetabek, Cianjur, Sukabumi, dan seluruh Bandung Raya.</p>
+                <div class="p-3.5 sm:p-5 bg-[#FAFAFA] rounded-2xl border border-neutral-100 card-hover-lift flex flex-col justify-between">
+                    <div>
+                        <div class="text-accent font-extrabold text-base sm:text-xl mb-1.5 sm:mb-2">04</div>
+                        <h3 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary mb-1 sm:mb-2">Gratis Ongkos Kirim</h3>
+                        <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed font-light">Bebas biaya pengantaran ke Jabodetabek, Cianjur, Sukabumi, dan seluruh Bandung Raya.</p>
+                    </div>
                 </div>
-                <div class="p-6 bg-[#FAFAFA] rounded-2xl border border-neutral-100 md:col-span-2 card-hover-lift">
-                    <div class="text-accent font-extrabold text-xl mb-3">05</div>
-                    <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Standar Kesehatan Triple
-                        Check Syar'i</h3>
-                    <p class="text-xs text-neutral-500 leading-relaxed font-light">Dipantau ketat oleh tim dokter hewan
-                        dan Insinyur Peternakan dari masa adaptasi hingga pengantaran hari H, memastikan 100% cukup umur
-                        (poel), tidak cacat, dan sah syar'i.</p>
+                <div class="col-span-2 md:col-span-1 p-3.5 sm:p-5 bg-[#FAFAFA] rounded-2xl border border-neutral-100 card-hover-lift flex flex-col justify-between">
+                    <div>
+                        <div class="text-accent font-extrabold text-base sm:text-xl mb-1.5 sm:mb-2">05</div>
+                        <h3 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-primary mb-1 sm:mb-2">Triple Health Check</h3>
+                        <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed font-light">Dipantau ketat tim medis hewan dan Insinyur Peternakan, jaminan 100% poel, tidak cacat, dan sah syar'i.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -617,8 +624,8 @@
                 </div>
             </div>
 
-            <!-- Grid 3 Foto Dokumentasi -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
+            <!-- Grid Foto Dokumentasi (2 Kolom Mobile, 4 Kolom Desktop) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-4xl mx-auto">
                 <div onclick="openModal('assets/pict1.jpg')"
                     class="aspect-square rounded-2xl overflow-hidden border border-neutral-200/70 bg-white shadow-2xs group cursor-pointer relative">
                     <img src="assets/pict1.jpg" alt="Aktivitas Perawatan Domba 1"
@@ -643,9 +650,21 @@
                     </div>
                 </div>
 
-                <a href="https://instagram.com/kandangkangiky" target="_blank"
-                    class="aspect-square rounded-2xl overflow-hidden border border-neutral-200/70 bg-neutral-900 shadow-2xs group relative block">
+                <div onclick="openModal('assets/pict3.jpg')"
+                    class="hidden md:block aspect-square rounded-2xl overflow-hidden border border-neutral-200/70 bg-white shadow-2xs group cursor-pointer relative">
                     <img src="assets/pict3.jpg" alt="Aktivitas Perawatan Domba 3"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-center justify-center">
+                        <span
+                            class="opacity-0 group-hover:opacity-100 bg-white/90 text-primary text-[10px] font-bold px-3 py-1.5 rounded-full shadow-xs transition">🔍
+                            Perbesar</span>
+                    </div>
+                </div>
+
+                <a href="https://instagram.com/kandangkangiky" target="_blank"
+                    class="hidden md:block aspect-square rounded-2xl overflow-hidden border border-neutral-200/70 bg-neutral-900 shadow-2xs group relative">
+                    <img src="assets/hero.jpeg" alt="Dokumentasi Instagram Kandang Kang Iky"
                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                     <div class="absolute inset-x-0 bottom-0 p-4 text-left">
@@ -656,6 +675,15 @@
                         </div>
                         <p class="text-[10px] text-neutral-300 font-light mt-0.5">Kunjungi Instagram resmi kami</p>
                     </div>
+                </a>
+            </div>
+
+            <!-- Link Dokumentasi Mobile -->
+            <div class="text-center mt-3 md:hidden">
+                <a href="https://instagram.com/kandangkangiky" target="_blank"
+                    class="inline-flex items-center gap-1 text-[11px] font-bold text-accent hover:text-primary transition uppercase tracking-wider">
+                    <span>Lihat Dokumentasi Lengkap di Instagram</span>
+                    <span>&rarr;</span>
                 </a>
             </div>
         </div>
@@ -744,11 +772,11 @@
                 </div>
 
                 <!-- Sisi Kanan: 3 Pilar Gerakan -->
-                <div class="md:col-span-7 space-y-4">
+                <div class="md:col-span-7 flex md:flex-col gap-3 md:gap-0 overflow-x-auto snap-x snap-mandatory scrollbar-none md:space-y-4 pb-2 md:pb-0">
 
                     <!-- Pilar 1: Pemberdayaan Peternak Lokal -->
                     <div
-                        class="bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
+                        class="min-w-[85%] md:min-w-full snap-center shrink-0 bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
                         <div class="flex items-start gap-4">
                             <div
                                 class="w-10 h-10 rounded-xl bg-accent/10 text-accent font-extrabold text-sm flex items-center justify-center shrink-0">
@@ -773,7 +801,7 @@
 
                     <!-- Pilar 2: Sirkular Ekonomi & Zero Waste Organic -->
                     <div
-                        class="bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
+                        class="min-w-[85%] md:min-w-full snap-center shrink-0 bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
                         <div class="flex items-start gap-4">
                             <div
                                 class="w-10 h-10 rounded-xl bg-accent/10 text-accent font-extrabold text-sm flex items-center justify-center shrink-0">
@@ -799,7 +827,7 @@
 
                     <!-- Pilar 3: Edukasi Pemuda & Vokasi Agropreneur -->
                     <div
-                        class="bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
+                        class="min-w-[85%] md:min-w-full snap-center shrink-0 bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
                         <div class="flex items-start gap-4">
                             <div
                                 class="w-10 h-10 rounded-xl bg-accent/10 text-accent font-extrabold text-sm flex items-center justify-center shrink-0">
@@ -849,10 +877,10 @@
                     mitra kami.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="flex md:grid md:grid-cols-4 gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-2 md:pb-0">
                 <!-- Ulasan 1 -->
                 <div
-                    class="p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between card-hover-lift">
+                    class="min-w-[80%] md:min-w-full snap-center shrink-0 p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between card-hover-lift">
                     <div>
                         <div class="text-amber-400 text-xs mb-3">★★★★★</div>
                         <p class="text-neutral-600 text-xs leading-relaxed font-light mb-6">"Alhamdulillah qurban tahun
@@ -867,7 +895,7 @@
 
                 <!-- Ulasan 2 -->
                 <div
-                    class="p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between card-hover-lift">
+                    class="min-w-[80%] md:min-w-full snap-center shrink-0 p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between card-hover-lift">
                     <div>
                         <div class="text-amber-400 text-xs mb-3">★★★★★</div>
                         <p class="text-neutral-600 text-xs leading-relaxed font-light mb-6">"Paling suka sama
@@ -882,7 +910,7 @@
 
                 <!-- Ulasan 3 -->
                 <div
-                    class="p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between card-hover-lift">
+                    class="min-w-[80%] md:min-w-full snap-center shrink-0 p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between card-hover-lift">
                     <div>
                         <div class="text-amber-400 text-xs mb-3">★★★★★</div>
                         <p class="text-neutral-600 text-xs leading-relaxed font-light mb-6">"Program tabungannya
@@ -897,7 +925,7 @@
 
                 <!-- Ulasan 4 -->
                 <div
-                    class="p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between card-hover-lift">
+                    class="min-w-[80%] md:min-w-full snap-center shrink-0 p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between card-hover-lift">
                     <div>
                         <div class="text-amber-400 text-xs mb-3">★★★★★</div>
                         <p class="text-neutral-600 text-xs leading-relaxed font-light mb-6">"Baru pertama kali beli
@@ -916,10 +944,10 @@
                 x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
                 x-transition:leave="transition ease-in duration-200"
                 x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2"
-                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+                class="flex md:grid md:grid-cols-4 gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-none mt-6 pb-2 md:pb-0">
 
                 <div
-                    class="p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between">
+                    class="min-w-[80%] md:min-w-full snap-center shrink-0 p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between">
                     <div>
                         <div class="text-amber-400 text-xs mb-3">★★★★★</div>
                         <p class="text-neutral-600 text-xs leading-relaxed font-light mb-6">"Fasilitas free ongkirnya
@@ -933,7 +961,7 @@
                 </div>
 
                 <div
-                    class="p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between">
+                    class="min-w-[80%] md:min-w-full snap-center shrink-0 p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between">
                     <div>
                         <div class="text-amber-400 text-xs mb-3">★★★★★</div>
                         <p class="text-neutral-600 text-xs leading-relaxed font-light mb-6">"Kandangnya bersih banget
@@ -947,7 +975,7 @@
                 </div>
 
                 <div
-                    class="p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between">
+                    class="min-w-[80%] md:min-w-full snap-center shrink-0 p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between">
                     <div>
                         <div class="text-amber-400 text-xs mb-3">★★★★★</div>
                         <p class="text-neutral-600 text-xs leading-relaxed font-light mb-6">"Pilihan timbangan dombanya
@@ -961,7 +989,7 @@
                 </div>
 
                 <div
-                    class="p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between">
+                    class="min-w-[80%] md:min-w-full snap-center shrink-0 p-6 bg-white rounded-2xl border border-neutral-200/60 shadow-2xs flex flex-col justify-between">
                     <div>
                         <div class="text-amber-400 text-xs mb-3">★★★★★</div>
                         <p class="text-neutral-600 text-xs leading-relaxed font-light mb-6">"Komoditas lokal rasa
