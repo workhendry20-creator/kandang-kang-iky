@@ -71,7 +71,9 @@
             <div
                 class="hidden md:flex items-center gap-5 lg:gap-7 text-xs font-semibold tracking-wider uppercase text-neutral-500">
                 <a href="index.html" class="hover:text-accent transition duration-200">Beranda</a>
-                <a href="domba.html" class="text-accent font-bold transition duration-200 border-b-2 border-accent pb-0.5">Katalog &amp; Tabungan</a>
+                <a href="domba.html"
+                    class="text-accent font-bold transition duration-200 border-b-2 border-accent pb-0.5">Katalog &amp;
+                    Tabungan</a>
                 <a href="konsultasi.html" class="hover:text-accent transition duration-200">Konsultasi Insinyur</a>
                 <a href="dampak-sosial.html" class="hover:text-accent transition duration-200">Dampak Sosial</a>
                 <a href="#kontak" class="hover:text-accent transition duration-200">Kontak</a>
@@ -79,10 +81,10 @@
 
             <!-- Action Buttons Desktop & Mobile Toggle -->
             <div class="flex items-center gap-3">
-                <a href="https://kandangkangiky.vercel.app/track" target="_blank" rel="noopener noreferrer"
+                <a href="https://kandangkangiky.vercel.app" target="_blank" rel="noopener noreferrer"
                     class="hidden sm:inline-flex items-center gap-1.5 bg-accent/10 hover:bg-accent/20 text-accent font-bold text-xs uppercase px-4 py-2.5 rounded-full transition duration-200">
                     <span>🔍</span>
-                    <span>Track Dombamu</span>
+                    <span>Pantau Dombamu</span>
                 </a>
                 <!-- Mobile Hamburger -->
                 <button @click="mobileMenuOpen = !mobileMenuOpen"
@@ -105,14 +107,17 @@
             x-transition:leave-end="opacity-0 -translate-y-2"
             class="md:hidden bg-white border-b border-neutral-100 px-6 py-5 space-y-3 shadow-xl font-semibold text-xs tracking-wider uppercase text-neutral-600">
             <a href="index.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Beranda</a>
-            <a href="domba.html" @click="mobileMenuOpen = false" class="block py-1.5 text-accent font-bold">Katalog &amp; Tabungan</a>
-            <a href="konsultasi.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Konsultasi Insinyur</a>
-            <a href="dampak-sosial.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Dampak Sosial</a>
+            <a href="domba.html" @click="mobileMenuOpen = false" class="block py-1.5 text-accent font-bold">Katalog
+                &amp; Tabungan</a>
+            <a href="konsultasi.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Konsultasi
+                Insinyur</a>
+            <a href="dampak-sosial.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Dampak
+                Sosial</a>
             <a href="#kontak" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Kontak</a>
             <div class="pt-2 border-t border-neutral-100 flex gap-2">
-                <a href="https://kandangkangiky.vercel.app/track" target="_blank" rel="noopener noreferrer"
+                <a href="https://kandangkangiky.vercel.app" target="_blank" rel="noopener noreferrer"
                     class="flex-1 text-center bg-accent text-white py-2.5 rounded-xl font-bold text-xs uppercase">
-                    🔍 Track Dombamu
+                    🔍 Pantau Dombamu
                 </a>
             </div>
         </div>
@@ -121,35 +126,32 @@
     <!-- 2. PAGE HEADER / BANNER -->
     <header class="relative bg-white py-14 sm:py-20 border-b border-neutral-100 overflow-hidden">
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <span class="text-[11px] font-bold tracking-[0.25em] text-accent uppercase bg-accent/10 px-4 py-1.5 rounded-full inline-flex items-center gap-1.5 mb-4">
-                <span>🐑</span>
-                <span>Pusat Penggemukan &amp; Pembibitan Domba Unggul</span>
-            </span>
             <h1 class="text-3xl sm:text-5xl font-extrabold text-primary tracking-tight leading-[1.2] mb-4">
                 Katalog Domba Unggul &amp;<br>
                 <span class="font-serif italic font-normal text-accent">Program Tabungan Qurban 2026</span>
             </h1>
             <p class="text-neutral-600 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed font-light mb-8">
-                Pilihan domba qurban &amp; aqiqah terbaik ras Dorper, Cross Texel, dan Garut. Gemuk sehat alami dengan ransum Complete Feed, terstandarisasi syariat, serta skema tabungan qurban bertahap tanpa rasa berat.
+                Pilihan domba qurban &amp; aqiqah terbaik ras Dorper, Cross Texel, dan Garut. Gemuk sehat alami dengan
+                ransum Complete Feed, terstandarisasi syariat, serta skema tabungan qurban bertahap tanpa rasa berat.
             </p>
             <div class="flex flex-wrap items-center justify-center gap-3">
                 <a href="#pricelist"
                     class="inline-flex items-center gap-2 bg-primary hover:bg-[#152e20] text-white font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-sm hover:shadow-md">
                     <span>Lihat Pricelist Resmi</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </a>
                 <a href="#kalkulator-tabungan"
                     class="inline-flex items-center gap-2 bg-accent hover:bg-[#3d7511] text-white font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-sm hover:shadow-md">
                     <span>Hitung Cicilan Tabungan</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </a>
                 <button onclick="sendWhatsapp('buy')"
                     class="inline-flex items-center gap-2 bg-white border border-neutral-200 text-primary hover:border-accent hover:text-accent font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-2xs cursor-pointer">
-                    <span>💬 Tanya Admin WA</span>
+                    <span>💬 Tanya Admin</span>
                 </button>
             </div>
         </div>
@@ -160,52 +162,59 @@
         <div class="max-w-6xl mx-auto px-6">
 
             <div class="text-center mb-12">
-                <span class="text-accent text-xs font-bold uppercase tracking-widest px-3 py-1 bg-accent/10 rounded-full inline-block">
-                    Katalog Resmi
-                </span>
+
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-primary mt-3 mb-2">Pricelist Hewan Qurban 2026</h2>
                 <p class="text-xs text-neutral-500 font-light max-w-md mx-auto">
-                    Daftar harga transparan hewan qurban Kandang Kang Iky. Booking lebih awal untuk mendapatkan harga hemat dan bobot terbaik!
+                    Daftar harga transparan hewan qurban Kandang Kang Iky. Booking lebih awal untuk mendapatkan harga
+                    hemat dan bobot terbaik!
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start max-w-4xl mx-auto">
 
                 <!-- Card Pricelist 1: Domba Tanduk Garut -->
-                <div class="bg-white p-3 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 group">
+                <div
+                    class="bg-white p-3 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 group">
                     <div onclick="openModal('assets/PL2.png')"
                         class="overflow-hidden rounded-xl bg-neutral-100 aspect-[3/2] flex items-center justify-center relative cursor-pointer">
                         <img src="assets/PL2.png" alt="Pricelist Domba Tanduk Garut"
                             class="w-full h-full object-cover group-hover:scale-103 transition duration-500"
                             loading="lazy">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-center justify-center">
-                            <span class="opacity-0 group-hover:opacity-100 bg-white/95 text-primary text-xs font-bold px-4 py-2 rounded-full shadow-md transition transform scale-95 group-hover:scale-100">
+                        <div
+                            class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-center justify-center">
+                            <span
+                                class="opacity-0 group-hover:opacity-100 bg-white/95 text-primary text-xs font-bold px-4 py-2 rounded-full shadow-md transition transform scale-95 group-hover:scale-100">
                                 🔍 Klik Perbesar Gambar
                             </span>
                         </div>
                     </div>
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-sm text-primary">Pricelist Domba Tanduk Garut</h3>
-                        <p class="text-[11px] text-neutral-400 font-light mt-0.5">Tipe gagah bertanduk seni khas Jawa Barat</p>
+                        <p class="text-[11px] text-neutral-400 font-light mt-0.5">Tipe gagah bertanduk seni khas Jawa
+                            Barat</p>
                     </div>
                 </div>
 
                 <!-- Card Pricelist 2: Domba Cross Texel & Dorper -->
-                <div class="bg-white p-3 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 group">
+                <div
+                    class="bg-white p-3 rounded-2xl border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 group">
                     <div onclick="openModal('assets/PL1.png')"
                         class="overflow-hidden rounded-xl bg-neutral-100 aspect-[3/2] flex items-center justify-center relative cursor-pointer">
                         <img src="assets/PL1.png" alt="Pricelist Domba Cross Texel dan Dorper"
                             class="w-full h-full object-cover group-hover:scale-103 transition duration-500"
                             loading="lazy">
-                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-center justify-center">
-                            <span class="opacity-0 group-hover:opacity-100 bg-white/95 text-primary text-xs font-bold px-4 py-2 rounded-full shadow-md transition transform scale-95 group-hover:scale-100">
+                        <div
+                            class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-center justify-center">
+                            <span
+                                class="opacity-0 group-hover:opacity-100 bg-white/95 text-primary text-xs font-bold px-4 py-2 rounded-full shadow-md transition transform scale-95 group-hover:scale-100">
                                 🔍 Klik Perbesar Gambar
                             </span>
                         </div>
                     </div>
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-sm text-primary">Pricelist Domba Cross Texel &amp; Dorper</h3>
-                        <p class="text-[11px] text-neutral-400 font-light mt-0.5">Tipe daging tebal unggul tanpa tanduk / poled</p>
+                        <p class="text-[11px] text-neutral-400 font-light mt-0.5">Tipe daging tebal unggul tanpa tanduk
+                            / poled</p>
                     </div>
                 </div>
 
@@ -231,24 +240,32 @@
     <section id="tabungan" class="py-16 sm:py-24 bg-white border-t border-b border-neutral-100 scroll-mt-20">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-12">
-                <span class="text-xs font-bold tracking-[0.2em] text-accent uppercase block mb-2">Perencanaan Ibadah</span>
+                <span class="text-xs font-bold tracking-[0.2em] text-accent uppercase block mb-2">Perencanaan
+                    Ibadah</span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-primary mb-2">Program Tabungan Qurban 2026</h2>
-                <p class="text-xs text-neutral-500 font-light">Rencanakan qurban terbaik Anda tanpa rasa berat dengan setoran bertahap fleksibel.</p>
+                <p class="text-xs text-neutral-500 font-light">Rencanakan qurban terbaik Anda tanpa rasa berat dengan
+                    setoran bertahap fleksibel.</p>
             </div>
 
             <!-- Paket Kartu Tabungan -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto items-stretch mb-16">
                 <!-- Paket Non-Tanduk -->
-                <div class="bg-[#FAFAFA] border border-neutral-200 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-2xs card-hover-lift">
+                <div
+                    class="bg-[#FAFAFA] border border-neutral-200 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-2xs card-hover-lift">
                     <div>
-                        <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">Pilihan Ekonomis</span>
+                        <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">Pilihan
+                            Ekonomis</span>
                         <h3 class="text-2xl font-bold text-primary mt-2 mb-1">Domba Non-Tanduk</h3>
                         <p class="text-sm font-bold text-accent mb-6">Mulai dari Rp 2.500.000</p>
-                        <ul class="space-y-3 text-xs text-neutral-600 font-light border-t border-neutral-200/70 pt-6 mb-8">
+                        <ul
+                            class="space-y-3 text-xs text-neutral-600 font-light border-t border-neutral-200/70 pt-6 mb-8">
                             <li class="flex items-center gap-2"><span>✓</span><span>Hasil Daging Padat Alami</span></li>
-                            <li class="flex items-center gap-2"><span>✓</span><span>Gratis Perawatan Sampai Hari H</span></li>
-                            <li class="flex items-center gap-2"><span>✓</span><span>Gratis Ongkir Jabodetabek &amp; Bandung</span></li>
-                            <li class="flex items-center gap-2"><span>✓</span><span>Jaminan Syariat &amp; Cukup Umur</span></li>
+                            <li class="flex items-center gap-2"><span>✓</span><span>Gratis Perawatan Sampai Hari
+                                    H</span></li>
+                            <li class="flex items-center gap-2"><span>✓</span><span>Gratis Ongkir Jabodetabek &amp;
+                                    Bandung</span></li>
+                            <li class="flex items-center gap-2"><span>✓</span><span>Jaminan Syariat &amp; Cukup
+                                    Umur</span></li>
                         </ul>
                     </div>
                     <a href="#kalkulator-tabungan"
@@ -258,18 +275,25 @@
                 </div>
 
                 <!-- Paket Tanduk Garut -->
-                <div class="bg-white border-2 border-accent rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-sm card-hover-lift relative mt-4 md:mt-0">
-                    <span class="absolute -top-3 left-6 bg-accent text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider shadow-2xs">
+                <div
+                    class="bg-white border-2 border-accent rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-sm card-hover-lift relative mt-4 md:mt-0">
+                    <span
+                        class="absolute -top-3 left-6 bg-accent text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider shadow-2xs">
                         Paling Diminati
                     </span>
                     <div>
-                        <span class="text-[10px] font-bold text-accent uppercase tracking-widest block mt-1">Pilihan Gagah Eksklusif</span>
+                        <span class="text-[10px] font-bold text-accent uppercase tracking-widest block mt-1">Pilihan
+                            Gagah Eksklusif</span>
                         <h3 class="text-2xl font-bold text-primary mt-2 mb-1">Domba Tanduk Garut</h3>
                         <p class="text-sm font-bold text-accent mb-6">Mulai dari Rp 3.800.000</p>
-                        <ul class="space-y-3 text-xs text-neutral-600 font-light border-t border-neutral-200/70 pt-6 mb-8">
-                            <li class="flex items-center gap-2 text-neutral-900 font-medium"><span>✓</span><span>Postur Tanduk Seni &amp; Badan Gagah</span></li>
-                            <li class="flex items-center gap-2"><span>✓</span><span>Pakan Complete Feed Terstandarisasi</span></li>
-                            <li class="flex items-center gap-2"><span>✓</span><span>Garansi Tukar Baru 1x24 Jam</span></li>
+                        <ul
+                            class="space-y-3 text-xs text-neutral-600 font-light border-t border-neutral-200/70 pt-6 mb-8">
+                            <li class="flex items-center gap-2 text-neutral-900 font-medium"><span>✓</span><span>Postur
+                                    Tanduk Seni &amp; Badan Gagah</span></li>
+                            <li class="flex items-center gap-2"><span>✓</span><span>Pakan Complete Feed
+                                    Terstandarisasi</span></li>
+                            <li class="flex items-center gap-2"><span>✓</span><span>Garansi Tukar Baru 1x24 Jam</span>
+                            </li>
                             <li class="flex items-center gap-2"><span>✓</span><span>Update Video Live Rutin</span></li>
                         </ul>
                     </div>
@@ -282,49 +306,57 @@
 
             <!-- INTERACTIVE CALCULATOR SECTION -->
             <div id="kalkulator-tabungan" class="max-w-2xl mx-auto scroll-mt-28">
-                <div class="bg-[#FAFAFA] rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary"></div>
+                <div
+                    class="bg-[#FAFAFA] rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm relative overflow-hidden">
+                    <div
+                        class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary">
+                    </div>
 
                     <div class="text-center mb-8">
-                        <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-accent mb-2 inline-block bg-accent/10 px-3 py-1 rounded-full">
-                            Kalkulator Finansial Ibadah
-                        </span>
+
                         <h3 class="text-2xl font-extrabold text-primary tracking-tight mt-2">
                             Simulasi Tabungan Qurban 2026
                         </h3>
                         <p class="text-xs text-neutral-500 font-light mt-1.5 max-w-md mx-auto">
-                            Tentukan tipe domba dan jangka waktu cicilan. Sistem akan menghitung estimasi setoran bulanan Anda secara otomatis.
+                            Tentukan tipe domba dan jangka waktu cicilan. Sistem akan menghitung estimasi setoran
+                            bulanan Anda secara otomatis.
                         </p>
                     </div>
 
                     <!-- Form Controls -->
                     <div class="space-y-5 mb-6">
                         <div>
-                            <label for="pilih-domba" class="block text-[11px] font-bold tracking-wider text-neutral-600 uppercase mb-2">
+                            <label for="pilih-domba"
+                                class="block text-[11px] font-bold tracking-wider text-neutral-600 uppercase mb-2">
                                 1. Pilihan Tipe Hewan &amp; Estimasi Bobot
                             </label>
                             <div class="relative">
-                                <select id="pilih-domba" class="w-full border border-neutral-200 rounded-xl px-4 py-3.5 bg-white text-xs font-semibold text-neutral-800 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition appearance-none cursor-pointer">
+                                <select id="pilih-domba"
+                                    class="w-full border border-neutral-200 rounded-xl px-4 py-3.5 bg-white text-xs font-semibold text-neutral-800 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition appearance-none cursor-pointer">
                                     <!-- Dimuat dinamis oleh js/calculator.js -->
                                 </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-neutral-400 text-xs">
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-neutral-400 text-xs">
                                     ▼
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <label for="pilih-tenor" class="block text-[11px] font-bold tracking-wider text-neutral-600 uppercase mb-2">
+                            <label for="pilih-tenor"
+                                class="block text-[11px] font-bold tracking-wider text-neutral-600 uppercase mb-2">
                                 2. Jangka Waktu Setoran (Tenor)
                             </label>
                             <div class="relative">
-                                <select id="pilih-tenor" class="w-full border border-neutral-200 rounded-xl px-4 py-3.5 bg-white text-xs font-semibold text-neutral-800 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition appearance-none cursor-pointer">
+                                <select id="pilih-tenor"
+                                    class="w-full border border-neutral-200 rounded-xl px-4 py-3.5 bg-white text-xs font-semibold text-neutral-800 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition appearance-none cursor-pointer">
                                     <option value="3">3 Bulan (Jangka Singkat)</option>
                                     <option value="6" selected>6 Bulan (Direkomendasikan)</option>
                                     <option value="9">9 Bulan (Santai &amp; Ringan)</option>
                                     <option value="12">12 Bulan (Setoran Minimal)</option>
                                 </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-neutral-400 text-xs">
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-neutral-400 text-xs">
                                     ▼
                                 </div>
                             </div>
@@ -336,13 +368,17 @@
                         <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 block mb-1">
                             Estimasi Setoran Tabungan
                         </span>
-                        <div id="hasil-cicilan" class="text-2xl sm:text-3xl font-extrabold text-accent tracking-tight my-1">
+                        <div id="hasil-cicilan"
+                            class="text-2xl sm:text-3xl font-extrabold text-accent tracking-tight my-1">
                             Rp 0 / bulan
                         </div>
-                        <div class="flex items-center justify-center gap-3 text-xs text-neutral-500 font-light mt-2 pt-3 border-t border-neutral-100">
-                            <span>Total Harga: <strong id="total-harga" class="font-bold text-neutral-800">Rp 0</strong></span>
+                        <div
+                            class="flex items-center justify-center gap-3 text-xs text-neutral-500 font-light mt-2 pt-3 border-t border-neutral-100">
+                            <span>Total Harga: <strong id="total-harga" class="font-bold text-neutral-800">Rp
+                                    0</strong></span>
                             <span>•</span>
-                            <span id="ringkasan-paket" class="font-medium text-primary">Domba Non-Tanduk — 6 Bulan</span>
+                            <span id="ringkasan-paket" class="font-medium text-primary">Domba Non-Tanduk — 6
+                                Bulan</span>
                         </div>
                     </div>
 
@@ -357,7 +393,8 @@
                     </a>
 
                     <div class="mt-4 text-center">
-                        <a href="simulasi.html" class="text-[11px] text-neutral-400 hover:text-accent font-medium underline">
+                        <a href="simulasi.html"
+                            class="text-[11px] text-neutral-400 hover:text-accent font-medium underline">
                             Buka Simulator Tabungan Halaman Penuh &rarr;
                         </a>
                     </div>
@@ -374,52 +411,61 @@
 
                 <div class="md:col-span-5 space-y-6">
                     <div>
-                        <span class="text-xs font-bold tracking-[0.2em] text-accent uppercase block mb-3">Pemesanan &amp; Survei</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-primary mb-3">Terhubung Bersama Kandang Kang Iky</h2>
+                        <span class="text-xs font-bold tracking-[0.2em] text-accent uppercase block mb-3">Pemesanan
+                            &amp; Survei</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-primary mb-3">Terhubung
+                            Bersama Kandang Kang Iky</h2>
                         <p class="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
-                            Punya pertanyaan seputar kurban, booking domba, atau pendaftaran program tabungan? Silakan hubungi saluran resmi kami berikut ini.
+                            Punya pertanyaan seputar kurban, booking domba, atau pendaftaran program tabungan? Silakan
+                            hubungi saluran resmi kami berikut ini.
                         </p>
                     </div>
 
                     <div class="space-y-3 pt-2">
                         <a href="https://wa.me/6287729727309" target="_blank"
                             class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-neutral-200/70 hover:border-[#25D366]/60 hover:shadow-2xs transition duration-300 group">
-                            <div class="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center text-[#25D366] shrink-0 transition group-hover:bg-[#25D366] group-hover:text-white">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center text-[#25D366] shrink-0 transition group-hover:bg-[#25D366] group-hover:text-white">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 12.008 0c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 12.004-11.953 12.004-.001 0-.001 0 0 0-2.001-.001-3.972-.542-5.717-1.564L0 24zm6.59-4.846c1.673.993 3.33 1.543 5.35 1.544 5.385 0 9.767-4.385 9.77-9.774.002-2.611-1.015-5.066-2.866-6.92C17.003 2.15 14.552 1.132 11.947 1.131 6.564 1.131 2.184 5.512 2.181 10.9c-.001 1.953.511 3.86 1.483 5.53l-.995 3.637 3.731-.978zm11.365-6.81c-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.668.149-.198.299-.765.967-.939 1.165-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.174.2-.298.3-.496.1-.198.05-.371-.025-.521-.075-.149-.668-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" />
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">WhatsApp Resmi</h4>
+                                <h4 class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">WhatsApp
+                                    Resmi</h4>
                                 <p class="text-xs font-bold text-primary mt-0.5">0877-2972-7309</p>
                             </div>
                         </a>
 
                         <a href="https://instagram.com/kandangkangiky" target="_blank"
                             class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-neutral-200/70 hover:border-pink-500/60 hover:shadow-2xs transition duration-300 group">
-                            <div class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-500 shrink-0 transition group-hover:bg-pink-500 group-hover:text-white">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-500 shrink-0 transition group-hover:bg-pink-500 group-hover:text-white">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Instagram</h4>
+                                <h4 class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Instagram
+                                </h4>
                                 <p class="text-xs font-bold text-primary mt-0.5">@kandangkangiky</p>
                             </div>
                         </a>
 
                         <a href="mailto:kandangkangiky@gmail.com"
                             class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-neutral-200/70 hover:border-blue-500/60 hover:shadow-2xs transition duration-300 group">
-                            <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 shrink-0 transition group-hover:bg-blue-500 group-hover:text-white">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 shrink-0 transition group-hover:bg-blue-500 group-hover:text-white">
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                                     <path
                                         d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Email Resmi</h4>
+                                <h4 class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Email Resmi
+                                </h4>
                                 <p class="text-xs font-bold text-primary mt-0.5">kandangkangiky@gmail.com</p>
                             </div>
                         </a>
@@ -428,8 +474,10 @@
 
                 <!-- Form Kritik & Pesanan -->
                 <div class="md:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-neutral-200/70 shadow-2xs">
-                    <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-1">Pertanyaan &amp; Booking Hewan</h3>
-                    <p class="text-neutral-400 text-xs font-light mb-6">Tinggalkan pesan Anda, tim customer service kami akan segera merespons.</p>
+                    <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-1">Pertanyaan &amp; Booking
+                        Hewan</h3>
+                    <p class="text-neutral-400 text-xs font-light mb-6">Tinggalkan pesan Anda, tim customer service kami
+                        akan segera merespons.</p>
 
                     <form action="https://formsubmit.co/kandangkangiky@gmail.com" method="POST" class="space-y-4">
                         <input type="hidden" name="_captcha" value="false">
@@ -437,19 +485,25 @@
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Nama Lengkap</label>
+                                <label
+                                    class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Nama
+                                    Lengkap</label>
                                 <input type="text" name="Nama" placeholder="Nama Anda" required
                                     class="w-full bg-[#FAFAFA] border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition">
                             </div>
                             <div>
-                                <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Nomor WhatsApp</label>
+                                <label
+                                    class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Nomor
+                                    WhatsApp</label>
                                 <input type="tel" name="WhatsApp" placeholder="Contoh: 0812345..." required
                                     class="w-full bg-[#FAFAFA] border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition">
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Isi Pesan / Pertanyaan</label>
+                            <label
+                                class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Isi
+                                Pesan / Pertanyaan</label>
                             <textarea name="Pesan" rows="4"
                                 placeholder="Tuliskan jenis domba yang diinginkan atau pertanyaan Anda..." required
                                 class="w-full bg-[#FAFAFA] border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition resize-none"></textarea>
@@ -474,24 +528,30 @@
             <div>
                 <h3 class="text-white font-semibold text-base mb-3 tracking-wide">Kandang Kang Iky</h3>
                 <p class="text-xs text-neutral-400 leading-relaxed font-light">
-                    Peternakan domba modern berbasis sains dan syariat di Parung, Bogor. Menghadirkan komoditas domba unggul (Dorper, Cross Texel, Garut), layanan riset &amp; konsultasi Insinyur Peternakan, serta ekosistem sirkular pemberdayaan masyarakat lokal.
+                    Peternakan domba modern berbasis sains dan syariat di Parung, Bogor. Menghadirkan komoditas domba
+                    unggul (Dorper, Cross Texel, Garut), layanan riset &amp; konsultasi Insinyur Peternakan, serta
+                    ekosistem sirkular pemberdayaan masyarakat lokal.
                 </p>
             </div>
 
             <div>
-                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Navigasi Halaman</h3>
+                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Navigasi
+                    Halaman</h3>
                 <ul class="space-y-2 text-xs font-light">
                     <li><a href="index.html" class="hover:text-accent transition">Beranda Utama</a></li>
-                    <li><a href="domba.html" class="hover:text-accent text-emerald-400 transition">Katalog &amp; Tabungan Domba</a></li>
+                    <li><a href="domba.html" class="hover:text-accent text-emerald-400 transition">Katalog &amp;
+                            Tabungan Domba</a></li>
                     <li><a href="konsultasi.html" class="hover:text-accent transition">Konsultasi Insinyur</a></li>
-                    <li><a href="dampak-sosial.html" class="hover:text-accent transition">Dampak Sosial &amp; CSR</a></li>
+                    <li><a href="dampak-sosial.html" class="hover:text-accent transition">Dampak Sosial &amp; CSR</a>
+                    </li>
                     <li><a href="simulasi.html" class="hover:text-accent transition">Simulator Cicilan</a></li>
                     <li><a href="#pricelist" class="hover:text-accent transition">Pricelist Hewan Qurban</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Kontak &amp; Lokasi</h3>
+                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Kontak &amp;
+                    Lokasi</h3>
                 <ul class="space-y-3 text-xs font-light">
                     <li>
                         <a href="https://maps.google.com/?q=Kecamatan+Parung+Bogor" target="_blank"
@@ -518,7 +578,8 @@
             </div>
 
             <div>
-                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Layanan &amp; Media Sosial</h3>
+                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Layanan &amp;
+                    Media Sosial</h3>
                 <p class="text-xs text-neutral-400 leading-relaxed font-light mb-3">
                     Konsultasi Peternakan, Beli &amp; Tabung Domba, serta Kemitraan CSR Berdampak Sosial.
                 </p>
@@ -535,7 +596,8 @@
             </div>
         </div>
 
-        <div class="max-w-6xl mx-auto px-6 border-t border-neutral-800/60 pt-8 text-center text-xs text-neutral-500 font-light">
+        <div
+            class="max-w-6xl mx-auto px-6 border-t border-neutral-800/60 pt-8 text-center text-xs text-neutral-500 font-light">
             &copy; 2026 Kandang Kang Iky. All Rights Reserved. Built Professionally.
         </div>
 
