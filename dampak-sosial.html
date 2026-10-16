@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dampak Sosial, Kemitraan Sirkular & CSR — Kandang Kang Iky</title>
+    <meta name="description"
+        content="Program pemberdayaan peternak lokal, sirkular ekonomi zero waste organik, dan kolaborasi CSR peternakan berkelanjutan bersama Kandang Kang Iky di Parung, Bogor.">
+    <meta name="keywords"
+        content="dampak sosial kandang kang iky, csr peternakan bogor, pemberdayaan peternak lokal, circular economy peternakan, pupuk organik domba, parung bogor">
+    <meta name="theme-color" content="#1E3E2B">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dampak Sosial, Kemitraan Sirkular & CSR — Kandang Kang Iky">
+    <meta property="og:description"
+        content="Ekosistem peternakan sirkular terpadu: memberdayakan petani limbah lokal, zero waste feses pupuk organik, dan bimbingan vokasi agropreneur muda.">
+    <meta property="og:image" content="assets/bea1.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3E2B',   /* Deep Forest Green */
+                        accent: '#478A14',    /* Bright Fresh Green */
+                        dark: '#0B1320',      /* Obsidian Footer */
+                        slateBg: '#FAFAFA'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Alpine.js Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="text-neutral-900 antialiased overflow-x-hidden bg-[#FAFAFA]" x-data="{ mobileMenuOpen: false }">
+
+    <!-- 1. NAVBAR -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-neutral-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+
+            <!-- Logo Brand -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-neutral-200/80 flex items-center justify-center bg-white aspect-square shrink-0 shadow-2xs">
+                    <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky"
+                        class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-xs sm:text-sm tracking-[0.15em] uppercase text-primary">Kandang
+                        Kang Iky</span>
+                    <span class="text-[9px] text-neutral-400 tracking-wider uppercase hidden sm:block">Parung,
+                        Bogor</span>
+                </div>
+            </a>
+
+            <!-- Menu Desktop -->
+            <div
+                class="hidden md:flex items-center gap-5 lg:gap-7 text-xs font-semibold tracking-wider uppercase text-neutral-500">
+                <a href="index.html" class="hover:text-accent transition duration-200">Beranda</a>
+                <a href="domba.html" class="hover:text-accent transition duration-200">Katalog &amp; Tabungan</a>
+                <a href="konsultasi.html" class="hover:text-accent transition duration-200">Konsultasi Insinyur</a>
+                <a href="dampak-sosial.html" class="text-accent font-bold transition duration-200 border-b-2 border-accent pb-0.5">Dampak Sosial</a>
+                <a href="#kontak" class="hover:text-accent transition duration-200">Kontak</a>
+            </div>
+
+            <!-- Action Buttons Desktop & Mobile Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="https://kandangkangiky.vercel.app/track" target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:inline-flex items-center gap-1.5 bg-accent/10 hover:bg-accent/20 text-accent font-bold text-xs uppercase px-4 py-2.5 rounded-full transition duration-200">
+                    <span>🔍</span>
+                    <span>Track Dombamu</span>
+                </a>
+                <!-- Mobile Hamburger -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen"
+                    class="md:hidden p-2 text-neutral-600 hover:text-primary focus:outline-none"
+                    aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Dropdown Mobile -->
+        <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="md:hidden bg-white border-b border-neutral-100 px-6 py-5 space-y-3 shadow-xl font-semibold text-xs tracking-wider uppercase text-neutral-600">
+            <a href="index.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Beranda</a>
+            <a href="domba.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Katalog &amp; Tabungan</a>
+            <a href="konsultasi.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Konsultasi Insinyur</a>
+            <a href="dampak-sosial.html" @click="mobileMenuOpen = false" class="block py-1.5 text-accent font-bold">Dampak Sosial</a>
+            <a href="#kontak" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Kontak</a>
+            <div class="pt-2 border-t border-neutral-100 flex gap-2">
+                <a href="https://kandangkangiky.vercel.app/track" target="_blank" rel="noopener noreferrer"
+                    class="flex-1 text-center bg-accent text-white py-2.5 rounded-xl font-bold text-xs uppercase">
+                    🔍 Track Dombamu
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. PAGE HEADER / BANNER -->
+    <header class="relative bg-white py-14 sm:py-20 border-b border-neutral-100 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <span class="text-[11px] font-bold tracking-[0.25em] text-accent uppercase bg-accent/10 px-4 py-1.5 rounded-full inline-flex items-center gap-1.5 mb-4">
+                <span>🤝</span>
+                <span>Kemitraan Sirkular &amp; Pemberdayaan Warga</span>
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-primary tracking-tight leading-[1.2] mb-4">
+                Dampak Sosial &amp; Keberlanjutan<br>
+                <span class="font-serif italic font-normal text-accent">Ekonomi Sirkular Peternakan Berdaya di Parung</span>
+            </h1>
+            <p class="text-neutral-600 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed font-light mb-8">
+                Lebih dari sekadar peternakan komersial, Kandang Kang Iky menggerakkan model ekonomi terpadu: memberdayakan petani limbah pertanian sekitar Parung Bogor, mengolah kotoran menjadi pupuk kompos zero waste, serta membina pemuda desa mandiri berwirausaha.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <button onclick="sendWhatsapp('social')"
+                    class="inline-flex items-center gap-2 bg-primary hover:bg-[#152e20] text-white font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-sm hover:shadow-md cursor-pointer">
+                    <span>🤝 Kolaborasi Program CSR</span>
+                    <svg class="w-4 h-4 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </button>
+                <a href="#pilar-gerakan"
+                    class="inline-flex items-center gap-2 bg-accent hover:bg-[#3d7511] text-white font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-sm hover:shadow-md">
+                    <span>3 Pilar Gerakan</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <a href="#siklus-sirkular"
+                    class="inline-flex items-center gap-2 bg-white border border-neutral-200 text-primary hover:border-accent hover:text-accent font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-2xs">
+                    <span>♻️ Model Sirkular</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. SECTION IMPACT COUNTER / METRIK UTAMA -->
+    <section id="dampak-sosial" class="py-16 sm:py-24 bg-[#FAFAFA] border-b border-neutral-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-[11px] font-bold tracking-[0.25em] text-accent uppercase bg-accent/10 px-4 py-1.5 rounded-full inline-flex items-center gap-1.5 mb-3">
+                    <span>📊</span>
+                    <span>Metrik Nyata di Lapangan</span>
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-primary tracking-tight leading-tight">
+                    Jejak Dampak Sosial &amp; Lingkungan
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-500 font-light mt-3 leading-relaxed">
+                    Setiap transaksi dan kemitraan di Kandang Kang Iky turut menyokong penghidupan keluarga tani lokal dan kelestarian ekosistem pedesaan.
+                </p>
+            </div>
+
+            <!-- Counter / Statistik Dampak Sosial Grid -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16">
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-neutral-200/70 text-center shadow-2xs card-hover-lift">
+                    <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center mx-auto mb-3 text-lg">
+                        👨‍🌾
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-primary tracking-tight">
+                        15+ Keluarga
+                    </div>
+                    <div class="text-xs font-bold text-neutral-700 uppercase tracking-wider mt-1">
+                        Petani Mitra Lokal
+                    </div>
+                    <p class="text-[11px] text-neutral-400 font-light mt-1 leading-snug">
+                        Pemasok rutin limbah pertanian segar bernilai tambah ekonomis
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-neutral-200/70 text-center shadow-2xs card-hover-lift">
+                    <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center mx-auto mb-3 text-lg">
+                        ♻️
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-primary tracking-tight">
+                        100% Zero Waste
+                    </div>
+                    <div class="text-xs font-bold text-neutral-700 uppercase tracking-wider mt-1">
+                        Pengolahan Limbah
+                    </div>
+                    <p class="text-[11px] text-neutral-400 font-light mt-1 leading-snug">
+                        Seluruh kotoran kandang dikonversi jadi pupuk kompos organik
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-neutral-200/70 text-center shadow-2xs card-hover-lift">
+                    <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center mx-auto mb-3 text-lg">
+                        🎓
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-primary tracking-tight">
+                        20+ Pemuda
+                    </div>
+                    <div class="text-xs font-bold text-neutral-700 uppercase tracking-wider mt-1">
+                        Edukasi &amp; Vokasi
+                    </div>
+                    <p class="text-[11px] text-neutral-400 font-light mt-1 leading-snug">
+                        Pelatihan formulasi pakan dan peternakan modern mandiri
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-neutral-200/70 text-center shadow-2xs card-hover-lift">
+                    <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center mx-auto mb-3 text-lg">
+                        🕌
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-primary tracking-tight">
+                        500+ Ekor / Thn
+                    </div>
+                    <div class="text-xs font-bold text-neutral-700 uppercase tracking-wider mt-1">
+                        Penyaluran Amanah
+                    </div>
+                    <p class="text-[11px] text-neutral-400 font-light mt-1 leading-snug">
+                        Terdistribusi tepat sasaran ke shohibul qurban &amp; pelosok
+                    </p>
+                </div>
+            </div>
+
+            <!-- 4. DOKUMENTASI & 3 PILAR GERAKAN PEMBERDAYAAN -->
+            <div id="pilar-gerakan" class="grid md:grid-cols-12 gap-8 sm:gap-12 items-center mb-16 scroll-mt-28">
+
+                <!-- Sisi Kiri: Slider Foto Dokumentasi Nyata -->
+                <div class="md:col-span-5 flex flex-col justify-between h-full">
+                    <div class="mb-4">
+                        <span class="text-xs font-bold tracking-widest text-accent uppercase block mb-1">
+                            Dokumentasi Lapangan
+                        </span>
+                        <h3 class="text-xl font-extrabold text-primary tracking-tight">
+                            Aksi Nyata di Parung, Bogor
+                        </h3>
+                        <p class="text-neutral-500 text-xs font-light mt-1">
+                            Transfer teknologi peternakan modern bersama masyarakat lokal.
+                        </p>
+                    </div>
+
+                    <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden border border-neutral-200/80 relative bg-neutral-900 shadow-md group/slider"
+                        x-data="{ 
+                            activeSlide: 0, 
+                            slides: ['assets/bea1.jpg', 'assets/bea2.jpg', 'assets/bea3.jpg'],
+                            timer: null,
+                            startSlider() {
+                                this.timer = setInterval(() => { this.next(); }, 3000);
+                            },
+                            stopSlider() {
+                                clearInterval(this.timer);
+                            },
+                            next() {
+                                this.activeSlide = (this.activeSlide + 1) % this.slides.length;
+                            },
+                            prev() {
+                                this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length;
+                            }
+                         }" x-init="startSlider()" @mouseenter="stopSlider()" @mouseleave="startSlider()">
+
+                        <template x-for="(slide, index) in slides" :key="index">
+                            <div class="absolute inset-0 bg-neutral-900 flex items-center justify-center transition-opacity duration-700 ease-in-out"
+                                x-show="activeSlide === index" x-transition:enter="transition-opacity duration-700"
+                                x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                                x-transition:leave="transition-opacity duration-700"
+                                x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                                <img :src="slide" alt="Dokumentasi Pemberdayaan Warga"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </template>
+
+                        <button @click="prev()"
+                            class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center text-sm backdrop-blur-xs transition duration-200 opacity-0 group-hover/slider:opacity-100 z-20 cursor-pointer">
+                            &#10094;
+                        </button>
+                        <button @click="next()"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center text-sm backdrop-blur-xs transition duration-200 opacity-0 group-hover/slider:opacity-100 z-20 cursor-pointer">
+                            &#10095;
+                        </button>
+
+                        <div
+                            class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1.5 z-10 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-xs">
+                            <template x-for="(slide, index) in slides" :key="index">
+                                <button @click="activeSlide = index"
+                                    class="w-1.5 h-1.5 rounded-full transition-all duration-300"
+                                    :class="activeSlide === index ? 'bg-white w-4' : 'bg-white/50'"></button>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: 3 Pilar Gerakan -->
+                <div class="md:col-span-7 space-y-4">
+                    
+                    <!-- Pilar 1: Pemberdayaan Peternak Lokal -->
+                    <div class="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent font-extrabold text-sm flex items-center justify-center shrink-0">
+                                01
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <h4 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider">
+                                        Pemberdayaan Peternak &amp; Petani Lokal
+                                    </h4>
+                                    <span class="text-[9px] font-bold text-accent bg-accent/10 px-2 py-0.5 rounded-full uppercase">Kemitraan</span>
+                                </div>
+                                <p class="text-xs text-neutral-500 font-light leading-relaxed">
+                                    Melibatkan petani Parung dalam rantai pasok pengumpulan limbah pertanian (ampas singkong, dedak giling, jerami) dengan harga pembelian yang adil, serta membuka lapangan kerja kemitraan pemeliharaan ternak.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 2: Sirkular Ekonomi & Zero Waste Organic -->
+                    <div class="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent font-extrabold text-sm flex items-center justify-center shrink-0">
+                                02
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <h4 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider">
+                                        Sirkular Ekonomi &amp; Zero Waste Organic
+                                    </h4>
+                                    <span class="text-[9px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full uppercase">Ramah Lingkungan</span>
+                                </div>
+                                <p class="text-xs text-neutral-500 font-light leading-relaxed">
+                                    Menerapkan sistem dekomposisi feses dan urin domba seketika menjadi pupuk organik kaya hara. Mengeliminasi bau kandang 100%, ramah pemukiman sekitar, dan menyuplai kembali pupuk bermutu bagi lahan tani mitra.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 3: Edukasi Pemuda & Vokasi Agropreneur -->
+                    <div class="bg-white p-5 sm:p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent font-extrabold text-sm flex items-center justify-center shrink-0">
+                                03
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <h4 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider">
+                                        Edukasi Pemuda &amp; Vokasi Agropreneur
+                                    </h4>
+                                    <span class="text-[9px] font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-full uppercase">Regenerasi</span>
+                                </div>
+                                <p class="text-xs text-neutral-500 font-light leading-relaxed">
+                                    Program bimbingan vokasi dan transfer teknologi terapan dari Insinyur Peternakan kepada pemuda pedesaan. Membekali generasi muda keterampilan nutrisi ternak, biosekuriti, dan kemandirian agribisnis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 5. MODEL EKONOMI SIRKULAR TERPADU -->
+            <div id="siklus-sirkular" class="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-2xs mb-16 scroll-mt-28">
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-[10px] font-bold tracking-[0.25em] text-accent uppercase bg-accent/10 px-3.5 py-1 rounded-full inline-block mb-2">
+                        Siklus Keberlanjutan
+                    </span>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-primary tracking-tight">
+                        Alur Ekonomi Sirkular Peternakan Mandiri
+                    </h3>
+                    <p class="text-xs text-neutral-500 font-light mt-1.5">
+                        Menyatukan mata rantai pertanian, nutrisi hewan ternak, dan pemulihan kesuburan tanah.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div class="bg-[#FAFAFA] p-5 rounded-2xl border border-neutral-100 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-2">🌾</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider mb-1">1. Petani Lokal</h4>
+                            <p class="text-[11px] text-neutral-500 font-light">Memanen singkong &amp; dedak, menjual sisa limbah berkualitas ke peternakan.</p>
+                        </div>
+                        <div class="text-accent text-xs font-bold mt-3">&rarr; Masuk Ransum</div>
+                    </div>
+
+                    <div class="bg-[#FAFAFA] p-5 rounded-2xl border border-neutral-100 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-2">🔬</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider mb-1">2. Complete Feed</h4>
+                            <p class="text-[11px] text-neutral-500 font-light">Insinyur memformulasi limbah jadi ransum pakan berprotein &amp; berenergi tinggi.</p>
+                        </div>
+                        <div class="text-accent text-xs font-bold mt-3">&rarr; Pakan Ternak</div>
+                    </div>
+
+                    <div class="bg-[#FAFAFA] p-5 rounded-2xl border border-neutral-100 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-2">🐑</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider mb-1">3. Domba Unggul</h4>
+                            <p class="text-[11px] text-neutral-500 font-light">Domba tumbuh sehat, karkas padat optimal tanpa kimiawi berbahaya.</p>
+                        </div>
+                        <div class="text-accent text-xs font-bold mt-3">&rarr; Zero Waste</div>
+                    </div>
+
+                    <div class="bg-[#FAFAFA] p-5 rounded-2xl border border-neutral-100 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-2">🌱</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider mb-1">4. Kompos Organik</h4>
+                            <p class="text-[11px] text-neutral-500 font-light">Feses &amp; urin didekomposisi cepat menjadi pupuk organik nir-bau bermutu.</p>
+                        </div>
+                        <div class="text-accent text-xs font-bold mt-3">&rarr; Kembali ke Tani</div>
+                    </div>
+
+                    <div class="bg-[#FAFAFA] p-5 rounded-2xl border border-neutral-100 text-center flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-2">🌿</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider mb-1">5. Tanah Subur</h4>
+                            <p class="text-[11px] text-neutral-500 font-light">Pupuk mengembalikan unsur hara lahan tani tanpa merusak struktur tanah.</p>
+                        </div>
+                        <div class="text-accent text-xs font-bold mt-3">✓ 100% Berputar</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. CSR COLLABORATION BANNER -->
+            <div class="bg-gradient-to-br from-primary to-[#2a563c] rounded-3xl p-8 sm:p-12 text-white shadow-md relative overflow-hidden">
+                <div class="max-w-2xl relative z-10">
+                    <span class="text-[10px] uppercase font-bold tracking-[0.25em] text-accent bg-white/10 px-3.5 py-1 rounded-full inline-block mb-3">
+                        Kemitraan Sosial &amp; CSR
+                    </span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-3">
+                        Buka Peluang Kolaborasi CSR Peternakan Bersama Kami
+                    </h3>
+                    <p class="text-xs sm:text-sm text-neutral-200 font-light leading-relaxed mb-8">
+                        Kami membuka kerja sama strategis dengan perusahaan swasta, BUMN, instansi pemerintah, dan lembaga amil zakat untuk pengadaan hewan qurban berkeadilan, program desa binaan peternakan, serta penyediaan pupuk organik berkelanjutan.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <button onclick="sendWhatsapp('social')"
+                            class="inline-flex items-center gap-2 px-6 py-3.5 bg-accent hover:bg-[#3d7511] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300 shadow-md hover:shadow-lg cursor-pointer">
+                            <span>🤝</span>
+                            <span>Diskusikan Program CSR &amp; Kemitraan</span>
+                            <svg class="w-4 h-4 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </button>
+                        <a href="#kontak"
+                            class="inline-flex items-center gap-2 px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300">
+                            <span>Form Usulan Kolaborasi</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. FAQ PROGRAM SOSIAL & CSR -->
+    <section class="py-16 sm:py-24 bg-white border-b border-neutral-100">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <span class="text-xs font-bold tracking-[0.2em] text-accent uppercase block mb-3">Tanya Jawab</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-primary">Seputar Program Sosial &amp; CSR</h2>
+            </div>
+
+            <div class="space-y-3.5" x-data="{ active: null }">
+                <div class="bg-[#FAFAFA] border border-neutral-200/70 rounded-2xl overflow-hidden shadow-2xs transition">
+                    <button class="w-full text-left p-5 font-semibold text-xs sm:text-sm text-primary flex justify-between items-center bg-[#FAFAFA] cursor-pointer"
+                        @click="active = (active === 1 ? null : 1)">
+                        <span>Bentuk kemitraan CSR apa saja yang dapat dijalankan bersama Kandang Kang Iky?</span>
+                        <span class="text-sm text-neutral-400 font-mono" x-text="active === 1 ? '−' : '+'"></span>
+                    </button>
+                    <div class="bg-white border-t border-neutral-100 p-5 text-xs text-neutral-600 leading-relaxed font-light"
+                        x-show="active === 1" x-transition>
+                        Kami memfasilitasi program pengadaan &amp; distribusi qurban korporat tepat sasaran ke pelosok, program hibah indukan ternak untuk kelompok tani binaan CSR, serta workshop vokasi peternakan ramah lingkungan bagi pemuda pedesaan.
+                    </div>
+                </div>
+
+                <div class="bg-[#FAFAFA] border border-neutral-200/70 rounded-2xl overflow-hidden shadow-2xs transition">
+                    <button class="w-full text-left p-5 font-semibold text-xs sm:text-sm text-primary flex justify-between items-center bg-[#FAFAFA] cursor-pointer"
+                        @click="active = (active === 2 ? null : 2)">
+                        <span>Apakah lembaga kami akan menerima laporan pertanggungjawaban (LPJ) resmi?</span>
+                        <span class="text-sm text-neutral-400 font-mono" x-text="active === 2 ? '−' : '+'"></span>
+                    </button>
+                    <div class="bg-white border-t border-neutral-100 p-5 text-xs text-neutral-600 leading-relaxed font-light"
+                        x-show="active === 2" x-transition>
+                        Tentu. Kami menyediakan laporan komprehensif yang mencakup dokumentasi foto &amp; video beresolusi tinggi, data penerima manfaat (beneficiary list), berita acara serah terima, serta metrik dampak lingkungan yang siap diaudit.
+                    </div>
+                </div>
+
+                <div class="bg-[#FAFAFA] border border-neutral-200/70 rounded-2xl overflow-hidden shadow-2xs transition">
+                    <button class="w-full text-left p-5 font-semibold text-xs sm:text-sm text-primary flex justify-between items-center bg-[#FAFAFA] cursor-pointer"
+                        @click="active = (active === 3 ? null : 3)">
+                        <span>Bagaimana cara memulai inisiasi kolaborasi?</span>
+                        <span class="text-sm text-neutral-400 font-mono" x-text="active === 3 ? '−' : '+'"></span>
+                    </button>
+                    <div class="bg-white border-t border-neutral-100 p-5 text-xs text-neutral-600 leading-relaxed font-light"
+                        x-show="active === 3" x-transition>
+                        Silakan hubungi WhatsApp resmi kemitraan kami atau isi formulir di bawah. Tim kami siap mengadakan sesi presentasi proposal program baik secara offline (visit kandang Parung) maupun online.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SECTION HUBUNGI KAMI & FORM CSR -->
+    <section id="kontak" class="py-16 sm:py-24 bg-white border-t border-b border-neutral-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-10 items-start">
+
+                <div class="md:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold tracking-[0.2em] text-accent uppercase block mb-3">Kolaborasi Kemitraan</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-primary mb-3">Sinergi Berkelanjutan Bersama Kami</h2>
+                        <p class="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
+                            Punya gagasan program CSR, pengadaan qurban instansi, atau program ketahanan pangan desa? Hubungi tim kami sekarang.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <a href="https://wa.me/6287729727309" target="_blank"
+                            class="flex items-center gap-4 p-4 bg-[#FAFAFA] rounded-2xl border border-neutral-200/70 hover:border-[#25D366]/60 hover:shadow-2xs transition duration-300 group">
+                            <div class="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center text-[#25D366] shrink-0 transition group-hover:bg-[#25D366] group-hover:text-white">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 12.008 0c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 12.004-11.953 12.004-.001 0-.001 0 0 0-2.001-.001-3.972-.542-5.717-1.564L0 24zm6.59-4.846c1.673.993 3.33 1.543 5.35 1.544 5.385 0 9.767-4.385 9.77-9.774.002-2.611-1.015-5.066-2.866-6.92C17.003 2.15 14.552 1.132 11.947 1.131 6.564 1.131 2.184 5.512 2.181 10.9c-.001 1.953.511 3.86 1.483 5.53l-.995 3.637 3.731-.978zm11.365-6.81c-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.668.149-.198.299-.765.967-.939 1.165-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.174.2-.298.3-.496.1-.198.05-.371-.025-.521-.075-.149-.668-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">WhatsApp Kemitraan</h4>
+                                <p class="text-xs font-bold text-primary mt-0.5">0877-2972-7309</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:kandangkangiky@gmail.com"
+                            class="flex items-center gap-4 p-4 bg-[#FAFAFA] rounded-2xl border border-neutral-200/70 hover:border-blue-500/60 hover:shadow-2xs transition duration-300 group">
+                            <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 shrink-0 transition group-hover:bg-blue-500 group-hover:text-white">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Email Kemitraan</h4>
+                                <p class="text-xs font-bold text-primary mt-0.5">kandangkangiky@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Form Minat Kolaborasi -->
+                <div class="md:col-span-7 bg-[#FAFAFA] p-6 sm:p-8 rounded-3xl border border-neutral-200/70 shadow-2xs">
+                    <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-1">Formulir Minat Kolaborasi CSR</h3>
+                    <p class="text-neutral-400 text-xs font-light mb-6">Kirimkan rincian usulan kemitraan instansi / lembaga Anda.</p>
+
+                    <form action="https://formsubmit.co/kandangkangiky@gmail.com" method="POST" class="space-y-4">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Usulan Kolaborasi CSR Baru dari Website Kandang Kang Iky">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Nama PIC / Instansi</label>
+                                <input type="text" name="Nama_PIC_Instansi" placeholder="Contoh: PT Harapan Jaya / Bapak Fajar" required
+                                    class="w-full bg-white border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Nomor WhatsApp</label>
+                                <input type="tel" name="WhatsApp" placeholder="Contoh: 0812345..." required
+                                    class="w-full bg-white border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Kategori Kolaborasi</label>
+                            <select name="Kategori_CSR" class="w-full bg-white border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition">
+                                <option value="Pengadaan Qurban Lembaga">Pengadaan Hewan Qurban Lembaga / CSR</option>
+                                <option value="Bina Desa Peternakan">Program Bina Desa &amp; Vokasi Peternak</option>
+                                <option value="Kemitraan Pupuk Organik">Penyediaan Pupuk Kompos Organik Berkelanjutan</option>
+                                <option value="Lainnya">Bentuk Kemitraan Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Rencana Program / Pesan</label>
+                            <textarea name="Pesan" rows="4"
+                                placeholder="Jelaskan gambaran program kolaborasi yang ingin Anda laksanakan bersama Kandang Kang Iky..." required
+                                class="w-full bg-white border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition resize-none"></textarea>
+                        </div>
+
+                        <div class="text-right pt-2">
+                            <button type="submit"
+                                class="bg-primary hover:bg-[#152e20] text-white font-bold text-xs tracking-widest uppercase px-6 py-3.5 rounded-xl transition duration-300 shadow-2xs w-full sm:w-auto cursor-pointer">
+                                Kirim Usulan Kolaborasi &rarr;
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER -->
+    <footer class="bg-[#0B1320] text-neutral-400 pt-16 pb-8 relative">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <h3 class="text-white font-semibold text-base mb-3 tracking-wide">Kandang Kang Iky</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                    Peternakan domba modern berbasis sains dan syariat di Parung, Bogor. Menghadirkan komoditas domba unggul (Dorper, Cross Texel, Garut), layanan riset &amp; konsultasi Insinyur Peternakan, serta ekosistem sirkular pemberdayaan masyarakat lokal.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Navigasi Halaman</h3>
+                <ul class="space-y-2 text-xs font-light">
+                    <li><a href="index.html" class="hover:text-accent transition">Beranda Utama</a></li>
+                    <li><a href="domba.html" class="hover:text-accent transition">Katalog &amp; Tabungan Domba</a></li>
+                    <li><a href="konsultasi.html" class="hover:text-accent transition">Konsultasi Insinyur</a></li>
+                    <li><a href="dampak-sosial.html" class="hover:text-accent text-emerald-400 transition">Dampak Sosial &amp; CSR</a></li>
+                    <li><a href="#dampak-sosial" class="hover:text-accent transition">Statistik Dampak</a></li>
+                    <li><a href="#siklus-sirkular" class="hover:text-accent transition">Siklus Sirkular</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Kontak &amp; Lokasi</h3>
+                <ul class="space-y-3 text-xs font-light">
+                    <li>
+                        <a href="https://maps.google.com/?q=Kecamatan+Parung+Bogor" target="_blank"
+                            class="flex items-start gap-2.5 hover:text-emerald-400 transition">
+                            <span class="shrink-0">📍</span>
+                            <span class="leading-relaxed">Kecamatan Parung, Kabupaten Bogor, Jawa Barat.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/6287729727309" target="_blank"
+                            class="flex items-center gap-2.5 hover:text-emerald-400 transition">
+                            <span class="shrink-0">📞</span>
+                            <span>WhatsApp: 0877-2972-7309</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:kandangkangiky@gmail.com"
+                            class="flex items-center gap-2.5 hover:text-emerald-400 transition">
+                            <span class="shrink-0">✉️</span>
+                            <span>kandangkangiky@gmail.com</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Layanan &amp; Media Sosial</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed font-light mb-3">
+                    Konsultasi Peternakan, Beli &amp; Tabung Domba, serta Kemitraan CSR Berdampak Sosial.
+                </p>
+                <div class="pt-1">
+                    <a href="https://instagram.com/kandangkangiky" target="_blank"
+                        class="inline-flex items-center gap-2 px-3 py-2 bg-white/5 border border-white/10 rounded-xl text-xs text-neutral-300 hover:text-white hover:border-pink-500/50 hover:bg-pink-500/10 transition duration-300">
+                        <svg class="w-4 h-4 fill-current text-pink-500" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                        <span>@kandangkangiky</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 border-t border-neutral-800/60 pt-8 text-center text-xs text-neutral-500 font-light">
+            &copy; 2026 Kandang Kang Iky. All Rights Reserved. Built Professionally.
+        </div>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/6287729727309" target="_blank"
+            class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#20ba56] hover:scale-110 transition-all duration-300 z-50 group"
+            aria-label="Hubungi via WhatsApp">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.896 0c3.181.001 6.171 1.242 8.42 3.496 2.248 2.253 3.487 5.244 3.484 8.425-.004 6.571-5.329 11.896-11.898 11.896-2.003-.001-3.971-.505-5.717-1.464L0 24zm6.59-4.846c1.66.986 3.288 1.488 4.704 1.49 5.351 0 9.702-4.347 9.704-9.699.002-2.593-1.008-5.032-2.844-6.87C16.32 2.236 13.883 1.002 11.29 1c-5.356 0-9.704 4.349-9.707 9.701-.001 1.48.513 2.973 1.527 4.36l-.999 3.647 3.737-.98c1.373.748 2.5 1.154 3.992 1.154l-.004-.028zm10.743-7.516c-.297-.15-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            </svg>
+            <span
+                class="absolute right-16 bg-[#0B1320] text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-sm border border-neutral-800">
+                Chat WA
+            </span>
+        </a>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script>
+        function sendWhatsapp(intent, serviceTopic) {
+            const phone = (window.KandangConfig && window.KandangConfig.getAppConfig().whatsapp) ? window.KandangConfig.getAppConfig().whatsapp : "6287729727309";
+            let message = "";
+
+            if (intent === 'social') {
+                message = "Halo Kang Iky & Tim, saya tertarik untuk mendiskusikan peluang kolaborasi kemitraan peternak lokal / program CSR & dampak sosial bersama Kandang Kang Iky. Terima kasih!";
+            } else if (intent === 'consult') {
+                message = "Halo Ir. Rizky / Tim Kandang Kang Iky, saya ingin berkonsultasi mengenai peternakan domba modern. Terima kasih!";
+            } else if (intent === 'buy') {
+                message = "Halo Kang Iky, saya tertarik dengan informasi pembelian domba qurban/aqiqah atau program tabungan domba di Kandang Kang Iky. Terima kasih!";
+            } else {
+                message = "Halo Kandang Kang Iky, saya tertarik dengan program dampak sosial & kemitraan peternakan Anda. Terima kasih!";
+            }
+
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+
+</html>

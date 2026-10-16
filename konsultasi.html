@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsultasi Peternakan Modern & Sains Insinyur — Kandang Kang Iky</title>
+    <meta name="description"
+        content="Layanan konsultasi peternakan domba modern bersama Ir. Rizky Ayuna Budiman, S.Pt di Parung, Bogor. Formulasi ransum Complete Feed limbah lokal, audit kandang higienis bebas bau, dan bimbingan agropreneur.">
+    <meta name="keywords"
+        content="konsultasi peternakan domba, insinyur peternakan bogor, formulasi complete feed, desain kandang domba modern, rizky ayuna budiman, pakan domba parung">
+    <meta name="theme-color" content="#1E3E2B">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Konsultasi Peternakan Modern & Sains Insinyur — Kandang Kang Iky">
+    <meta property="og:description"
+        content="Bimbingan teknis profesional formulasi pakan nutrisi presisi, tata kelola kandang nir-bau, dan pelatihan agropreneur bersama Ir. Rizky Ayuna Budiman, S.Pt.">
+    <meta property="og:image" content="assets/profile.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3E2B',   /* Deep Forest Green */
+                        accent: '#478A14',    /* Bright Fresh Green */
+                        dark: '#0B1320',      /* Obsidian Footer */
+                        slateBg: '#FAFAFA'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Alpine.js Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="text-neutral-900 antialiased overflow-x-hidden bg-[#FAFAFA]" x-data="{ mobileMenuOpen: false }">
+
+    <!-- 1. NAVBAR -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-neutral-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+
+            <!-- Logo Brand -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div
+                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-neutral-200/80 flex items-center justify-center bg-white aspect-square shrink-0 shadow-2xs">
+                    <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky"
+                        class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-xs sm:text-sm tracking-[0.15em] uppercase text-primary">Kandang
+                        Kang Iky</span>
+                    <span class="text-[9px] text-neutral-400 tracking-wider uppercase hidden sm:block">Parung,
+                        Bogor</span>
+                </div>
+            </a>
+
+            <!-- Menu Desktop -->
+            <div
+                class="hidden md:flex items-center gap-5 lg:gap-7 text-xs font-semibold tracking-wider uppercase text-neutral-500">
+                <a href="index.html" class="hover:text-accent transition duration-200">Beranda</a>
+                <a href="domba.html" class="hover:text-accent transition duration-200">Katalog &amp; Tabungan</a>
+                <a href="konsultasi.html" class="text-accent font-bold transition duration-200 border-b-2 border-accent pb-0.5">Konsultasi Insinyur</a>
+                <a href="dampak-sosial.html" class="hover:text-accent transition duration-200">Dampak Sosial</a>
+                <a href="#kontak" class="hover:text-accent transition duration-200">Kontak</a>
+            </div>
+
+            <!-- Action Buttons Desktop & Mobile Toggle -->
+            <div class="flex items-center gap-3">
+                <a href="https://kandangkangiky.vercel.app/track" target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:inline-flex items-center gap-1.5 bg-accent/10 hover:bg-accent/20 text-accent font-bold text-xs uppercase px-4 py-2.5 rounded-full transition duration-200">
+                    <span>🔍</span>
+                    <span>Track Dombamu</span>
+                </a>
+                <!-- Mobile Hamburger -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen"
+                    class="md:hidden p-2 text-neutral-600 hover:text-primary focus:outline-none"
+                    aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Dropdown Mobile -->
+        <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="md:hidden bg-white border-b border-neutral-100 px-6 py-5 space-y-3 shadow-xl font-semibold text-xs tracking-wider uppercase text-neutral-600">
+            <a href="index.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Beranda</a>
+            <a href="domba.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Katalog &amp; Tabungan</a>
+            <a href="konsultasi.html" @click="mobileMenuOpen = false" class="block py-1.5 text-accent font-bold">Konsultasi Insinyur</a>
+            <a href="dampak-sosial.html" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Dampak Sosial</a>
+            <a href="#kontak" @click="mobileMenuOpen = false" class="block py-1.5 hover:text-accent">Kontak</a>
+            <div class="pt-2 border-t border-neutral-100 flex gap-2">
+                <a href="https://kandangkangiky.vercel.app/track" target="_blank" rel="noopener noreferrer"
+                    class="flex-1 text-center bg-accent text-white py-2.5 rounded-xl font-bold text-xs uppercase">
+                    🔍 Track Dombamu
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. PAGE HEADER / BANNER -->
+    <header class="relative bg-white py-14 sm:py-20 border-b border-neutral-100 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <span class="text-[11px] font-bold tracking-[0.25em] text-accent uppercase bg-accent/10 px-4 py-1.5 rounded-full inline-flex items-center gap-1.5 mb-4">
+                <span>🔬</span>
+                <span>Layanan Bimbingan &amp; Riset Sains Peternakan</span>
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-primary tracking-tight leading-[1.2] mb-4">
+                Konsultasi Peternakan Domba Modern<br>
+                <span class="font-serif italic font-normal text-accent">Berbasis Sains, Nutrisi &amp; Tata Kelola Higienis</span>
+            </h1>
+            <p class="text-neutral-600 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed font-light mb-8">
+                Dikelola dan dibimbing langsung oleh <strong class="font-semibold text-primary">Ir. Rizky Ayuna Budiman, S.Pt</strong> di Parung, Bogor. Solusi aplikatif bagi peternak, pemilik kandang, dan agropreneur untuk memacu produktivitas ternak dengan formulasi pakan limbah lokal serta efisiensi operasional terukur.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <a href="#konsultasi-layanan"
+                    class="inline-flex items-center gap-2 bg-primary hover:bg-[#152e20] text-white font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-sm hover:shadow-md">
+                    <span>Pilih Layanan Konsultasi</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <button onclick="sendWhatsapp('consult')"
+                    class="inline-flex items-center gap-2 bg-accent hover:bg-[#3d7511] text-white font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-sm hover:shadow-md cursor-pointer">
+                    <span>💬 Tanya Langsung Kang Iky</span>
+                </button>
+                <a href="#pakan"
+                    class="inline-flex items-center gap-2 bg-white border border-neutral-200 text-primary hover:border-accent hover:text-accent font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-2xs">
+                    <span>🌾 Inovasi Complete Feed</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. SECTION KEPAKARAN INSINYUR PETERNAKAN -->
+    <section id="keahlian" class="py-16 sm:py-24 bg-white border-b border-neutral-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <!-- Header Section -->
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-[11px] font-bold tracking-[0.25em] text-accent uppercase bg-accent/10 px-4 py-1.5 rounded-full inline-flex items-center gap-1.5 mb-3">
+                    <span>👨‍🔬</span>
+                    <span>Profil Pakar</span>
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-primary tracking-tight leading-tight">
+                    Dikelola Langsung Oleh Insinyur Peternakan
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-500 font-light mt-3 leading-relaxed">
+                    Menghadirkan standar peternakan domba modern di Parung, Bogor yang memadukan riset nutrisi presisi, pemuliaan genetik unggul, serta biosekuriti kandang berstandar syariah.
+                </p>
+            </div>
+
+            <!-- Profile & Scientific Cards Grid -->
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-[#FAFAFA] rounded-3xl p-6 sm:p-10 border border-neutral-200/70 shadow-2xs">
+                
+                <!-- Sisi Kiri: Foto Profil & Identitas Diri -->
+                <div class="lg:col-span-5 flex flex-col items-center text-center lg:items-start lg:text-left">
+                    <div class="relative w-64 sm:w-72 aspect-square rounded-3xl overflow-hidden border-4 border-white shadow-md mb-6 group">
+                        <img src="assets/profile.jpg" alt="Ir. Rizky Ayuna Budiman, S.Pt"
+                            class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-3 left-3 right-3 text-left">
+                            <span class="bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1 shadow-2xs">
+                                <span>✓</span>
+                                <span>Verified Insinyur Peternakan</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-primary tracking-tight">
+                        Ir. Rizky Ayuna Budiman, S.Pt
+                    </h3>
+                    <p class="text-xs font-bold text-accent uppercase tracking-wider mt-1">
+                        Insinyur Peternakan &amp; Penggerak Sosial
+                    </p>
+                    <p class="text-xs text-neutral-600 font-light mt-3 leading-relaxed">
+                        Praktisi dan Insinyur Peternakan berdedikasi tinggi yang mengintegrasikan pendekatan sains dan prinsip syariat dalam tata kelola ruminansia. Berpengalaman dalam riset formulasi Complete Feed berbasis limbah pertanian lokal, seleksi genetik unggul, dan perancangan ekosistem kandang terpadu bebas bau di Parung, Bogor.
+                    </p>
+
+                    <button onclick="sendWhatsapp('consult')"
+                        class="mt-6 inline-flex items-center gap-2 px-6 py-3.5 bg-primary hover:bg-[#152e20] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300 shadow-sm hover:shadow-md cursor-pointer">
+                        <span>💬</span>
+                        <span>Konsultasi Bersama Kang Iky</span>
+                        <svg class="w-4 h-4 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Sisi Kanan: 3 Pilar Keunggulan Sains & Metrik -->
+                <div class="lg:col-span-7 space-y-4">
+                    
+                    <!-- Pilar 1: Formulasi Complete Feed -->
+                    <div class="bg-white p-5 rounded-2xl border border-neutral-200/60 shadow-2xs card-hover-lift">
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0 text-lg">
+                                🌾
+                            </div>
+                            <div>
+                                <h4 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-1">
+                                    Formulasi Complete Feed (Limbah Pertanian Lokal)
+                                </h4>
+                                <p class="text-xs text-neutral-500 font-light leading-relaxed">
+                                    Riset ransum pakan terintegrasi memanfaatkan limbah pertanian berkualitas (ampas singkong, dedak giling, bungkil kedelai). Menghasilkan nutrisi seimbang yang memacu bobot harian (ADG) optimal, menghasilkan daging empuk padat tanpa hormon kimia sintetis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 2: Triple Health Check -->
+                    <div class="bg-white p-5 rounded-2xl border border-neutral-200/60 shadow-2xs card-hover-lift">
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0 text-lg">
+                                🩺
+                            </div>
+                            <div>
+                                <h4 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-1">
+                                    Standar Triple Health Check Terstandarisasi
+                                </h4>
+                                <p class="text-xs text-neutral-500 font-light leading-relaxed">
+                                    Protokol pemeriksaan kesehatan 3 tahap ketat: (1) Karantina &amp; uji adaptasi biosekuriti kedatangan, (2) Monitoring nafsu makan, gigi, dan kuku secara berkala, (3) Sertifikasi fisik bebas cacat sesuai kaidah syariat qurban sebelum pengiriman ke tangan konsumen.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 3: Riset Genetik Domba Unggul -->
+                    <div class="bg-white p-5 rounded-2xl border border-neutral-200/60 shadow-2xs card-hover-lift">
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0 text-lg">
+                                🧬
+                            </div>
+                            <div>
+                                <h4 class="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider mb-1">
+                                    Riset Pemuliaan &amp; Genetik Terseleksi
+                                </h4>
+                                <p class="text-xs text-neutral-500 font-light leading-relaxed">
+                                    Fokus pada performa silang dan pemuliaan 3 rumpun unggulan: <strong>Dorper</strong> (pertumbuhan bobot ekspres &amp; daging tebal), <strong>Cross Texel</strong> (rasio karkas tinggi berlemak tipis), dan <strong>Domba Garut</strong> (postur tangguh, artistik, dan berdaya tahan tinggi).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mini Metric Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                        <div class="bg-white p-3.5 rounded-xl border border-neutral-200/50 text-center shadow-2xs">
+                            <div class="text-base sm:text-lg font-extrabold text-primary tracking-tight">10+ Tahun</div>
+                            <div class="text-[10px] text-neutral-400 uppercase tracking-wider font-medium mt-0.5">Riset &amp; Dedikasi</div>
+                        </div>
+                        <div class="bg-white p-3.5 rounded-xl border border-neutral-200/50 text-center shadow-2xs">
+                            <div class="text-base sm:text-lg font-extrabold text-primary tracking-tight">500+ Ekor</div>
+                            <div class="text-[10px] text-neutral-400 uppercase tracking-wider font-medium mt-0.5">Kapasitas Ternak</div>
+                        </div>
+                        <div class="bg-white p-3.5 rounded-xl border border-neutral-200/50 text-center shadow-2xs">
+                            <div class="text-base sm:text-lg font-extrabold text-primary tracking-tight">3 Lapis</div>
+                            <div class="text-[10px] text-neutral-400 uppercase tracking-wider font-medium mt-0.5">Health Check</div>
+                        </div>
+                        <div class="bg-white p-3.5 rounded-xl border border-neutral-200/50 text-center shadow-2xs">
+                            <div class="text-base sm:text-lg font-extrabold text-primary tracking-tight">100%</div>
+                            <div class="text-[10px] text-neutral-400 uppercase tracking-wider font-medium mt-0.5">Bebas Kimiawi</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION LAYANAN KONSULTASI (3 CARD UTAMA) -->
+    <section id="konsultasi-layanan" class="py-16 sm:py-24 bg-[#FAFAFA] border-b border-neutral-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-[11px] font-bold tracking-[0.25em] text-accent uppercase bg-accent/10 px-4 py-1.5 rounded-full inline-flex items-center gap-1.5 mb-3">
+                    <span>💡</span>
+                    <span>Pilihan Paket Layanan</span>
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-primary tracking-tight leading-tight">
+                    Layanan Konsultasi Peternakan Modern
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-500 font-light mt-3 leading-relaxed">
+                    Bimbingan teknis profesional langsung dari <strong>Ir. Rizky Ayuna Budiman, S.Pt</strong> untuk meningkatkan efisiensi pakan, tata kelola kandang higienis, dan profitabilitas peternakan Anda.
+                </p>
+            </div>
+
+            <!-- Grid 3 Card Layanan -->
+            <div class="grid md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+                
+                <!-- Card 1: Formulasi Pakan & Nutrisi -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 flex flex-col justify-between group card-hover-lift">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center text-xl transition group-hover:bg-accent group-hover:text-white">
+                                🌾
+                            </div>
+                            <span class="text-[10px] font-bold text-neutral-400 bg-neutral-100 px-3 py-1 rounded-full uppercase tracking-wider">
+                                Formulasi Nutrisi
+                            </span>
+                        </div>
+
+                        <h3 class="text-base sm:text-lg font-bold text-primary tracking-tight mb-2">
+                            Formulasi Pakan &amp; Nutrisi
+                        </h3>
+                        <div class="text-[11px] font-semibold text-accent uppercase tracking-wider mb-3">
+                            Sasaran: Peternak Penggemukan &amp; Investor Ransum
+                        </div>
+                        <p class="text-xs text-neutral-500 font-light leading-relaxed mb-6">
+                            Penyusunan rasio nutrisi Complete Feed presisi memanfaatkan limbah pertanian lokal (ampas singkong, dedak, bungkil). Menekan biaya pakan dan mendongkrak ADG alami secara terukur.
+                        </p>
+
+                        <div class="border-t border-neutral-100 pt-5 mb-6 space-y-2.5">
+                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block mb-2">
+                                Output / Materi Konsultasi:
+                            </span>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>Analisis bahan baku limbah pertanian sekitar kandang</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>Resep ransum Complete Feed per fase pertumbuhan</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>Optimasi Feed Conversion Ratio (FCR) hemat biaya</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>SOP fermentasi, pengeringan, &amp; penyimpanan silase awet</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-neutral-100">
+                        <button onclick="sendWhatsapp('consult', 'Formulasi Pakan & Nutrisi')"
+                            class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 bg-primary hover:bg-[#152e20] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300 shadow-2xs group-hover:shadow-sm cursor-pointer">
+                            <span>💬</span>
+                            <span>Konsultasi Formulasi Pakan</span>
+                            <svg class="w-3.5 h-3.5 ml-0.5 transform group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Audit & Design Management Kandang -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 flex flex-col justify-between group card-hover-lift">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center text-xl transition group-hover:bg-accent group-hover:text-white">
+                                🏗️
+                            </div>
+                            <span class="text-[10px] font-bold text-neutral-400 bg-neutral-100 px-3 py-1 rounded-full uppercase tracking-wider">
+                                Audit &amp; Desain
+                            </span>
+                        </div>
+
+                        <h3 class="text-base sm:text-lg font-bold text-primary tracking-tight mb-2">
+                            Audit &amp; Design Management Kandang
+                        </h3>
+                        <div class="text-[11px] font-semibold text-accent uppercase tracking-wider mb-3">
+                            Sasaran: Calon Pembangun Kandang &amp; Renovasi Higienis
+                        </div>
+                        <p class="text-xs text-neutral-500 font-light leading-relaxed mb-6">
+                            Perancangan tata letak kandang panggung ergonomis, ventilasi sirkulasi udara optimal, sistem bebas polusi bau ramah pemukiman, serta protokol biosekuriti sterilisasi kandang.
+                        </p>
+
+                        <div class="border-t border-neutral-100 pt-5 mb-6 space-y-2.5">
+                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block mb-2">
+                                Output / Materi Konsultasi:
+                            </span>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>Evaluasi blueprint kandang, pencahayaan &amp; aliran angin</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>Desain pemisahan kotoran padat dan urin tanpa bau menyengat</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>Tempat pakan ergonomis anti-tercecer &amp; mudah dibersihkan</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>SOP biosekuriti karantina hewan baru &amp; desinfeksi harian</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-neutral-100">
+                        <button onclick="sendWhatsapp('consult', 'Audit & Design Management Kandang')"
+                            class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 bg-primary hover:bg-[#152e20] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300 shadow-2xs group-hover:shadow-sm cursor-pointer">
+                            <span>💬</span>
+                            <span>Konsultasi Tata Kelola Kandang</span>
+                            <svg class="w-3.5 h-3.5 ml-0.5 transform group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Pelatihan Agropreneur -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-2xs hover:shadow-md transition duration-300 flex flex-col justify-between group card-hover-lift">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center text-xl transition group-hover:bg-accent group-hover:text-white">
+                                🎓
+                            </div>
+                            <span class="text-[10px] font-bold text-neutral-400 bg-neutral-100 px-3 py-1 rounded-full uppercase tracking-wider">
+                                Mentoring Bisnis
+                            </span>
+                        </div>
+
+                        <h3 class="text-base sm:text-lg font-bold text-primary tracking-tight mb-2">
+                            Pelatihan Agropreneur
+                        </h3>
+                        <div class="text-[11px] font-semibold text-accent uppercase tracking-wider mb-3">
+                            Sasaran: Agropreneur Muda, Kelompok Tani &amp; Profesional
+                        </div>
+                        <p class="text-xs text-neutral-500 font-light leading-relaxed mb-6">
+                            Pendampingan bisnis peternakan dari hulu ke hilir: mulai dari seleksi bakalan unggul, proyeksi cashflow &amp; risiko mortalitas, hingga strategi pemasaran musim qurban dan aqiqah.
+                        </p>
+
+                        <div class="border-t border-neutral-100 pt-5 mb-6 space-y-2.5">
+                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block mb-2">
+                                Output / Materi Konsultasi:
+                            </span>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>Standarisasi seleksi bibit poel, sehat &amp; genetik unggul</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>Penyusunan proyeksi finansial &amp; cashflow peternakan berputar</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>Model program tabungan qurban berjangka &amp; digital sales</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-xs text-neutral-600 font-light leading-relaxed">
+                                <span class="text-accent font-bold">✓</span>
+                                <span>SOP logistik pengantaran aman (minim susut &amp; bebas stres)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-neutral-100">
+                        <button onclick="sendWhatsapp('consult', 'Pelatihan Agropreneur')"
+                            class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 bg-primary hover:bg-[#152e20] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300 shadow-2xs group-hover:shadow-sm cursor-pointer">
+                            <span>💬</span>
+                            <span>Daftar Pelatihan Agropreneur</span>
+                            <svg class="w-3.5 h-3.5 ml-0.5 transform group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TEKNOLOGI NUTRISI PAKAN (COMPLETE FEED) -->
+    <section id="pakan" class="py-16 sm:py-24 bg-white border-b border-neutral-100 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 mb-10">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-xs font-bold tracking-[0.2em] text-accent uppercase block mb-3">Inovasi Nutrisi Pakan</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-primary mb-4">Complete Feed Berkualitas Tinggi</h2>
+                <p class="text-neutral-500 text-xs sm:text-sm font-light">
+                    Formulasi pakan modern kami memanfaatkan limbah pertanian segar dari petani sekitar, mengubahnya menjadi ransum nutrisi prima yang padat Karbohidrat, Protein, Serat, Vitamin &amp; Mineral.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slider Marquee Bergulir Bersih -->
+        <div class="relative w-full overflow-hidden py-3 bg-[#FAFAFA] border-y border-neutral-200/70">
+            <div
+                class="absolute inset-y-0 left-0 w-12 sm:w-28 bg-gradient-to-r from-[#FAFAFA] to-transparent z-10 pointer-events-none">
+            </div>
+            <div
+                class="absolute inset-y-0 right-0 w-12 sm:w-28 bg-gradient-to-l from-[#FAFAFA] to-transparent z-10 pointer-events-none">
+            </div>
+
+            <div class="animate-marquee gap-4 sm:gap-6 px-4">
+                <!-- Set 1: 5 Bahan Utama -->
+                <div class="flex gap-4 sm:gap-6 shrink-0">
+                    <div
+                        class="w-44 sm:w-56 p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200/70 text-center flex flex-col justify-between shadow-2xs">
+                        <div>
+                            <div class="text-2xl mb-1">🌿</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Daun Singkong</h4>
+                        </div>
+                        <p class="text-[11px] text-neutral-400 font-light mt-2">Sumber serat &amp; protein hijau alami</p>
+                    </div>
+                    <div
+                        class="w-44 sm:w-56 p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200/70 text-center flex flex-col justify-between shadow-2xs">
+                        <div>
+                            <div class="text-2xl mb-1">🥔</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Singkong</h4>
+                        </div>
+                        <p class="text-[11px] text-neutral-400 font-light mt-2">Sumber energi karbohidrat tinggi</p>
+                    </div>
+                    <div
+                        class="w-44 sm:w-56 p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200/70 text-center flex flex-col justify-between shadow-2xs">
+                        <div>
+                            <div class="text-2xl mb-1">🪵</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Pongkol Singkong</h4>
+                        </div>
+                        <p class="text-[11px] text-neutral-400 font-light mt-2">Energi karbohidrat tambahan</p>
+                    </div>
+                    <div
+                        class="w-44 sm:w-56 p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200/70 text-center flex flex-col justify-between shadow-2xs">
+                        <div>
+                            <div class="text-2xl mb-1">🌾</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Dedak Padi</h4>
+                        </div>
+                        <p class="text-[11px] text-neutral-400 font-light mt-2">Penggemukan alami yang optimal</p>
+                    </div>
+                    <div
+                        class="w-44 sm:w-56 p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200/70 text-center flex flex-col justify-between shadow-2xs">
+                        <div>
+                            <div class="text-2xl mb-1">🫘</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Bungkil Kedelai</h4>
+                        </div>
+                        <p class="text-[11px] text-neutral-400 font-light mt-2">Asupan protein pemicu kepadatan daging</p>
+                    </div>
+                </div>
+
+                <!-- Set 2: Duplikasi Bahan untuk Continuous Loop -->
+                <div class="flex gap-4 sm:gap-6 shrink-0">
+                    <div
+                        class="w-44 sm:w-56 p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200/70 text-center flex flex-col justify-between shadow-2xs">
+                        <div>
+                            <div class="text-2xl mb-1">🌿</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Daun Singkong</h4>
+                        </div>
+                        <p class="text-[11px] text-neutral-400 font-light mt-2">Sumber serat &amp; protein hijau alami</p>
+                    </div>
+                    <div
+                        class="w-44 sm:w-56 p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200/70 text-center flex flex-col justify-between shadow-2xs">
+                        <div>
+                            <div class="text-2xl mb-1">🥔</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Singkong</h4>
+                        </div>
+                        <p class="text-[11px] text-neutral-400 font-light mt-2">Sumber energi karbohidrat tinggi</p>
+                    </div>
+                    <div
+                        class="w-44 sm:w-56 p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200/70 text-center flex flex-col justify-between shadow-2xs">
+                        <div>
+                            <div class="text-2xl mb-1">🪵</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Pongkol Singkong</h4>
+                        </div>
+                        <p class="text-[11px] text-neutral-400 font-light mt-2">Energi karbohidrat tambahan</p>
+                    </div>
+                    <div
+                        class="w-44 sm:w-56 p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200/70 text-center flex flex-col justify-between shadow-2xs">
+                        <div>
+                            <div class="text-2xl mb-1">🌾</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Dedak Padi</h4>
+                        </div>
+                        <p class="text-[11px] text-neutral-400 font-light mt-2">Penggemukan alami yang optimal</p>
+                    </div>
+                    <div
+                        class="w-44 sm:w-56 p-4 sm:p-5 bg-white rounded-2xl border border-neutral-200/70 text-center flex flex-col justify-between shadow-2xs">
+                        <div>
+                            <div class="text-2xl mb-1">🫘</div>
+                            <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Bungkil Kedelai</h4>
+                        </div>
+                        <p class="text-[11px] text-neutral-400 font-light mt-2">Asupan protein pemicu kepadatan daging</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ALUR & MEKANISME KONSULTASI -->
+    <section class="py-16 sm:py-24 bg-[#FAFAFA] border-b border-neutral-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs font-bold tracking-[0.2em] text-accent uppercase block mb-2">Alur Kerjasama</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">Bagaimana Proses Konsultasi Berjalan?</h2>
+                <p class="text-xs text-neutral-500 font-light mt-2">Tahapan terstruktur dari analisis kebutuhan hingga evaluasi hasil di lapangan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
+                    <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent font-extrabold text-sm flex items-center justify-center mb-4">
+                        01
+                    </div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Diskusi Awal</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-light">Hubungi kami via WhatsApp untuk menyampaikan profil kandang, kendala pakan, atau target populasi ternak Anda.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
+                    <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent font-extrabold text-sm flex items-center justify-center mb-4">
+                        02
+                    </div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Analisis &amp; Penjadwalan</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-light">Pemetaan ketersediaan bahan pakan lokal di sekitar wilayah Anda serta penentuan sesi konsultasi (daring / kunjungan Parung).</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
+                    <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent font-extrabold text-sm flex items-center justify-center mb-4">
+                        03
+                    </div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Penyusunan Solusi</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-light">Penyerahan formula ransum presisi, blueprint ventilasi kandang, SOP biosekuriti, atau proyeksi finansial bisnis.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-neutral-200/70 shadow-2xs card-hover-lift">
+                    <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent font-extrabold text-sm flex items-center justify-center mb-4">
+                        04
+                    </div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Evaluasi Berkala</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-light">Monitoring laju pertumbuhan bobot harian (ADG) domba dan audit efisiensi biaya secara berkala.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ KONSULTASI -->
+    <section class="py-16 sm:py-24 bg-white border-b border-neutral-100">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <span class="text-xs font-bold tracking-[0.2em] text-accent uppercase block mb-3">Tanya Jawab</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-primary">Seputar Layanan Konsultasi</h2>
+            </div>
+
+            <div class="space-y-3.5" x-data="{ active: null }">
+                <div class="bg-[#FAFAFA] border border-neutral-200/70 rounded-2xl overflow-hidden shadow-2xs transition">
+                    <button class="w-full text-left p-5 font-semibold text-xs sm:text-sm text-primary flex justify-between items-center bg-[#FAFAFA] cursor-pointer"
+                        @click="active = (active === 1 ? null : 1)">
+                        <span>Siapa saja yang cocok mengikuti konsultasi ini?</span>
+                        <span class="text-sm text-neutral-400 font-mono" x-text="active === 1 ? '−' : '+'"></span>
+                    </button>
+                    <div class="bg-white border-t border-neutral-100 p-5 text-xs text-neutral-600 leading-relaxed font-light"
+                        x-show="active === 1" x-transition>
+                        Layanan ini dirancang untuk peternak pemula, agropreneur, pemilik kandang skala hobi maupun komersial, kelompok tani, hingga investor yang ingin memulai bisnis peternakan ruminansia dengan risiko terkendali dan berbasis kaidah sains modern.
+                    </div>
+                </div>
+
+                <div class="bg-[#FAFAFA] border border-neutral-200/70 rounded-2xl overflow-hidden shadow-2xs transition">
+                    <button class="w-full text-left p-5 font-semibold text-xs sm:text-sm text-primary flex justify-between items-center bg-[#FAFAFA] cursor-pointer"
+                        @click="active = (active === 2 ? null : 2)">
+                        <span>Apakah konsultasi dapat dilakukan langsung di lokasi kandang Parung?</span>
+                        <span class="text-sm text-neutral-400 font-mono" x-text="active === 2 ? '−' : '+'"></span>
+                    </button>
+                    <div class="bg-white border-t border-neutral-100 p-5 text-xs text-neutral-600 leading-relaxed font-light"
+                        x-show="active === 2" x-transition>
+                        Bisa! Kami menyediakan opsi konsultasi tatap muka langsung di kandang riset Parung, Bogor (dengan konfirmasi jadwal terlebih dahulu) agar Anda bisa melihat implementasi nyata mesin pengolah pakan, struktur kandang nir-bau, dan kondisi ternak secara fisik.
+                    </div>
+                </div>
+
+                <div class="bg-[#FAFAFA] border border-neutral-200/70 rounded-2xl overflow-hidden shadow-2xs transition">
+                    <button class="w-full text-left p-5 font-semibold text-xs sm:text-sm text-primary flex justify-between items-center bg-[#FAFAFA] cursor-pointer"
+                        @click="active = (active === 3 ? null : 3)">
+                        <span>Bagaimana bentuk output formulasi pakan yang diberikan?</span>
+                        <span class="text-sm text-neutral-400 font-mono" x-text="active === 3 ? '−' : '+'"></span>
+                    </button>
+                    <div class="bg-white border-t border-neutral-100 p-5 text-xs text-neutral-600 leading-relaxed font-light"
+                        x-show="active === 3" x-transition>
+                        Anda akan menerima dokumen resep ransum Complete Feed lengkap dengan persentase takaran bahan, estimasi kandungan Protein Kasar (PK) &amp; Total Digestible Nutrients (TDN), estimasi harga per kg ransum, serta petunjuk teknis pengolahan / fermentasi silase.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SECTION HUBUNGI KAMI & FORM KONSULTASI -->
+    <section id="kontak" class="py-16 sm:py-24 bg-white border-t border-b border-neutral-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-10 items-start">
+
+                <div class="md:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold tracking-[0.2em] text-accent uppercase block mb-3">Jadwalkan Konsultasi</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-primary mb-3">Terhubung Langsung Bersama Insinyur Kami</h2>
+                        <p class="text-neutral-500 text-xs sm:text-sm font-light leading-relaxed">
+                            Siap mengoptimalkan performa kandang Anda? Diskusikan kebutuhan spesifik Anda langsung bersama Ir. Rizky Ayuna Budiman, S.Pt via WhatsApp atau formulir di samping.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <a href="https://wa.me/6287729727309" target="_blank"
+                            class="flex items-center gap-4 p-4 bg-[#FAFAFA] rounded-2xl border border-neutral-200/70 hover:border-[#25D366]/60 hover:shadow-2xs transition duration-300 group">
+                            <div class="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center text-[#25D366] shrink-0 transition group-hover:bg-[#25D366] group-hover:text-white">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 12.008 0c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 12.004-11.953 12.004-.001 0-.001 0 0 0-2.001-.001-3.972-.542-5.717-1.564L0 24zm6.59-4.846c1.673.993 3.33 1.543 5.35 1.544 5.385 0 9.767-4.385 9.77-9.774.002-2.611-1.015-5.066-2.866-6.92C17.003 2.15 14.552 1.132 11.947 1.131 6.564 1.131 2.184 5.512 2.181 10.9c-.001 1.953.511 3.86 1.483 5.53l-.995 3.637 3.731-.978zm11.365-6.81c-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.668.149-.198.299-.765.967-.939 1.165-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.174.2-.298.3-.496.1-.198.05-.371-.025-.521-.075-.149-.668-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">WhatsApp Konsultasi</h4>
+                                <p class="text-xs font-bold text-primary mt-0.5">0877-2972-7309</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:kandangkangiky@gmail.com"
+                            class="flex items-center gap-4 p-4 bg-[#FAFAFA] rounded-2xl border border-neutral-200/70 hover:border-blue-500/60 hover:shadow-2xs transition duration-300 group">
+                            <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 shrink-0 transition group-hover:bg-blue-500 group-hover:text-white">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path
+                                        d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Email Resmi</h4>
+                                <p class="text-xs font-bold text-primary mt-0.5">kandangkangiky@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Form Minat Konsultasi -->
+                <div class="md:col-span-7 bg-[#FAFAFA] p-6 sm:p-8 rounded-3xl border border-neutral-200/70 shadow-2xs">
+                    <h3 class="text-sm font-bold text-primary uppercase tracking-wider mb-1">Formulir Booking Konsultasi</h3>
+                    <p class="text-neutral-400 text-xs font-light mb-6">Ceritakan topik konsultasi yang ingin Anda diskusikan bersama Insinyur kami.</p>
+
+                    <form action="https://formsubmit.co/kandangkangiky@gmail.com" method="POST" class="space-y-4">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Permintaan Konsultasi Baru dari Website Kandang Kang Iky">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Nama Lengkap</label>
+                                <input type="text" name="Nama" placeholder="Nama Anda" required
+                                    class="w-full bg-white border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Nomor WhatsApp</label>
+                                <input type="tel" name="WhatsApp" placeholder="Contoh: 0812345..." required
+                                    class="w-full bg-white border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Topik Konsultasi</label>
+                            <select name="Topik" class="w-full bg-white border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition">
+                                <option value="Formulasi Pakan & Nutrisi">Formulasi Pakan &amp; Nutrisi (Complete Feed)</option>
+                                <option value="Audit & Desain Kandang">Audit &amp; Desain Management Kandang</option>
+                                <option value="Pelatihan Agropreneur">Pelatihan Agropreneur &amp; Bisnis Ternak</option>
+                                <option value="Lainnya">Kebutuhan Khusus / Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-500 mb-1">Deskripsi Kondisi Kandang / Pertanyaan</label>
+                            <textarea name="Pesan" rows="4"
+                                placeholder="Jelaskan lokasi peternakan, jumlah populasi domba saat ini, atau tantangan pakan yang dihadapi..." required
+                                class="w-full bg-white border border-neutral-200 px-4 py-3 rounded-xl text-xs font-light focus:outline-none focus:border-accent transition resize-none"></textarea>
+                        </div>
+
+                        <div class="text-right pt-2">
+                            <button type="submit"
+                                class="bg-primary hover:bg-[#152e20] text-white font-bold text-xs tracking-widest uppercase px-6 py-3.5 rounded-xl transition duration-300 shadow-2xs w-full sm:w-auto cursor-pointer">
+                                Kirim Permintaan Konsultasi &rarr;
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER -->
+    <footer class="bg-[#0B1320] text-neutral-400 pt-16 pb-8 relative">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <h3 class="text-white font-semibold text-base mb-3 tracking-wide">Kandang Kang Iky</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                    Peternakan domba modern berbasis sains dan syariat di Parung, Bogor. Menghadirkan komoditas domba unggul (Dorper, Cross Texel, Garut), layanan riset &amp; konsultasi Insinyur Peternakan, serta ekosistem sirkular pemberdayaan masyarakat lokal.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Navigasi Halaman</h3>
+                <ul class="space-y-2 text-xs font-light">
+                    <li><a href="index.html" class="hover:text-accent transition">Beranda Utama</a></li>
+                    <li><a href="domba.html" class="hover:text-accent transition">Katalog &amp; Tabungan Domba</a></li>
+                    <li><a href="konsultasi.html" class="hover:text-accent text-emerald-400 transition">Konsultasi Insinyur</a></li>
+                    <li><a href="dampak-sosial.html" class="hover:text-accent transition">Dampak Sosial &amp; CSR</a></li>
+                    <li><a href="#keahlian" class="hover:text-accent transition">Kepakaran Insinyur</a></li>
+                    <li><a href="#pakan" class="hover:text-accent transition">Inovasi Complete Feed</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Kontak &amp; Lokasi</h3>
+                <ul class="space-y-3 text-xs font-light">
+                    <li>
+                        <a href="https://maps.google.com/?q=Kecamatan+Parung+Bogor" target="_blank"
+                            class="flex items-start gap-2.5 hover:text-emerald-400 transition">
+                            <span class="shrink-0">📍</span>
+                            <span class="leading-relaxed">Kecamatan Parung, Kabupaten Bogor, Jawa Barat.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/6287729727309" target="_blank"
+                            class="flex items-center gap-2.5 hover:text-emerald-400 transition">
+                            <span class="shrink-0">📞</span>
+                            <span>WhatsApp: 0877-2972-7309</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:kandangkangiky@gmail.com"
+                            class="flex items-center gap-2.5 hover:text-emerald-400 transition">
+                            <span class="shrink-0">✉️</span>
+                            <span>kandangkangiky@gmail.com</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white font-semibold text-xs mb-3 tracking-wide uppercase text-neutral-300">Layanan &amp; Media Sosial</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed font-light mb-3">
+                    Konsultasi Peternakan, Beli &amp; Tabung Domba, serta Kemitraan CSR Berdampak Sosial.
+                </p>
+                <div class="pt-1">
+                    <a href="https://instagram.com/kandangkangiky" target="_blank"
+                        class="inline-flex items-center gap-2 px-3 py-2 bg-white/5 border border-white/10 rounded-xl text-xs text-neutral-300 hover:text-white hover:border-pink-500/50 hover:bg-pink-500/10 transition duration-300">
+                        <svg class="w-4 h-4 fill-current text-pink-500" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                        <span>@kandangkangiky</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 border-t border-neutral-800/60 pt-8 text-center text-xs text-neutral-500 font-light">
+            &copy; 2026 Kandang Kang Iky. All Rights Reserved. Built Professionally.
+        </div>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/6287729727309" target="_blank"
+            class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#20ba56] hover:scale-110 transition-all duration-300 z-50 group"
+            aria-label="Hubungi via WhatsApp">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.896 0c3.181.001 6.171 1.242 8.42 3.496 2.248 2.253 3.487 5.244 3.484 8.425-.004 6.571-5.329 11.896-11.898 11.896-2.003-.001-3.971-.505-5.717-1.464L0 24zm6.59-4.846c1.66.986 3.288 1.488 4.704 1.49 5.351 0 9.702-4.347 9.704-9.699.002-2.593-1.008-5.032-2.844-6.87C16.32 2.236 13.883 1.002 11.29 1c-5.356 0-9.704 4.349-9.707 9.701-.001 1.48.513 2.973 1.527 4.36l-.999 3.647 3.737-.98c1.373.748 2.5 1.154 3.992 1.154l-.004-.028zm10.743-7.516c-.297-.15-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            </svg>
+            <span
+                class="absolute right-16 bg-[#0B1320] text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-sm border border-neutral-800">
+                Chat WA
+            </span>
+        </a>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script>
+        function sendWhatsapp(intent, serviceTopic) {
+            const phone = (window.KandangConfig && window.KandangConfig.getAppConfig().whatsapp) ? window.KandangConfig.getAppConfig().whatsapp : "6287729727309";
+            let message = "";
+
+            if (intent === 'consult') {
+                if (serviceTopic) {
+                    message = `Halo Ir. Rizky / Tim Kandang Kang Iky, saya tertarik dengan layanan konsultasi *${serviceTopic}*. Mohon informasi ketersediaan jadwal konsultasi dan mekanismenya. Terima kasih!`;
+                } else {
+                    message = "Halo Ir. Rizky / Tim Kandang Kang Iky, saya ingin berkonsultasi mengenai peternakan domba modern (formulasi pakan Complete Feed / tata kelola kandang). Mohon informasi ketersediaan jadwal konsultasi. Terima kasih!";
+                }
+            } else if (intent === 'social') {
+                message = "Halo Kang Iky & Tim, saya tertarik untuk mendiskusikan peluang kolaborasi kemitraan peternak lokal / program CSR bersama Kandang Kang Iky. Terima kasih!";
+            } else if (intent === 'buy') {
+                message = "Halo Kang Iky, saya tertarik dengan informasi pembelian domba qurban/aqiqah atau program tabungan domba di Kandang Kang Iky. Terima kasih!";
+            } else {
+                message = "Halo Kandang Kang Iky, saya ingin berkonsultasi mengenai peternakan domba modern. Terima kasih!";
+            }
+
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+
+</html>
