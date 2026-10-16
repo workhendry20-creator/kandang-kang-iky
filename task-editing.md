@@ -21,7 +21,7 @@ Mengubah struktur landing page dari Single Long Page menjadi **Modular Multi-Pag
 - [x] **Task 1.3**: Buat `dampak-sosial.html` - Pindahkan section Program Pemberdayaan & Impact Counter ke file ini.
 
 ### Phase 2: Gateway Refactoring (`index.html`)
-- [ ] **Task 2.1**: Sederhanakan `index.html` hanya berisi:
+- [x] **Task 2.1**: Sederhanakan `index.html` hanya berisi:
   - Header Navbar
   - Hero Section (Headline Insinyur & Penggerak Sosial)
   - **3 Hero Cards (Intent Selector)**:
@@ -29,8 +29,8 @@ Mengubah struktur landing page dari Single Long Page menjadi **Modular Multi-Pag
     2. Card 2: Konsultasi Peternakan -> Link ke `konsultasi.html`
     3. Card 3: Kolaborasi & CSR -> Link ke `dampak-sosial.html`
   - Ringkasan Singkat & Footer
-- [ ] **Task 2.2**: Update Navbar & Footer di SEMUA file HTML agar link navigasinya konsisten menunjuk ke file `.html` yang sesuai.
+- [x] **Task 2.2**: Update Navbar & Footer di SEMUA file HTML agar link navigasinya konsisten menunjuk ke file `.html` yang sesuai.
 
 ### Phase 3: Verification & Push
-- [ ] **Task 3.1**: Uji alur perpindahan halaman (routing) dari `index.html` ke halaman turunan.
-- [ ] **Task 3.2**: Git commit & push to GitHub -> Auto-deploying to Vercel.
+- [x] **Task 3.1**: Uji alur perpindahan halaman (routing) dari `index.html` ke halaman turunan.
+- [x] **Task 3.2**: Git commit & push to GitHub -> Auto-deploying to Vercel.
