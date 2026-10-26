@@ -50,10 +50,10 @@
 
     <!-- 1. FLOATING PILL NAVBAR -->
     <div class="fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none" x-data="{ mobileMenuOpen: false }">
-        <nav class="pointer-events-auto flex items-center justify-between gap-3 sm:gap-4 px-4 py-2.5 rounded-full bg-emerald-950/85 backdrop-blur-md border border-emerald-800/50 shadow-lg w-full max-w-4xl text-white relative">
+        <nav class="pointer-events-auto flex items-center justify-between gap-4 w-full max-w-6xl md:max-w-7xl px-4 md:px-6 py-2.5 rounded-full bg-[#1E3E2B]/90 backdrop-blur-md border border-white/10 shadow-xl text-white transition-all relative">
             <!-- Logo Kiri -->
             <a href="index.html" class="flex items-center gap-2.5 shrink-0 group">
-                <div class="w-8 h-8 rounded-full overflow-hidden border border-emerald-700/80 bg-white aspect-square shrink-0 shadow-xs">
+                <div class="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-white aspect-square shrink-0 shadow-xs">
                     <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky" class="w-full h-full object-cover transition-transform group-hover:scale-105">
                 </div>
                 <span class="text-xs sm:text-sm font-bold tracking-wide text-white">
@@ -62,49 +62,30 @@
             </a>
 
             <!-- Menu Link Desktop -->
-            <div class="hidden md:flex items-center gap-1 text-xs">
-                <a href="index.html" class="px-3 py-1.5 rounded-full font-medium text-white/80 hover:text-white hover:bg-emerald-800/60 transition">Beranda</a>
-                <a href="domba.html" class="px-3 py-1.5 rounded-full font-medium text-white/80 hover:text-white hover:bg-emerald-800/60 transition">Katalog &amp; Tabungan</a>
-                <a href="konsultasi.html" class="px-3 py-1.5 rounded-full font-medium text-white/80 hover:text-white hover:bg-emerald-800/60 transition">Konsultasi</a>
-                <a href="dampak-sosial.html" class="px-3 py-1.5 rounded-full font-semibold text-emerald-300 bg-emerald-900/90 border border-emerald-700/50 transition">Dampak Sosial</a>
-                <a href="tracking.html" class="px-3 py-1.5 rounded-full font-medium text-white/80 hover:text-white hover:bg-emerald-800/60 transition">Tracking</a>
+            <div class="hidden md:flex items-center gap-1.5 lg:gap-2">
+                <a href="index.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Beranda</a>
+                <a href="domba.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Katalog &amp; Tabungan</a>
+                <a href="konsultasi.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Konsultasi</a>
+                <a href="dampak-sosial.html" class="px-4 py-1.5 rounded-full bg-white/20 text-white font-semibold transition-all text-sm">Dampak Sosial</a>
+                <a href="tracking.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Tracking</a>
             </div>
 
-            <!-- Icon WA & Hamburger Menu Kanan -->
+            <!-- Action Buttons Kanan (Track Dombamu & Mobile Toggle) -->
             <div class="flex items-center gap-2 shrink-0">
-                <!-- WhatsApp CTA Button -->
-                <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
-                    class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-xs transition"
-                    aria-label="WhatsApp Kandang Kang Iky" title="Chat via WhatsApp">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5">
-                        <path fill="currentColor" d="m7.254 18.494l.724.423A7.95 7.95 0 0 0 12.001 20a8 8 0 1 0-8-8a7.95 7.95 0 0 0 1.084 4.024l.422.724l-.653 2.401zM2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355zM8.392 7.308q.202-.014.403-.004q.081.006.162.016c.159.018.334.115.393.249q.447 1.015.868 2.04c.062.152.025.347-.093.537c-.06.097-.154.233-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268c.12.116.237.235.363.346c.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11q.093.039.191.066q.036.01.073.011a.35.35 0 0 0 .295-.142c.723-.876.79-.933.795-.933v.002a.48.48 0 0 1 .378-.127q.092.004.177.04c.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265c.004.067.01.175-.013.373c-.032.259-.11.57-.188.733a1.2 1.2 0 0 1-.21.302a2.4 2.4 0 0 1-.33.288q-.124.092-.125.09a5 5 0 0 1-.383.22a2 2 0 0 1-.833.23c-.185.01-.37.024-.556.014c-.008 0-.568-.087-.568-.087a9.45 9.45 0 0 1-3.84-2.046c-.226-.199-.436-.413-.65-.626c-.888-.885-1.561-1.84-1.97-2.742a3.5 3.5 0 0 1-.33-1.413a2.73 2.73 0 0 1 .565-1.68c.073-.094.142-.192.261-.305c.126-.12.207-.184.294-.228a1 1 0 0 1 .371-.1"/>
+                <!-- Button Track Dombamu CTA -->
+                <a href="tracking.html"
+                    class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#1E3E2B] font-medium text-xs md:text-sm transition-all border border-white/20 shadow-sm"
+                    aria-label="Track Dombamu">
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <span>WhatsApp</span>
-                </a>
-
-                <!-- WhatsApp Mobile Icon -->
-                <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
-                    class="sm:hidden w-8 h-8 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition shadow-xs"
-                    aria-label="WhatsApp" title="WhatsApp">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
-                        <path fill="currentColor" d="m7.254 18.494l.724.423A7.95 7.95 0 0 0 12.001 20a8 8 0 1 0-8-8a7.95 7.95 0 0 0 1.084 4.024l.422.724l-.653 2.401zM2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355zM8.392 7.308q.202-.014.403-.004q.081.006.162.016c.159.018.334.115.393.249q.447 1.015.868 2.04c.062.152.025.347-.093.537c-.06.097-.154.233-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268c.12.116.237.235.363.346c.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11q.093.039.191.066q.036.01.073.011a.35.35 0 0 0 .295-.142c.723-.876.79-.933.795-.933v.002a.48.48 0 0 1 .378-.127q.092.004.177.04c.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265c.004.067.01.175-.013.373c-.032.259-.11.57-.188.733a1.2 1.2 0 0 1-.21.302a2.4 2.4 0 0 1-.33.288q-.124.092-.125.09a5 5 0 0 1-.383.22a2 2 0 0 1-.833.23c-.185.01-.37.024-.556.014c-.008 0-.568-.087-.568-.087a9.45 9.45 0 0 1-3.84-2.046c-.226-.199-.436-.413-.65-.626c-.888-.885-1.561-1.84-1.97-2.742a3.5 3.5 0 0 1-.33-1.413a2.73 2.73 0 0 1 .565-1.68c.073-.094.142-.192.261-.305c.126-.12.207-.184.294-.228a1 1 0 0 1 .371-.1"/>
-                    </svg>
-                    <span>WhatsApp</span>
-                </a>
-
-                <!-- WhatsApp Mobile Icon -->
-                <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
-                    class="sm:hidden w-8 h-8 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition shadow-xs"
-                    aria-label="WhatsApp" title="WhatsApp">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4">
-                        <path fill="currentColor" d="m7.254 18.494l.724.423A7.95 7.95 0 0 0 12.001 20a8 8 0 1 0-8-8a7.95 7.95 0 0 0 1.084 4.024l.422.724l-.653 2.401zM2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355zM8.392 7.308q.202-.014.403-.004q.081.006.162.016c.159.018.334.115.393.249q.447 1.015.868 2.04c.062.152.025.347-.093.537c-.06.097-.154.233-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268c.12.116.237.235.363.346c.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11q.093.039.191.066q.036.01.073.011a.35.35 0 0 0 .295-.142c.723-.876.79-.933.795-.933v.002a.48.48 0 0 1 .378-.127q.092.004.177.04c.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265c.004.067.01.175-.013.373c-.032.259-.11.57-.188.733a1.2 1.2 0 0 1-.21.302a2.4 2.4 0 0 1-.33.288q-.124.092-.125.09a5 5 0 0 1-.383.22a2 2 0 0 1-.833.23c-.185.01-.37.024-.556.014c-.008 0-.568-.087-.568-.087a9.45 9.45 0 0 1-3.84-2.046c-.226-.199-.436-.413-.65-.626c-.888-.885-1.561-1.84-1.97-2.742a3.5 3.5 0 0 1-.33-1.413a2.73 2.73 0 0 1 .565-1.68c.073-.094.142-.192.261-.305c.126-.12.207-.184.294-.228a1 1 0 0 1 .371-.1"/>
-                    </svg>
-                    <span>WhatsApp</span>
+                    <span>Track Dombamu</span>
                 </a>
 
                 <!-- Mobile Hamburger Button -->
                 <button @click="mobileMenuOpen = !mobileMenuOpen"
-                    class="md:hidden w-8 h-8 rounded-full bg-emerald-900/80 hover:bg-emerald-800 text-emerald-200 flex items-center justify-center focus:outline-none transition border border-emerald-700/60"
+                    class="md:hidden w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center focus:outline-none transition border border-white/20"
                     aria-label="Toggle navigation">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -124,16 +105,20 @@
                 x-transition:leave="transition ease-in duration-150"
                 x-transition:leave-start="opacity-100 translate-y-0 scale-100"
                 x-transition:leave-end="opacity-0 -translate-y-2 scale-95"
-                class="md:hidden absolute top-full left-0 right-0 mt-2 bg-emerald-950/95 backdrop-blur-md border border-emerald-800/80 rounded-2xl p-4 shadow-xl space-y-1.5 text-xs text-white">
-                <a href="index.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-emerald-800/60 hover:text-white transition">Beranda</a>
-                <a href="domba.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-emerald-800/60 hover:text-white transition">Katalog &amp; Tabungan</a>
-                <a href="konsultasi.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-emerald-800/60 hover:text-white transition">Konsultasi</a>
-                <a href="dampak-sosial.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-emerald-300 font-semibold bg-emerald-900/80 border border-emerald-700/50">Dampak Sosial</a>
-                <a href="tracking.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-emerald-800/60 hover:text-white transition">Tracking</a>
-                <div class="pt-2 border-t border-emerald-800/60">
-                    <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
-                        class="w-full inline-flex items-center justify-center gap-2 py-2.5 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-bold text-xs text-white transition shadow-sm">
-                        <span>Hubungi via WhatsApp</span>
+                class="md:hidden absolute top-full left-0 right-0 mt-2 bg-[#1E3E2B]/95 backdrop-blur-md border border-white/15 rounded-2xl p-4 shadow-xl space-y-1.5 text-xs text-white">
+                <a href="index.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Beranda</a>
+                <a href="domba.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Katalog &amp; Tabungan</a>
+                <a href="konsultasi.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Konsultasi</a>
+                <a href="dampak-sosial.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white font-semibold bg-white/20 border border-white/20">Dampak Sosial</a>
+                <a href="tracking.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Tracking</a>
+                <div class="pt-2 border-t border-white/15">
+                    <a href="tracking.html" @click="mobileMenuOpen = false"
+                        class="w-full inline-flex items-center justify-center gap-2 py-2.5 bg-white text-[#1E3E2B] hover:bg-white/90 rounded-xl font-bold text-xs transition shadow-sm">
+                        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <span>Track Dombamu</span>
                     </a>
                 </div>
             </div>
@@ -684,36 +669,36 @@
     </section>
 
     <!-- FOOTER (SHADCNBLOCKS GREEN THEME - 4 COLUMNS) -->
-    <footer class="bg-emerald-950 text-white pt-16 pb-10 border-t border-emerald-900 relative">
+    <footer class="bg-[#1E3E2B] text-white pt-16 pb-10 border-t border-white/10 relative">
         <div class="max-w-6xl mx-auto px-6">
             <!-- 4-Column Grid -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12">
                 <!-- Kolom 1: Brand & Bio & Medsos -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full overflow-hidden border border-emerald-800 bg-white aspect-square shrink-0 shadow-xs">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-white aspect-square shrink-0 shadow-xs">
                             <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-white font-bold text-base tracking-wide">Kandang Kang Iky</h3>
                     </div>
-                    <p class="text-xs text-emerald-100/70 leading-relaxed font-light">
+                    <p class="text-xs text-white/70 leading-relaxed font-light">
                         Peternakan domba modern berbasis sains dan syariat di Parung, Bogor. Menghadirkan bibit unggul, riset nutrisi pakan presisi, dan ekosistem pemberdayaan sirkular berkelanjutan.
                     </p>
                     <div class="flex items-center gap-3 pt-1">
                         <!-- WhatsApp -->
                         <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
-                            class="w-9 h-9 rounded-full bg-emerald-900/80 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-all shadow-sm border border-emerald-800/60 group"
+                            class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-[#1E3E2B] text-white flex items-center justify-center transition-all shadow-sm border border-white/15 group"
                             aria-label="WhatsApp Resmi" title="WhatsApp Resmi">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-emerald-300 group-hover:text-white transition-colors">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white group-hover:text-[#1E3E2B] transition-colors">
                                 <path fill="currentColor" d="m7.254 18.494l.724.423A7.95 7.95 0 0 0 12.001 20a8 8 0 1 0-8-8a7.95 7.95 0 0 0 1.084 4.024l.422.724l-.653 2.401zM2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355zM8.392 7.308q.202-.014.403-.004q.081.006.162.016c.159.018.334.115.393.249q.447 1.015.868 2.04c.062.152.025.347-.093.537c-.06.097-.154.233-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268c.12.116.237.235.363.346c.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11q.093.039.191.066q.036.01.073.011a.35.35 0 0 0 .295-.142c.723-.876.79-.933.795-.933v.002a.48.48 0 0 1 .378-.127q.092.004.177.04c.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265c.004.067.01.175-.013.373c-.032.259-.11.57-.188.733a1.2 1.2 0 0 1-.21.302a2.4 2.4 0 0 1-.33.288q-.124.092-.125.09a5 5 0 0 1-.383.22a2 2 0 0 1-.833.23c-.185.01-.37.024-.556.014c-.008 0-.568-.087-.568-.087a9.45 9.45 0 0 1-3.84-2.046c-.226-.199-.436-.413-.65-.626c-.888-.885-1.561-1.84-1.97-2.742a3.5 3.5 0 0 1-.33-1.413a2.73 2.73 0 0 1 .565-1.68c.073-.094.142-.192.261-.305c.126-.12.207-.184.294-.228a1 1 0 0 1 .371-.1"/>
                             </svg>
                         </a>
 
                         <!-- Instagram -->
                         <a href="https://instagram.com/kandangkangiky" target="_blank" rel="noopener noreferrer"
-                            class="w-9 h-9 rounded-full bg-emerald-900/80 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-all shadow-sm border border-emerald-800/60 group"
+                            class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-[#1E3E2B] text-white flex items-center justify-center transition-all shadow-sm border border-white/15 group"
                             aria-label="Instagram Resmi" title="Instagram Resmi">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-emerald-300 group-hover:text-white transition-colors">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white group-hover:text-[#1E3E2B] transition-colors">
                                 <path fill="currentColor" d="M12 7.005a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6a3 3 0 0 1 0 6zm5.25-8.5a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0zM12 2.005c2.717 0 3.056.01 4.122.06c1.065.048 1.79.217 2.427.465a4.91 4.91 0 0 1 1.772 1.153a4.91 4.91 0 0 1 1.153 1.772c.247.637.416 1.362.465 2.427c.048 1.066.06 1.405.06 4.122s-.01 3.056-.06 4.122c-.048 1.065-.217 1.79-.465 2.427a4.91 4.91 0 0 1-1.153 1.772a4.91 4.91 0 0 1-1.772 1.153c-.637.247-1.362.416-2.427.465c-1.066.048-1.405.06-4.122.06s-3.056-.01-4.122-.06c-1.065-.048-1.79-.217-2.427-.465a4.91 4.91 0 0 1-1.772-1.153a4.91 4.91 0 0 1-1.153-1.772c-.247-.637-.416-1.362-.465-2.427c-.048-1.066-.06-1.405-.06-4.122s.01-3.056.06-4.122c.048-1.065.217-1.79.465-2.427a4.91 4.91 0 0 1 1.153-1.772a4.91 4.91 0 0 1 1.772-1.153c.637-.247 1.362-.416 2.427-.465c1.066-.048 1.405-.06 4.122-.06zM12 4.005c-2.67 0-2.987.01-4.042.058c-.975.045-1.504.207-1.857.344c-.467.182-.8.398-1.15.749c-.35.35-.567.683-.749 1.15c-.137.353-.3.882-.344 1.857c-.048 1.055-.058 1.372-.058 4.042s.01 2.987.058 4.042c.045.975.207 1.504.344 1.857c.182.467.398.8.749 1.15c.35.35.683.567 1.15.749c.353.137.882.3 1.857.344c1.055.048 1.372.058 4.042.058s2.987-.01 4.042-.058c.975-.045 1.504-.207 1.857-.344c.467-.182.8-.398 1.15-.749c.35-.35.567-.683.749-1.15c.137-.353.3-.882.344-1.857c.048-1.055.058-1.372.058-4.042s-.01-2.987-.058-4.042c-.045-.975-.207-1.504-.344-1.857c-.182-.467-.398-.8-.749-1.15c-.35-.35-.683-.567-1.15-.749c-.353-.137-.882-.3-1.857-.344c-1.055-.048-1.372-.058-4.042-.058z"/>
                             </svg>
                         </a>
@@ -769,7 +754,7 @@
                                 <span>kandangkangiky@gmail.com</span>
                             </a>
                         </li>
-                        <li class="flex items-center gap-2.5 text-emerald-200/60 pt-1">
+                        <li class="flex items-center gap-2.5 text-white/60 pt-1">
                             <span class="shrink-0 text-emerald-400">🕒</span>
                             <span>Kunjungan: Setiap Hari (08.00 - 17.00 WIB)</span>
                         </li>
@@ -778,7 +763,7 @@
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-emerald-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-100/60 font-light">
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60 font-light">
                 <p>&copy; 2026 Kandang Kang Iky. All Rights Reserved. Parung, Bogor.</p>
                 <div class="flex items-center gap-6 text-white/70">
                     <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Bantuan Cepat</a>
@@ -799,7 +784,7 @@
                     d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.896 0c3.181.001 6.171 1.242 8.42 3.496 2.248 2.253 3.487 5.244 3.484 8.425-.004 6.571-5.329 11.896-11.898 11.896-2.003-.001-3.971-.505-5.717-1.464L0 24zm6.59-4.846c1.66.986 3.288 1.488 4.704 1.49 5.351 0 9.702-4.347 9.704-9.699.002-2.593-1.008-5.032-2.844-6.87C16.32 2.236 13.883 1.002 11.29 1c-5.356 0-9.704 4.349-9.707 9.701-.001 1.48.513 2.973 1.527 4.36l-.999 3.647 3.737-.98c1.373.748 2.5 1.154 3.992 1.154l-.004-.028zm10.743-7.516c-.297-.15-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
             </svg>
             <span
-                class="absolute right-16 bg-emerald-950 text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-sm border border-emerald-800">
+                class="absolute right-16 bg-[#1E3E2B] text-white text-[10px] tracking-wider uppercase px-3 py-1.5 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-sm border border-white/20">
                 Chat WA
             </span>
         </a>
