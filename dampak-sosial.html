@@ -49,25 +49,36 @@
 <body class="text-neutral-900 antialiased overflow-x-hidden bg-[#FAFAFA]" x-data="{ mobileMenuOpen: false }">
 
     <!-- 1. FLOATING PILL NAVBAR -->
-    <div class="fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none" x-data="{ mobileMenuOpen: false }">
-        <nav class="pointer-events-auto flex items-center justify-between gap-4 w-full max-w-6xl md:max-w-7xl px-4 md:px-6 py-2.5 rounded-full bg-[#1E3E2B]/90 backdrop-blur-md border border-white/10 shadow-xl text-white transition-all relative">
+    <div class="fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none"
+        x-data="{ mobileMenuOpen: false }">
+        <nav
+            class="pointer-events-auto flex items-center justify-between gap-4 w-full max-w-6xl md:max-w-7xl px-4 md:px-6 py-2.5 rounded-full bg-[#1E3E2B]/90 backdrop-blur-md border border-white/10 shadow-xl text-white transition-all relative">
             <!-- Logo Kiri -->
             <a href="index.html" class="flex items-center gap-2.5 shrink-0 group">
-                <div class="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-white aspect-square shrink-0 shadow-xs">
-                    <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                <div
+                    class="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-white aspect-square shrink-0 shadow-xs">
+                    <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky"
+                        class="w-full h-full object-cover transition-transform group-hover:scale-105">
                 </div>
                 <span class="text-xs sm:text-sm font-bold tracking-wide text-white">
-                    Kandang <span class="text-emerald-400">Kang Iky</span>
+                    Kandang Kang Iky
                 </span>
             </a>
 
             <!-- Menu Link Desktop -->
             <div class="hidden md:flex items-center gap-1.5 lg:gap-2">
-                <a href="index.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Beranda</a>
-                <a href="domba.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Katalog &amp; Tabungan</a>
-                <a href="konsultasi.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Konsultasi</a>
-                <a href="dampak-sosial.html" class="px-4 py-1.5 rounded-full bg-white/20 text-white font-semibold transition-all text-sm">Dampak Sosial</a>
-                <a href="tracking.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Tracking</a>
+                <a href="index.html"
+                    class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Beranda</a>
+                <a href="domba.html"
+                    class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Katalog
+                    &amp; Tabungan</a>
+                <a href="konsultasi.html"
+                    class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Konsultasi</a>
+                <a href="dampak-sosial.html"
+                    class="px-4 py-1.5 rounded-full bg-white/20 text-white font-semibold transition-all text-sm">Dampak
+                    Sosial</a>
+                <a href="tracking.html"
+                    class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Tracking</a>
             </div>
 
             <!-- Action Buttons Kanan (Track Dombamu & Mobile Toggle) -->
@@ -76,7 +87,8 @@
                 <a href="tracking.html"
                     class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#1E3E2B] font-medium text-xs md:text-sm transition-all border border-white/20 shadow-sm"
                     aria-label="Track Dombamu">
-                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
@@ -97,8 +109,7 @@
             </div>
 
             <!-- Mobile Menu Dropdown Card -->
-            <div x-show="mobileMenuOpen"
-                @click.away="mobileMenuOpen = false"
+            <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false"
                 x-transition:enter="transition ease-out duration-200"
                 x-transition:enter-start="opacity-0 -translate-y-2 scale-95"
                 x-transition:enter-end="opacity-100 translate-y-0 scale-100"
@@ -106,15 +117,23 @@
                 x-transition:leave-start="opacity-100 translate-y-0 scale-100"
                 x-transition:leave-end="opacity-0 -translate-y-2 scale-95"
                 class="md:hidden absolute top-full left-0 right-0 mt-2 bg-[#1E3E2B]/95 backdrop-blur-md border border-white/15 rounded-2xl p-4 shadow-xl space-y-1.5 text-xs text-white">
-                <a href="index.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Beranda</a>
-                <a href="domba.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Katalog &amp; Tabungan</a>
-                <a href="konsultasi.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Konsultasi</a>
-                <a href="dampak-sosial.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white font-semibold bg-white/20 border border-white/20">Dampak Sosial</a>
-                <a href="tracking.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Tracking</a>
+                <a href="index.html" @click="mobileMenuOpen = false"
+                    class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Beranda</a>
+                <a href="domba.html" @click="mobileMenuOpen = false"
+                    class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Katalog
+                    &amp; Tabungan</a>
+                <a href="konsultasi.html" @click="mobileMenuOpen = false"
+                    class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Konsultasi</a>
+                <a href="dampak-sosial.html" @click="mobileMenuOpen = false"
+                    class="block px-3 py-2 rounded-xl text-white font-semibold bg-white/20 border border-white/20">Dampak
+                    Sosial</a>
+                <a href="tracking.html" @click="mobileMenuOpen = false"
+                    class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Tracking</a>
                 <div class="pt-2 border-t border-white/15">
                     <a href="tracking.html" @click="mobileMenuOpen = false"
                         class="w-full inline-flex items-center justify-center gap-2 py-2.5 bg-white text-[#1E3E2B] hover:bg-white/90 rounded-xl font-bold text-xs transition shadow-sm">
-                        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
@@ -131,8 +150,7 @@
 
             <h1 class="text-3xl sm:text-5xl font-extrabold text-primary tracking-tight leading-[1.2] mb-4">
                 Dampak Sosial &amp; Keberlanjutan<br>
-                <span class="font-serif italic font-normal text-accent">Ekonomi Sirkular Peternakan Berdaya di
-                    Parung</span>
+                <span class="font-serif italic font-normal text-accent">Ekonomi Sirkular Peternakan </span>
             </h1>
             <p class="text-neutral-600 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed font-light">
                 Lebih dari sekadar peternakan komersial, Kandang Kang Iky menggerakkan model ekonomi terpadu:
@@ -235,14 +253,12 @@
                 <div class="md:col-span-5 flex flex-col justify-between h-full">
                     <div class="mb-4">
                         <span class="text-xs font-bold tracking-widest text-accent uppercase block mb-1">
-                            Dokumentasi Lapangan
+                            Dokumentasi Sosial
                         </span>
                         <h3 class="text-xl font-extrabold text-primary tracking-tight">
-                            Aksi Nyata di Parung, Bogor
+                            Aksi Nyata di Kandang Kang Iky
                         </h3>
-                        <p class="text-neutral-500 text-xs font-light mt-1">
-                            Transfer teknologi peternakan modern bersama masyarakat lokal.
-                        </p>
+
                     </div>
 
                     <div class="w-full aspect-[4/5] rounded-3xl overflow-hidden border border-neutral-200/80 relative bg-neutral-900 shadow-md group/slider"
@@ -381,10 +397,7 @@
             <div id="siklus-sirkular"
                 class="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-2xs mb-16 scroll-mt-28">
                 <div class="text-center max-w-2xl mx-auto mb-10">
-                    <span
-                        class="text-[10px] font-bold tracking-[0.25em] text-accent uppercase bg-accent/10 px-3.5 py-1 rounded-full inline-block mb-2">
-                        Siklus Keberlanjutan
-                    </span>
+
                     <h3 class="text-xl sm:text-2xl font-extrabold text-primary tracking-tight">
                         Alur Ekonomi Sirkular Peternakan Mandiri
                     </h3>
@@ -473,18 +486,12 @@
                     </p>
                     <div class="flex flex-wrap items-center gap-3">
                         <button onclick="sendWhatsapp('social')"
-                            class="inline-flex items-center gap-2 px-6 py-3.5 bg-accent hover:bg-[#3d7511] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300 shadow-md hover:shadow-lg cursor-pointer">
-                            <span>🤝</span>
-                            <span>Diskusikan Program CSR &amp; Kemitraan</span>
-                            <svg class="w-4 h-4 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
+                            class="inline-flex items-center gap-2 px-5 py-3.5 bg-accent hover:bg-[#1E3E2B] text-white text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300 shadow-md hover:shadow-lg cursor-pointer">
+
+                            <span>Diskusikan Programu Bersama Kang Iky</span>
+
                         </button>
-                        <a href="#kontak"
-                            class="inline-flex items-center gap-2 px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300">
-                            <span>Form Usulan Kolaborasi</span>
-                        </a>
+
                     </div>
                 </div>
             </div>
@@ -575,8 +582,11 @@
                         <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
                             class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-emerald-50 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-all shadow-sm group"
                             aria-label="WhatsApp Kemitraan" title="WhatsApp Kemitraan">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6 text-emerald-700 group-hover:text-white transition-colors">
-                                <path fill="currentColor" d="m7.254 18.494l.724.423A7.95 7.95 0 0 0 12.001 20a8 8 0 1 0-8-8a7.95 7.95 0 0 0 1.084 4.024l.422.724l-.653 2.401zM2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355zM8.392 7.308q.202-.014.403-.004q.081.006.162.016c.159.018.334.115.393.249q.447 1.015.868 2.04c.062.152.025.347-.093.537c-.06.097-.154.233-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268c.12.116.237.235.363.346c.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11q.093.039.191.066q.036.01.073.011a.35.35 0 0 0 .295-.142c.723-.876.79-.933.795-.933v.002a.48.48 0 0 1 .378-.127q.092.004.177.04c.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265c.004.067.01.175-.013.373c-.032.259-.11.57-.188.733a1.2 1.2 0 0 1-.21.302a2.4 2.4 0 0 1-.33.288q-.124.092-.125.09a5 5 0 0 1-.383.22a2 2 0 0 1-.833.23c-.185.01-.37.024-.556.014c-.008 0-.568-.087-.568-.087a9.45 9.45 0 0 1-3.84-2.046c-.226-.199-.436-.413-.65-.626c-.888-.885-1.561-1.84-1.97-2.742a3.5 3.5 0 0 1-.33-1.413a2.73 2.73 0 0 1 .565-1.68c.073-.094.142-.192.261-.305c.126-.12.207-.184.294-.228a1 1 0 0 1 .371-.1"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5 md:w-6 md:h-6 text-emerald-700 group-hover:text-white transition-colors">
+                                <path fill="currentColor"
+                                    d="m7.254 18.494l.724.423A7.95 7.95 0 0 0 12.001 20a8 8 0 1 0-8-8a7.95 7.95 0 0 0 1.084 4.024l.422.724l-.653 2.401zM2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355zM8.392 7.308q.202-.014.403-.004q.081.006.162.016c.159.018.334.115.393.249q.447 1.015.868 2.04c.062.152.025.347-.093.537c-.06.097-.154.233-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268c.12.116.237.235.363.346c.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11q.093.039.191.066q.036.01.073.011a.35.35 0 0 0 .295-.142c.723-.876.79-.933.795-.933v.002a.48.48 0 0 1 .378-.127q.092.004.177.04c.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265c.004.067.01.175-.013.373c-.032.259-.11.57-.188.733a1.2 1.2 0 0 1-.21.302a2.4 2.4 0 0 1-.33.288q-.124.092-.125.09a5 5 0 0 1-.383.22a2 2 0 0 1-.833.23c-.185.01-.37.024-.556.014c-.008 0-.568-.087-.568-.087a9.45 9.45 0 0 1-3.84-2.046c-.226-.199-.436-.413-.65-.626c-.888-.885-1.561-1.84-1.97-2.742a3.5 3.5 0 0 1-.33-1.413a2.73 2.73 0 0 1 .565-1.68c.073-.094.142-.192.261-.305c.126-.12.207-.184.294-.228a1 1 0 0 1 .371-.1" />
                             </svg>
                         </a>
 
@@ -584,8 +594,11 @@
                         <a href="https://instagram.com/kandangkangiky" target="_blank" rel="noopener noreferrer"
                             class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-emerald-50 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-all shadow-sm group"
                             aria-label="Instagram Resmi" title="Instagram Resmi">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6 text-emerald-700 group-hover:text-white transition-colors">
-                                <path fill="currentColor" d="M12 7.005a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6a3 3 0 0 1 0 6zm5.25-8.5a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0zM12 2.005c2.717 0 3.056.01 4.122.06c1.065.048 1.79.217 2.427.465a4.91 4.91 0 0 1 1.772 1.153a4.91 4.91 0 0 1 1.153 1.772c.247.637.416 1.362.465 2.427c.048 1.066.06 1.405.06 4.122s-.01 3.056-.06 4.122c-.048 1.065-.217 1.79-.465 2.427a4.91 4.91 0 0 1-1.153 1.772a4.91 4.91 0 0 1-1.772 1.153c-.637.247-1.362.416-2.427.465c-1.066.048-1.405.06-4.122.06s-3.056-.01-4.122-.06c-1.065-.048-1.79-.217-2.427-.465a4.91 4.91 0 0 1-1.772-1.153a4.91 4.91 0 0 1-1.153-1.772c-.247-.637-.416-1.362-.465-2.427c-.048-1.066-.06-1.405-.06-4.122s.01-3.056.06-4.122c.048-1.065.217-1.79.465-2.427a4.91 4.91 0 0 1 1.153-1.772a4.91 4.91 0 0 1 1.772-1.153c.637-.247 1.362-.416 2.427-.465c1.066-.048 1.405-.06 4.122-.06zM12 4.005c-2.67 0-2.987.01-4.042.058c-.975.045-1.504.207-1.857.344c-.467.182-.8.398-1.15.749c-.35.35-.567.683-.749 1.15c-.137.353-.3.882-.344 1.857c-.048 1.055-.058 1.372-.058 4.042s.01 2.987.058 4.042c.045.975.207 1.504.344 1.857c.182.467.398.8.749 1.15c.35.35.683.567 1.15.749c.353.137.882.3 1.857.344c1.055.048 1.372.058 4.042.058s2.987-.01 4.042-.058c.975-.045 1.504-.207 1.857-.344c.467-.182.8-.398 1.15-.749c.35-.35.567-.683.749-1.15c.137-.353.3-.882.344-1.857c.048-1.055.058-1.372.058-4.042s-.01-2.987-.058-4.042c-.045-.975-.207-1.504-.344-1.857c-.182-.467-.398-.8-.749-1.15c-.35-.35-.683-.567-1.15-.749c-.353-.137-.882-.3-1.857-.344c-1.055-.048-1.372-.058-4.042-.058z"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5 md:w-6 md:h-6 text-emerald-700 group-hover:text-white transition-colors">
+                                <path fill="currentColor"
+                                    d="M12 7.005a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6a3 3 0 0 1 0 6zm5.25-8.5a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0zM12 2.005c2.717 0 3.056.01 4.122.06c1.065.048 1.79.217 2.427.465a4.91 4.91 0 0 1 1.772 1.153a4.91 4.91 0 0 1 1.153 1.772c.247.637.416 1.362.465 2.427c.048 1.066.06 1.405.06 4.122s-.01 3.056-.06 4.122c-.048 1.065-.217 1.79-.465 2.427a4.91 4.91 0 0 1-1.153 1.772a4.91 4.91 0 0 1-1.772 1.153c-.637.247-1.362.416-2.427.465c-1.066.048-1.405.06-4.122.06s-3.056-.01-4.122-.06c-1.065-.048-1.79-.217-2.427-.465a4.91 4.91 0 0 1-1.772-1.153a4.91 4.91 0 0 1-1.153-1.772c-.247-.637-.416-1.362-.465-2.427c-.048-1.066-.06-1.405-.06-4.122s.01-3.056.06-4.122c.048-1.065.217-1.79.465-2.427a4.91 4.91 0 0 1 1.153-1.772a4.91 4.91 0 0 1 1.772-1.153c.637-.247 1.362-.416 2.427-.465c1.066-.048 1.405-.06 4.122-.06zM12 4.005c-2.67 0-2.987.01-4.042.058c-.975.045-1.504.207-1.857.344c-.467.182-.8.398-1.15.749c-.35.35-.567.683-.749 1.15c-.137.353-.3.882-.344 1.857c-.048 1.055-.058 1.372-.058 4.042s.01 2.987.058 4.042c.045.975.207 1.504.344 1.857c.182.467.398.8.749 1.15c.35.35.683.567 1.15.749c.353.137.882.3 1.857.344c1.055.048 1.372.058 4.042.058s2.987-.01 4.042-.058c.975-.045 1.504-.207 1.857-.344c.467-.182.8-.398 1.15-.749c.35-.35.567-.683.749-1.15c.137-.353.3-.882.344-1.857c.048-1.055.058-1.372.058-4.042s-.01-2.987-.058-4.042c-.045-.975-.207-1.504-.344-1.857c-.182-.467-.398-.8-.749-1.15c-.35-.35-.683-.567-1.15-.749c-.353-.137-.882-.3-1.857-.344c-1.055-.048-1.372-.058-4.042-.058z" />
                             </svg>
                         </a>
 
@@ -593,7 +606,8 @@
                         <a href="mailto:kandangkangiky@gmail.com"
                             class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-emerald-50 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-all shadow-sm group"
                             aria-label="Email Resmi" title="Email Resmi">
-                            <svg class="w-4 h-4 md:w-5 md:h-5 text-emerald-700 group-hover:text-white transition-colors fill-current" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 text-emerald-700 group-hover:text-white transition-colors fill-current"
+                                viewBox="0 0 24 24">
                                 <path
                                     d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
                             </svg>
@@ -676,21 +690,26 @@
                 <!-- Kolom 1: Brand & Bio & Medsos -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-white aspect-square shrink-0 shadow-xs">
+                        <div
+                            class="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-white aspect-square shrink-0 shadow-xs">
                             <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-white font-bold text-base tracking-wide">Kandang Kang Iky</h3>
                     </div>
                     <p class="text-xs text-white/70 leading-relaxed font-light">
-                        Peternakan domba modern berbasis sains dan syariat di Parung, Bogor. Menghadirkan bibit unggul, riset nutrisi pakan presisi, dan ekosistem pemberdayaan sirkular berkelanjutan.
+                        Peternakan domba modern berbasis sains dan syariat di Parung, Bogor. Menghadirkan bibit unggul,
+                        riset nutrisi pakan presisi, dan ekosistem pemberdayaan sirkular berkelanjutan.
                     </p>
                     <div class="flex items-center gap-3 pt-1">
                         <!-- WhatsApp -->
                         <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
                             class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-[#1E3E2B] text-white flex items-center justify-center transition-all shadow-sm border border-white/15 group"
                             aria-label="WhatsApp Resmi" title="WhatsApp Resmi">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white group-hover:text-[#1E3E2B] transition-colors">
-                                <path fill="currentColor" d="m7.254 18.494l.724.423A7.95 7.95 0 0 0 12.001 20a8 8 0 1 0-8-8a7.95 7.95 0 0 0 1.084 4.024l.422.724l-.653 2.401zM2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355zM8.392 7.308q.202-.014.403-.004q.081.006.162.016c.159.018.334.115.393.249q.447 1.015.868 2.04c.062.152.025.347-.093.537c-.06.097-.154.233-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268c.12.116.237.235.363.346c.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11q.093.039.191.066q.036.01.073.011a.35.35 0 0 0 .295-.142c.723-.876.79-.933.795-.933v.002a.48.48 0 0 1 .378-.127q.092.004.177.04c.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265c.004.067.01.175-.013.373c-.032.259-.11.57-.188.733a1.2 1.2 0 0 1-.21.302a2.4 2.4 0 0 1-.33.288q-.124.092-.125.09a5 5 0 0 1-.383.22a2 2 0 0 1-.833.23c-.185.01-.37.024-.556.014c-.008 0-.568-.087-.568-.087a9.45 9.45 0 0 1-3.84-2.046c-.226-.199-.436-.413-.65-.626c-.888-.885-1.561-1.84-1.97-2.742a3.5 3.5 0 0 1-.33-1.413a2.73 2.73 0 0 1 .565-1.68c.073-.094.142-.192.261-.305c.126-.12.207-.184.294-.228a1 1 0 0 1 .371-.1"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 text-white group-hover:text-[#1E3E2B] transition-colors">
+                                <path fill="currentColor"
+                                    d="m7.254 18.494l.724.423A7.95 7.95 0 0 0 12.001 20a8 8 0 1 0-8-8a7.95 7.95 0 0 0 1.084 4.024l.422.724l-.653 2.401zM2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355zM8.392 7.308q.202-.014.403-.004q.081.006.162.016c.159.018.334.115.393.249q.447 1.015.868 2.04c.062.152.025.347-.093.537c-.06.097-.154.233-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268c.12.116.237.235.363.346c.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11q.093.039.191.066q.036.01.073.011a.35.35 0 0 0 .295-.142c.723-.876.79-.933.795-.933v.002a.48.48 0 0 1 .378-.127q.092.004.177.04c.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265c.004.067.01.175-.013.373c-.032.259-.11.57-.188.733a1.2 1.2 0 0 1-.21.302a2.4 2.4 0 0 1-.33.288q-.124.092-.125.09a5 5 0 0 1-.383.22a2 2 0 0 1-.833.23c-.185.01-.37.024-.556.014c-.008 0-.568-.087-.568-.087a9.45 9.45 0 0 1-3.84-2.046c-.226-.199-.436-.413-.65-.626c-.888-.885-1.561-1.84-1.97-2.742a3.5 3.5 0 0 1-.33-1.413a2.73 2.73 0 0 1 .565-1.68c.073-.094.142-.192.261-.305c.126-.12.207-.184.294-.228a1 1 0 0 1 .371-.1" />
                             </svg>
                         </a>
 
@@ -698,8 +717,11 @@
                         <a href="https://instagram.com/kandangkangiky" target="_blank" rel="noopener noreferrer"
                             class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-[#1E3E2B] text-white flex items-center justify-center transition-all shadow-sm border border-white/15 group"
                             aria-label="Instagram Resmi" title="Instagram Resmi">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white group-hover:text-[#1E3E2B] transition-colors">
-                                <path fill="currentColor" d="M12 7.005a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6a3 3 0 0 1 0 6zm5.25-8.5a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0zM12 2.005c2.717 0 3.056.01 4.122.06c1.065.048 1.79.217 2.427.465a4.91 4.91 0 0 1 1.772 1.153a4.91 4.91 0 0 1 1.153 1.772c.247.637.416 1.362.465 2.427c.048 1.066.06 1.405.06 4.122s-.01 3.056-.06 4.122c-.048 1.065-.217 1.79-.465 2.427a4.91 4.91 0 0 1-1.153 1.772a4.91 4.91 0 0 1-1.772 1.153c-.637.247-1.362.416-2.427.465c-1.066.048-1.405.06-4.122.06s-3.056-.01-4.122-.06c-1.065-.048-1.79-.217-2.427-.465a4.91 4.91 0 0 1-1.772-1.153a4.91 4.91 0 0 1-1.153-1.772c-.247-.637-.416-1.362-.465-2.427c-.048-1.066-.06-1.405-.06-4.122s.01-3.056.06-4.122c.048-1.065.217-1.79.465-2.427a4.91 4.91 0 0 1 1.153-1.772a4.91 4.91 0 0 1 1.772-1.153c.637-.247 1.362-.416 2.427-.465c1.066-.048 1.405-.06 4.122-.06zM12 4.005c-2.67 0-2.987.01-4.042.058c-.975.045-1.504.207-1.857.344c-.467.182-.8.398-1.15.749c-.35.35-.567.683-.749 1.15c-.137.353-.3.882-.344 1.857c-.048 1.055-.058 1.372-.058 4.042s.01 2.987.058 4.042c.045.975.207 1.504.344 1.857c.182.467.398.8.749 1.15c.35.35.683.567 1.15.749c.353.137.882.3 1.857.344c1.055.048 1.372.058 4.042.058s2.987-.01 4.042-.058c.975-.045 1.504-.207 1.857-.344c.467-.182.8-.398 1.15-.749c.35-.35.567-.683.749-1.15c.137-.353.3-.882.344-1.857c.048-1.055.058-1.372.058-4.042s-.01-2.987-.058-4.042c-.045-.975-.207-1.504-.344-1.857c-.182-.467-.398-.8-.749-1.15c-.35-.35-.683-.567-1.15-.749c-.353-.137-.882-.3-1.857-.344c-1.055-.048-1.372-.058-4.042-.058z"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 text-white group-hover:text-[#1E3E2B] transition-colors">
+                                <path fill="currentColor"
+                                    d="M12 7.005a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6a3 3 0 0 1 0 6zm5.25-8.5a1.25 1.25 0 1 1-2.5 0a1.25 1.25 0 0 1 2.5 0zM12 2.005c2.717 0 3.056.01 4.122.06c1.065.048 1.79.217 2.427.465a4.91 4.91 0 0 1 1.772 1.153a4.91 4.91 0 0 1 1.153 1.772c.247.637.416 1.362.465 2.427c.048 1.066.06 1.405.06 4.122s-.01 3.056-.06 4.122c-.048 1.065-.217 1.79-.465 2.427a4.91 4.91 0 0 1-1.153 1.772a4.91 4.91 0 0 1-1.772 1.153c-.637.247-1.362.416-2.427.465c-1.066.048-1.405.06-4.122.06s-3.056-.01-4.122-.06c-1.065-.048-1.79-.217-2.427-.465a4.91 4.91 0 0 1-1.772-1.153a4.91 4.91 0 0 1-1.153-1.772c-.247-.637-.416-1.362-.465-2.427c-.048-1.066-.06-1.405-.06-4.122s.01-3.056.06-4.122c.048-1.065.217-1.79.465-2.427a4.91 4.91 0 0 1 1.153-1.772a4.91 4.91 0 0 1 1.772-1.153c.637-.247 1.362-.416 2.427-.465c1.066-.048 1.405-.06 4.122-.06zM12 4.005c-2.67 0-2.987.01-4.042.058c-.975.045-1.504.207-1.857.344c-.467.182-.8.398-1.15.749c-.35.35-.567.683-.749 1.15c-.137.353-.3.882-.344 1.857c-.048 1.055-.058 1.372-.058 4.042s.01 2.987.058 4.042c.045.975.207 1.504.344 1.857c.182.467.398.8.749 1.15c.35.35.683.567 1.15.749c.353.137.882.3 1.857.344c1.055.048 1.372.058 4.042.058s2.987-.01 4.042-.058c.975-.045 1.504-.207 1.857-.344c.467-.182.8-.398 1.15-.749c.35-.35.567-.683.749-1.15c.137-.353.3-.882.344-1.857c.048-1.055.058-1.372.058-4.042s-.01-2.987-.058-4.042c-.045-.975-.207-1.504-.344-1.857c-.182-.467-.398-.8-.749-1.15c-.35-.35-.683-.567-1.15-.749c-.353-.137-.882-.3-1.857-.344c-1.055-.048-1.372-.058-4.042-.058z" />
                             </svg>
                         </a>
                     </div>
@@ -709,11 +731,16 @@
                 <div>
                     <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Navigasi Halaman</h4>
                     <ul class="space-y-2.5 text-xs">
-                        <li><a href="index.html" class="text-white/80 hover:text-white transition">Beranda Utama</a></li>
-                        <li><a href="domba.html" class="text-white/80 hover:text-white transition">Katalog &amp; Tabungan Domba</a></li>
-                        <li><a href="konsultasi.html" class="text-white/80 hover:text-white transition">Konsultasi</a></li>
-                        <li><a href="dampak-sosial.html" class="text-white/80 hover:text-white transition">Dampak Sosial &amp; CSR</a></li>
-                        <li><a href="tracking.html" class="text-white/80 hover:text-white transition">Pantau Ternak (Tracking)</a></li>
+                        <li><a href="index.html" class="text-white/80 hover:text-white transition">Beranda Utama</a>
+                        </li>
+                        <li><a href="domba.html" class="text-white/80 hover:text-white transition">Katalog &amp;
+                                Tabungan Domba</a></li>
+                        <li><a href="konsultasi.html" class="text-white/80 hover:text-white transition">Konsultasi</a>
+                        </li>
+                        <li><a href="dampak-sosial.html" class="text-white/80 hover:text-white transition">Dampak Sosial
+                                &amp; CSR</a></li>
+                        <li><a href="tracking.html" class="text-white/80 hover:text-white transition">Pantau Ternak
+                                (Tracking)</a></li>
                     </ul>
                 </div>
 
@@ -721,11 +748,17 @@
                 <div>
                     <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Layanan Utama</h4>
                     <ul class="space-y-2.5 text-xs">
-                        <li><a href="domba.html#pricelist" class="text-white/80 hover:text-white transition">Qurban Domba Unggul</a></li>
-                        <li><a href="domba.html#tabungan" class="text-white/80 hover:text-white transition">Tabungan Qurban &amp; Aqiqah</a></li>
-                        <li><a href="konsultasi.html#konsultasi-layanan" class="text-white/80 hover:text-white transition">Formulasi Pakan Nutrisi</a></li>
-                        <li><a href="konsultasi.html#konsultasi-layanan" class="text-white/80 hover:text-white transition">Audit &amp; Desain Kandang</a></li>
-                        <li><a href="dampak-sosial.html#program-csr" class="text-white/80 hover:text-white transition">Kemitraan &amp; Kolaborasi CSR</a></li>
+                        <li><a href="domba.html#pricelist" class="text-white/80 hover:text-white transition">Qurban
+                                Domba Unggul</a></li>
+                        <li><a href="domba.html#tabungan" class="text-white/80 hover:text-white transition">Tabungan
+                                Qurban &amp; Aqiqah</a></li>
+                        <li><a href="konsultasi.html#konsultasi-layanan"
+                                class="text-white/80 hover:text-white transition">Formulasi Pakan Nutrisi</a></li>
+                        <li><a href="konsultasi.html#konsultasi-layanan"
+                                class="text-white/80 hover:text-white transition">Audit &amp; Desain Kandang</a></li>
+                        <li><a href="dampak-sosial.html#program-csr"
+                                class="text-white/80 hover:text-white transition">Kemitraan &amp; Kolaborasi CSR</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -734,7 +767,8 @@
                     <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Kontak &amp; Lokasi</h4>
                     <ul class="space-y-3 text-xs">
                         <li>
-                            <a href="https://maps.google.com/?q=Kecamatan+Parung+Bogor" target="_blank" rel="noopener noreferrer"
+                            <a href="https://maps.google.com/?q=Kecamatan+Parung+Bogor" target="_blank"
+                                rel="noopener noreferrer"
                                 class="flex items-start gap-2.5 text-white/80 hover:text-white transition group">
                                 <span class="shrink-0 text-emerald-400">📍</span>
                                 <span class="leading-relaxed">Kecamatan Parung, Kabupaten Bogor, Jawa Barat.</span>
@@ -763,10 +797,12 @@
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60 font-light">
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60 font-light">
                 <p>&copy; 2026 Kandang Kang Iky. All Rights Reserved. Parung, Bogor.</p>
                 <div class="flex items-center gap-6 text-white/70">
-                    <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Bantuan Cepat</a>
+                    <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-white transition">Bantuan Cepat</a>
                     <span>•</span>
                     <a href="index.html#kontak" class="hover:text-white transition">Hubungi Kami</a>
                     <span>•</span>
