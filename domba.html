@@ -130,30 +130,10 @@
                 Katalog Domba Unggul &amp;<br>
                 <span class="font-serif italic font-normal text-accent">Program Tabungan Qurban 2026</span>
             </h1>
-            <p class="text-neutral-600 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed font-light mb-8">
+            <p class="text-neutral-600 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed font-light">
                 Pilihan domba qurban &amp; aqiqah terbaik ras Dorper, Cross Texel, dan Garut. Gemuk sehat alami dengan
                 ransum Complete Feed, terstandarisasi syariat, serta skema tabungan qurban bertahap tanpa rasa berat.
             </p>
-            <div class="flex flex-wrap items-center justify-center gap-3">
-                <a href="#pricelist"
-                    class="inline-flex items-center gap-2 bg-primary hover:bg-[#152e20] text-white font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-sm hover:shadow-md">
-                    <span>Lihat Pricelist Resmi</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </a>
-                <a href="#kalkulator-tabungan"
-                    class="inline-flex items-center gap-2 bg-accent hover:bg-[#3d7511] text-white font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-sm hover:shadow-md">
-                    <span>Hitung Cicilan Tabungan</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </a>
-                <button onclick="sendWhatsapp('buy')"
-                    class="inline-flex items-center gap-2 bg-white border border-neutral-200 text-primary hover:border-accent hover:text-accent font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-full transition duration-300 shadow-2xs cursor-pointer">
-                    <span>💬 Tanya Admin</span>
-                </button>
-            </div>
         </div>
     </header>
 
@@ -304,99 +284,41 @@
                 </div>
             </div>
 
-            <!-- INTERACTIVE CALCULATOR SECTION -->
-            <div id="kalkulator-tabungan" class="max-w-2xl mx-auto scroll-mt-28">
+            <!-- BANNER / CARD RINGKAS AJAK KONTAK WA -->
+            <div id="kalkulator-tabungan" class="max-w-3xl mx-auto scroll-mt-28">
                 <div
-                    class="bg-[#FAFAFA] rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm relative overflow-hidden">
+                    class="bg-gradient-to-br from-[#1E3E2B] via-[#152e20] to-[#0B1320] text-white rounded-3xl p-8 sm:p-12 border border-white/10 shadow-xl relative overflow-hidden text-center">
+                    <!-- Subtle Glow Effect -->
                     <div
-                        class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary">
+                        class="absolute -top-24 -right-24 w-64 h-64 bg-accent/20 rounded-full blur-3xl pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute -bottom-24 -left-24 w-64 h-64 bg-accent/15 rounded-full blur-3xl pointer-events-none">
                     </div>
 
-                    <div class="text-center mb-8">
-
-                        <h3 class="text-2xl font-extrabold text-primary tracking-tight mt-2">
-                            Simulasi Tabungan Qurban 2026
-                        </h3>
-                        <p class="text-xs text-neutral-500 font-light mt-1.5 max-w-md mx-auto">
-                            Tentukan tipe domba dan jangka waktu cicilan. Sistem akan menghitung estimasi setoran
-                            bulanan Anda secara otomatis.
-                        </p>
-                    </div>
-
-                    <!-- Form Controls -->
-                    <div class="space-y-5 mb-6">
-                        <div>
-                            <label for="pilih-domba"
-                                class="block text-[11px] font-bold tracking-wider text-neutral-600 uppercase mb-2">
-                                1. Pilihan Tipe Hewan &amp; Estimasi Bobot
-                            </label>
-                            <div class="relative">
-                                <select id="pilih-domba"
-                                    class="w-full border border-neutral-200 rounded-xl px-4 py-3.5 bg-white text-xs font-semibold text-neutral-800 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition appearance-none cursor-pointer">
-                                    <!-- Dimuat dinamis oleh js/calculator.js -->
-                                </select>
-                                <div
-                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-neutral-400 text-xs">
-                                    ▼
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="pilih-tenor"
-                                class="block text-[11px] font-bold tracking-wider text-neutral-600 uppercase mb-2">
-                                2. Jangka Waktu Setoran (Tenor)
-                            </label>
-                            <div class="relative">
-                                <select id="pilih-tenor"
-                                    class="w-full border border-neutral-200 rounded-xl px-4 py-3.5 bg-white text-xs font-semibold text-neutral-800 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition appearance-none cursor-pointer">
-                                    <option value="3">3 Bulan (Jangka Singkat)</option>
-                                    <option value="6" selected>6 Bulan (Direkomendasikan)</option>
-                                    <option value="9">9 Bulan (Santai &amp; Ringan)</option>
-                                    <option value="12">12 Bulan (Setoran Minimal)</option>
-                                </select>
-                                <div
-                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-neutral-400 text-xs">
-                                    ▼
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Result Panel -->
-                    <div class="bg-white rounded-2xl p-6 border border-neutral-200/90 shadow-2xs mb-6 text-center">
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400 block mb-1">
-                            Estimasi Setoran Tabungan
+                    <div class="relative z-10 max-w-xl mx-auto">
+                        <span
+                            class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-xs text-[#8ee04e] text-[11px] font-semibold tracking-wider uppercase mb-4 border border-white/10">
+                            <span>💬</span>
+                            <span>Konsultasi Bebas Biaya</span>
                         </span>
-                        <div id="hasil-cicilan"
-                            class="text-2xl sm:text-3xl font-extrabold text-accent tracking-tight my-1">
-                            Rp 0 / bulan
-                        </div>
-                        <div
-                            class="flex items-center justify-center gap-3 text-xs text-neutral-500 font-light mt-2 pt-3 border-t border-neutral-100">
-                            <span>Total Harga: <strong id="total-harga" class="font-bold text-neutral-800">Rp
-                                    0</strong></span>
-                            <span>•</span>
-                            <span id="ringkasan-paket" class="font-medium text-primary">Domba Non-Tanduk — 6
-                                Bulan</span>
-                        </div>
-                    </div>
 
-                    <!-- WhatsApp CTA -->
-                    <a id="btn-wa-kalkulator" href="#" target="_blank"
-                        class="w-full flex items-center justify-center gap-2 bg-accent hover:bg-[#3d7511] text-white py-4 rounded-xl font-bold text-xs uppercase tracking-wider transition shadow-md hover:shadow-lg">
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                            <path
-                                d="M24 12c0 6.627-5.373 12-12 12-1.956 0-3.79-.466-5.415-1.291L0 24l1.32-6.397C.474 15.95 0 14.032 0 12 0s12 5.373 12 0s12 5.373 12 12z" />
-                        </svg>
-                        <span>Daftar Tabungan via WhatsApp</span>
-                    </a>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug mb-3">
+                            Ingin Simulasi &amp; Skema Tabungan Khusus?
+                        </h3>
 
-                    <div class="mt-4 text-center">
-                        <a href="simulasi.html"
-                            class="text-[11px] text-neutral-400 hover:text-accent font-medium underline">
-                            Buka Simulator Tabungan Halaman Penuh &rarr;
-                        </a>
+                        <p class="text-neutral-200 text-xs sm:text-sm font-light leading-relaxed mb-8">
+                            Konsultasikan target qurban/aqiqah dan kemampuan setoran bulanan Anda langsung bersama Admin Kandang.
+                        </p>
+
+                        <button onclick="sendWhatsapp('saving')"
+                            class="inline-flex items-center justify-center gap-2.5 bg-accent hover:bg-[#3d7511] text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 cursor-pointer">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 12.008 0c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 12.004-11.953 12.004-.001 0-.001 0 0 0-2.001-.001-3.972-.542-5.717-1.564L0 24zm6.59-4.846c1.673.993 3.33 1.543 5.35 1.544 5.385 0 9.767-4.385 9.77-9.774.002-2.611-1.015-5.066-2.866-6.92C17.003 2.15 14.552 1.132 11.947 1.131 6.564 1.131 2.184 5.512 2.181 10.9c-.001 1.953.511 3.86 1.483 5.53l-.995 3.637 3.731-.978zm11.365-6.81c-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.668.149-.198.299-.765.967-.939 1.165-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.174.2-.298.3-.496.1-.198.05-.371-.025-.521-.075-.149-.668-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" />
+                            </svg>
+                            <span>Hubungi Admin via WhatsApp</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -613,7 +535,6 @@
 
     <!-- SCRIPTS -->
     <script src="js/config.js"></script>
-    <script src="js/calculator.js"></script>
     <script>
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImg');
@@ -649,7 +570,9 @@
             const phone = (window.KandangConfig && window.KandangConfig.getAppConfig().whatsapp) ? window.KandangConfig.getAppConfig().whatsapp : "6287729727309";
             let message = "";
 
-            if (intent === 'buy') {
+            if (intent === 'saving' || intent === 'tabungan') {
+                message = "Halo Admin Kandang Kang Iky, saya ingin berkonsultasi mengenai simulasi & skema tabungan qurban/aqiqah khusus sesuai kemampuan setoran bulanan saya. Mohon informasinya. Terima kasih!";
+            } else if (intent === 'buy') {
                 message = "Halo Kang Iky, saya tertarik dengan informasi pembelian domba qurban/aqiqah atau program tabungan domba di Kandang Kang Iky. Mohon informasi ketersediaan stok & katalog terbaru. Terima kasih!";
             } else if (intent === 'consult') {
                 message = "Halo Ir. Rizky / Tim Kandang Kang Iky, saya ingin berkonsultasi mengenai peternakan domba modern. Terima kasih!";
