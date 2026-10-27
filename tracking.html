@@ -12,7 +12,9 @@
     <!-- Google Fonts & Tailwind CSS CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -40,12 +42,16 @@
 <body class="text-neutral-900 antialiased overflow-x-hidden bg-[#FAFAFA]" x-data="{ mobileMenuOpen: false }">
 
     <!-- 1. FLOATING PILL NAVBAR -->
-    <div class="fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none" x-data="{ mobileMenuOpen: false }">
-        <nav class="pointer-events-auto flex items-center justify-between gap-4 w-full max-w-6xl md:max-w-7xl px-4 md:px-6 py-2.5 rounded-full bg-[#1E3E2B]/90 backdrop-blur-md border border-white/10 shadow-xl text-white transition-all relative">
+    <div class="fixed top-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none"
+        x-data="{ mobileMenuOpen: false }">
+        <nav
+            class="pointer-events-auto flex items-center justify-between gap-4 w-full max-w-6xl md:max-w-7xl px-4 md:px-6 py-2.5 rounded-full bg-[#1E3E2B]/90 backdrop-blur-md border border-white/10 shadow-xl text-white transition-all relative">
             <!-- Logo Kiri -->
             <a href="index.html" class="flex items-center gap-2.5 shrink-0 group">
-                <div class="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-white aspect-square shrink-0 shadow-xs">
-                    <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+                <div
+                    class="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-white aspect-square shrink-0 shadow-xs">
+                    <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky"
+                        class="w-full h-full object-cover transition-transform group-hover:scale-105">
                 </div>
                 <span class="text-xs sm:text-sm font-bold tracking-wide text-white">
                     Kandang Kang Iky
@@ -54,10 +60,16 @@
 
             <!-- Menu Link Desktop -->
             <div class="hidden md:flex items-center gap-1.5 lg:gap-2">
-                <a href="index.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Beranda</a>
-                <a href="domba.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Katalog &amp; Tabungan</a>
-                <a href="konsultasi.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Konsultasi</a>
-                <a href="dampak-sosial.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Dampak Sosial</a>
+                <a href="index.html"
+                    class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Beranda</a>
+                <a href="domba.html"
+                    class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Katalog
+                    &amp; Tabungan</a>
+                <a href="konsultasi.html"
+                    class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Konsultasi</a>
+                <a href="dampak-sosial.html"
+                    class="px-4 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/15 transition-all text-sm">Dampak
+                    Sosial</a>
             </div>
 
             <!-- Action Buttons Kanan (Track Dombamu & Mobile Toggle) -->
@@ -66,7 +78,8 @@
                 <a href="tracking.html"
                     class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white text-[#1E3E2B] font-semibold text-xs md:text-sm transition-all border border-white/20 shadow-sm"
                     aria-label="Track Dombamu">
-                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
@@ -87,8 +100,7 @@
             </div>
 
             <!-- Mobile Menu Dropdown Card -->
-            <div x-show="mobileMenuOpen"
-                @click.away="mobileMenuOpen = false"
+            <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false"
                 x-transition:enter="transition ease-out duration-200"
                 x-transition:enter-start="opacity-0 -translate-y-2 scale-95"
                 x-transition:enter-end="opacity-100 translate-y-0 scale-100"
@@ -96,14 +108,21 @@
                 x-transition:leave-start="opacity-100 translate-y-0 scale-100"
                 x-transition:leave-end="opacity-0 -translate-y-2 scale-95"
                 class="md:hidden absolute top-full left-0 right-0 mt-2 bg-[#1E3E2B]/95 backdrop-blur-md border border-white/15 rounded-2xl p-4 shadow-xl space-y-1.5 text-xs text-white">
-                <a href="index.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Beranda</a>
-                <a href="domba.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Katalog &amp; Tabungan</a>
-                <a href="konsultasi.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Konsultasi</a>
-                <a href="dampak-sosial.html" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Dampak Sosial</a>
+                <a href="index.html" @click="mobileMenuOpen = false"
+                    class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Beranda</a>
+                <a href="domba.html" @click="mobileMenuOpen = false"
+                    class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Katalog
+                    &amp; Tabungan</a>
+                <a href="konsultasi.html" @click="mobileMenuOpen = false"
+                    class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Konsultasi</a>
+                <a href="dampak-sosial.html" @click="mobileMenuOpen = false"
+                    class="block px-3 py-2 rounded-xl text-white/90 hover:bg-white/15 hover:text-white transition">Dampak
+                    Sosial</a>
                 <div class="pt-2 border-t border-white/15">
                     <a href="tracking.html" @click="mobileMenuOpen = false"
                         class="w-full inline-flex items-center justify-center gap-2 py-2.5 bg-white text-[#1E3E2B] hover:bg-white/90 rounded-xl font-bold text-xs transition shadow-sm">
-                        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
@@ -117,17 +136,22 @@
     <!-- 2. PAGE HEADER / BANNER -->
     <header class="relative bg-white pt-28 sm:pt-32 pb-14 sm:pb-20 border-b border-neutral-100 overflow-hidden">
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-200 text-[#1E3E2B] text-xs font-semibold uppercase tracking-wider mb-5">
+            <div
+                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-200 text-[#1E3E2B] text-xs font-semibold uppercase tracking-wider mb-5">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span>Live Digital Monitoring System</span>
             </div>
-            <h1 class="text-3xl sm:text-5xl font-extrabold text-primary tracking-tight leading-[1.2] mb-4">
+
+            <h1
+                class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-primary tracking-tight leading-[1.2] sm:leading-[1.15] mb-6 [text-shadow:_0_2px_12px_rgba(255,255,255,0.7)]">
                 Pantau Dombamu Secara Transparan<br>
-                <span class="font-serif italic font-normal text-accent">Kapan Saja &amp; Di Mana Saja</span>
+                <span class="font-serif italic font-normal text-accent"">Kapan Saja &amp; Di Mana Saja</span>
             </h1>
-            <p class="text-neutral-600 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed font-light">
-                Setiap domba qurban, aqiqah, dan tabungan di Kandang Kang Iky memiliki catatan rekam medis, kurva kenaikan bobot harian, serta riwayat ransum pakan berbasis nomor telinga (ear-tag) yang dapat Anda akses secara digital.
-            </p>
+            <p class=" text-neutral-600 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed font-light">
+                    Setiap domba qurban, aqiqah, dan tabungan di Kandang Kang Iky memiliki catatan rekam medis, kurva
+                    kenaikan bobot harian, serta riwayat ransum pakan berbasis nomor telinga (ear-tag) yang dapat Anda
+                    akses secara digital.
+                    </p>
         </div>
     </header>
 
@@ -135,49 +159,62 @@
     <main class="py-16 sm:py-24 bg-[#FAFAFA]">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <!-- Highlight Card -->
-            <div class="bg-white rounded-3xl border border-neutral-200 shadow-xl overflow-hidden p-8 sm:p-12 mb-12 relative">
-                <div class="absolute top-0 right-0 w-80 h-80 bg-emerald-100/50 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+            <div
+                class="bg-white rounded-3xl border border-neutral-200 shadow-xl overflow-hidden p-8 sm:p-12 mb-12 relative">
+                <div
+                    class="absolute top-0 right-0 w-80 h-80 bg-emerald-100/50 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20">
+                </div>
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     <div class="lg:col-span-7">
-                        <span class="text-xs uppercase tracking-widest font-bold text-accent mb-2 block">Aplikasi Resmi Sahibul Qurban</span>
+                        <span class="text-xs uppercase tracking-widest font-bold text-accent mb-2 block">Aplikasi Resmi
+                            Sahibul Qurban</span>
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight mb-4">
                             Portal Web Pantau Dombamu
                         </h2>
                         <p class="text-neutral-600 text-sm leading-relaxed mb-6">
-                            Akses langsung dashboard pemantauan domba melalui aplikasi web interaktif kami. Cukup masukkan ID domba atau nomor telepon terdaftar untuk melihat status gizi, jadwal timbang berkala, dan video perkembangan terkini.
+                            Akses langsung dashboard pemantauan domba melalui aplikasi web interaktif kami. Cukup
+                            masukkan ID domba atau nomor telepon terdaftar untuk melihat status gizi, jadwal timbang
+                            berkala, dan video perkembangan terkini.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-3">
                             <a href="https://kandangkangiky.vercel.app" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-primary hover:bg-[#152e20] text-white text-xs sm:text-sm font-bold tracking-wide transition shadow-md hover:shadow-lg">
                                 <span>Buka Aplikasi Pantau Dombamu</span>
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
                             </a>
                             <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-emerald-50 hover:bg-emerald-100 text-[#1E3E2B] text-xs sm:text-sm font-semibold border border-emerald-200 transition">
-                                <span>Tanya Admin ID Ternak</span>
+                                <span>Tanya ID Ternakmu ke Admin</span>
                             </a>
                         </div>
                     </div>
-                    <div class="lg:col-span-5 bg-[#1E3E2B] text-white p-6 rounded-2xl shadow-inner border border-white/15">
-                        <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider mb-3">Fitur Monitoring Live:</h3>
+                    <div
+                        class="lg:col-span-5 bg-[#1E3E2B] text-white p-6 rounded-2xl shadow-inner border border-white/15">
+                        <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider mb-3">Fitur Monitoring
+                            Live:</h3>
                         <ul class="space-y-3 text-xs text-white/90">
                             <li class="flex items-start gap-2.5">
                                 <span class="text-emerald-400 font-bold">✓</span>
-                                <span><strong>Riwayat Bobot Real-Time:</strong> Grafik kenaikan ADG (Average Daily Gain) mingguan.</span>
+                                <span><strong>Riwayat Bobot Real-Time:</strong> Grafik kenaikan ADG (Average Daily Gain)
+                                    mingguan.</span>
                             </li>
                             <li class="flex items-start gap-2.5">
                                 <span class="text-emerald-400 font-bold">✓</span>
-                                <span><strong>Buku Kesehatan Ternak:</strong> Catatan vaksinasi, obat cacing, dan sertifikasi syariat.</span>
+                                <span><strong>Buku Kesehatan Ternak:</strong> Catatan vaksinasi, obat cacing, dan
+                                    sertifikasi syariat.</span>
                             </li>
                             <li class="flex items-start gap-2.5">
                                 <span class="text-emerald-400 font-bold">✓</span>
-                                <span><strong>Log Formulasi Pakan:</strong> Transparansi ransum pakan Complete Feed silase limbah lokal.</span>
+                                <span><strong>Log Formulasi Pakan:</strong> Transparansi ransum pakan Complete Feed
+                                    silase limbah lokal.</span>
                             </li>
                             <li class="flex items-start gap-2.5">
                                 <span class="text-emerald-400 font-bold">✓</span>
-                                <span><strong>Dokumentasi Foto/Video:</strong> Update visual rutin kondisi domba di kandang panggung.</span>
+                                <span><strong>Dokumentasi Domba:</strong> Update visual rutin kondisi domba di
+                                    kandang.</span>
                             </li>
                         </ul>
                     </div>
@@ -186,31 +223,40 @@
 
             <!-- 3 Pillars of Transparent Tracking -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-2xl border border-neutral-150 shadow-xs hover:border-emerald-300 transition">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-xl font-bold mb-4">
+                <div
+                    class="bg-white p-6 rounded-2xl border border-neutral-150 shadow-xs hover:border-emerald-300 transition">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-xl font-bold mb-4">
                         ⚖️
                     </div>
                     <h4 class="text-sm font-bold text-primary mb-2">Penimbangan Presisi</h4>
                     <p class="text-xs text-neutral-600 leading-relaxed">
-                        Data timbang akurat menggunakan timbangan digital bersertifikasi setiap 2 minggu sekali demi memastikan domba Anda mencapai target bobot akad.
+                        Data timbang akurat menggunakan timbangan digital bersertifikasi setiap 2 minggu sekali demi
+                        memastikan domba Anda mencapai target bobot akad.
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border border-neutral-150 shadow-xs hover:border-emerald-300 transition">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-xl font-bold mb-4">
+                <div
+                    class="bg-white p-6 rounded-2xl border border-neutral-150 shadow-xs hover:border-emerald-300 transition">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-xl font-bold mb-4">
                         🩺
                     </div>
                     <h4 class="text-sm font-bold text-primary mb-2">Supervisi Insinyur Ahli</h4>
                     <p class="text-xs text-neutral-600 leading-relaxed">
-                        Diperiksa berkala oleh Ir. Rizky Ayuna Budiman, S.Pt dengan standar biosekuriti ketat dan manajemen kandang higienis tanpa bau menyengat.
+                        Diperiksa berkala oleh Kang Iky ahli peternakan dengan standar biosekuriti ketat dan
+                        manajemen kandang higienis tanpa bau menyengat.
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border border-neutral-150 shadow-xs hover:border-emerald-300 transition">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-xl font-bold mb-4">
+                <div
+                    class="bg-white p-6 rounded-2xl border border-neutral-150 shadow-xs hover:border-emerald-300 transition">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-xl font-bold mb-4">
                         📱
                     </div>
                     <h4 class="text-sm font-bold text-primary mb-2">Akses Mudah dari HP</h4>
                     <p class="text-xs text-neutral-600 leading-relaxed">
-                        Tanpa perlu install aplikasi rumit dari app store, cukup buka browser di ponsel Anda untuk melihat status domba secara praktis.
+                        Tanpa perlu install aplikasi rumit dari app store, cukup buka browser di ponsel Anda untuk
+                        melihat status domba secara praktis.
                     </p>
                 </div>
             </div>
@@ -228,10 +274,12 @@
                         <div class="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-white">
                             <img src="assets/logo.jpg" alt="Logo Kandang Kang Iky" class="w-full h-full object-cover">
                         </div>
-                        <span class="text-sm font-bold tracking-wide text-white">Kandang <span class="text-emerald-400">Kang Iky</span></span>
+                        <span class="text-sm font-bold tracking-wide text-white">Kandang <span
+                                class="text-emerald-400">Kang Iky</span></span>
                     </div>
                     <p class="text-xs text-white/80 leading-relaxed">
-                        Peternakan domba modern berbasis sains dan syariat di Parung, Bogor. Menghadirkan bibit unggul, program tabungan qurban, konsultasi peternakan terintegrasi, serta pemberdayaan petani lokal.
+                        Peternakan domba modern berbasis sains dan syariat di Parung, Bogor. Menghadirkan bibit unggul,
+                        program tabungan qurban, konsultasi peternakan terintegrasi, serta pemberdayaan petani lokal.
                     </p>
                     <!-- Sosmed Icons -->
                     <div class="flex items-center gap-3 pt-2">
@@ -239,16 +287,22 @@
                         <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
                             class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-[#1E3E2B] text-white flex items-center justify-center transition border border-white/15 group"
                             aria-label="WhatsApp Kandang Kang Iky">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white group-hover:text-[#1E3E2B] transition-colors">
-                                <path fill="currentColor" d="m7.254 18.494l.724.423A7.95 7.95 0 0 0 12.001 20a8 8 0 1 0-8-8a7.95 7.95 0 0 0 1.084 4.024l.422.724l-.653 2.401zM2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355zM8.392 7.308q.202-.014.403-.004q.081.006.162.016c.159.018.334.115.393.249q.447 1.015.868 2.04c.062.152.025.347-.093.537c-.06.097-.154.233-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268c.12.116.237.235.363.346c.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11q.093.039.191.066q.036.01.073.011a.35.35 0 0 0 .295-.142c.723-.876.79-.933.795-.933v.002a.48.48 0 0 1 .378-.127q.092.004.177.04c.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265c.004.067.01.175-.013.373c-.032.259-.11.57-.188.733a1.2 1.2 0 0 1-.21.302a2.4 2.4 0 0 1-.33.288q-.124.092-.125.09a5 5 0 0 1-.383.22a2 2 0 0 1-.833.23c-.185.01-.37.024-.556.014c-.008 0-.568-.087-.568-.087a9.45 9.45 0 0 1-3.84-2.046c-.226-.199-.436-.413-.65-.626c-.888-.885-1.561-1.84-1.97-2.742a3.5 3.5 0 0 1-.33-1.413a2.73 2.73 0 0 1 .565-1.68c.073-.094.142-.192.261-.305c.126-.12.207-.184.294-.228a1 1 0 0 1 .371-.1"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 text-white group-hover:text-[#1E3E2B] transition-colors">
+                                <path fill="currentColor"
+                                    d="m7.254 18.494l.724.423A7.95 7.95 0 0 0 12.001 20a8 8 0 1 0-8-8a7.95 7.95 0 0 0 1.084 4.024l.422.724l-.653 2.401zM2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355zM8.392 7.308q.202-.014.403-.004q.081.006.162.016c.159.018.334.115.393.249q.447 1.015.868 2.04c.062.152.025.347-.093.537c-.06.097-.154.233-.263.372c-.113.145-.356.411-.356.411s-.099.118-.061.265c.014.056.06.137.102.205l.059.095c.256.427.6.86 1.02 1.268c.12.116.237.235.363.346c.468.413.998.75 1.57 1l.005.002c.085.037.128.057.252.11q.093.039.191.066q.036.01.073.011a.35.35 0 0 0 .295-.142c.723-.876.79-.933.795-.933v.002a.48.48 0 0 1 .378-.127q.092.004.177.04c.531.243 1.4.622 1.4.622l.582.261c.098.047.187.158.19.265c.004.067.01.175-.013.373c-.032.259-.11.57-.188.733a1.2 1.2 0 0 1-.21.302a2.4 2.4 0 0 1-.33.288q-.124.092-.125.09a5 5 0 0 1-.383.22a2 2 0 0 1-.833.23c-.185.01-.37.024-.556.014c-.008 0-.568-.087-.568-.087a9.45 9.45 0 0 1-3.84-2.046c-.226-.199-.436-.413-.65-.626c-.888-.885-1.561-1.84-1.97-2.742a3.5 3.5 0 0 1-.33-1.413a2.73 2.73 0 0 1 .565-1.68c.073-.094.142-.192.261-.305c.126-.12.207-.184.294-.228a1 1 0 0 1 .371-.1" />
                             </svg>
                         </a>
                         <!-- Instagram -->
                         <a href="https://instagram.com/kandangkangiky" target="_blank" rel="noopener noreferrer"
                             class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-[#1E3E2B] text-white flex items-center justify-center transition border border-white/15 group"
                             aria-label="Instagram Kandang Kang Iky">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white group-hover:text-[#1E3E2B] transition-colors">
-                                <path fill="currentColor" d="M12 2c2.717 0 3.056.01 4.122.06c1.065.05 1.79.217 2.428.465c.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122c0 2.717-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465c-1.066.047-1.405.06-4.122.06c-2.717 0-3.056-.01-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153a4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 1.802c-2.67 0-2.987.01-4.042.059c-.974.045-1.504.207-1.857.344c-.467.182-.8.398-1.15.748c-.35.35-.566.683-.748 1.15c-.137.353-.3.882-.344 1.857c-.048 1.055-.058 1.372-.058 4.04s.01 2.986.058 4.042c.045.974.207 1.504.344 1.857c.182.466.399.8.748 1.15c.35.35.683.566 1.15.748c.353.137.882.3 1.857.344c1.054.048 1.37.058 4.041.058s2.987-.01 4.042-.058c.974-.045 1.504-.207 1.857-.344c.467-.182.8-.399 1.15-.748c.35-.35.566-.683.748-1.15c.137-.353.3-.882.344-1.857c.048-1.055.058-1.371.058-4.041s-.01-2.986-.058-4.042c-.045-.974-.207-1.504-.344-1.857c-.182-.467-.399-.8-.748-1.15c-.35-.35-.683-.566-1.15-.748c-.353-.137-.882-.3-1.857-.344c-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 1 1 0 10.27a5.135 5.135 0 0 1 0-10.27zm0 1.802a3.333 3.333 0 1 0 0 6.666a3.333 3.333 0 0 0 0-6.666zm5.338-3.205a1.2 1.2 0 1 1 0 2.4a1.2 1.2 0 0 1 0-2.4z"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 text-white group-hover:text-[#1E3E2B] transition-colors">
+                                <path fill="currentColor"
+                                    d="M12 2c2.717 0 3.056.01 4.122.06c1.065.05 1.79.217 2.428.465c.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122c0 2.717-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465c-1.066.047-1.405.06-4.122.06c-2.717 0-3.056-.01-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153a4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 1.802c-2.67 0-2.987.01-4.042.059c-.974.045-1.504.207-1.857.344c-.467.182-.8.398-1.15.748c-.35.35-.566.683-.748 1.15c-.137.353-.3.882-.344 1.857c-.048 1.055-.058 1.372-.058 4.04s.01 2.986.058 4.042c.045.974.207 1.504.344 1.857c.182.466.399.8.748 1.15c.35.35.683.566 1.15.748c.353.137.882.3 1.857.344c1.054.048 1.37.058 4.041.058s2.987-.01 4.042-.058c.974-.045 1.504-.207 1.857-.344c.467-.182.8-.399 1.15-.748c.35-.35.566-.683.748-1.15c.137-.353.3-.882.344-1.857c.048-1.055.058-1.371.058-4.041s-.01-2.986-.058-4.042c-.045-.974-.207-1.504-.344-1.857c-.182-.467-.399-.8-.748-1.15c-.35-.35-.683-.566-1.15-.748c-.353-.137-.882-.3-1.857-.344c-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 1 1 0 10.27a5.135 5.135 0 0 1 0-10.27zm0 1.802a3.333 3.333 0 1 0 0 6.666a3.333 3.333 0 0 0 0-6.666zm5.338-3.205a1.2 1.2 0 1 1 0 2.4a1.2 1.2 0 0 1 0-2.4z" />
                             </svg>
                         </a>
                     </div>
@@ -258,11 +312,16 @@
                 <div>
                     <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Navigasi Halaman</h4>
                     <ul class="space-y-2.5 text-xs">
-                        <li><a href="index.html" class="text-white/80 hover:text-white transition">Beranda Utama</a></li>
-                        <li><a href="domba.html" class="text-white/80 hover:text-white transition">Katalog &amp; Tabungan Domba</a></li>
-                        <li><a href="konsultasi.html" class="text-white/80 hover:text-white transition">Konsultasi</a></li>
-                        <li><a href="dampak-sosial.html" class="text-white/80 hover:text-white transition">Dampak Sosial &amp; CSR</a></li>
-                        <li><a href="tracking.html" class="text-white/80 hover:text-white transition">Pantau Ternak (Tracking)</a></li>
+                        <li><a href="index.html" class="text-white/80 hover:text-white transition">Beranda Utama</a>
+                        </li>
+                        <li><a href="domba.html" class="text-white/80 hover:text-white transition">Katalog &amp;
+                                Tabungan Domba</a></li>
+                        <li><a href="konsultasi.html" class="text-white/80 hover:text-white transition">Konsultasi</a>
+                        </li>
+                        <li><a href="dampak-sosial.html" class="text-white/80 hover:text-white transition">Dampak Sosial
+                                &amp; CSR</a></li>
+                        <li><a href="tracking.html" class="text-white/80 hover:text-white transition">Pantau Ternak
+                                (Tracking)</a></li>
                     </ul>
                 </div>
 
@@ -270,11 +329,17 @@
                 <div>
                     <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Layanan Utama</h4>
                     <ul class="space-y-2.5 text-xs">
-                        <li><a href="domba.html#pricelist" class="text-white/80 hover:text-white transition">Qurban Domba Unggul</a></li>
-                        <li><a href="domba.html#tabungan" class="text-white/80 hover:text-white transition">Tabungan Qurban &amp; Aqiqah</a></li>
-                        <li><a href="konsultasi.html#konsultasi-layanan" class="text-white/80 hover:text-white transition">Formulasi Pakan Nutrisi</a></li>
-                        <li><a href="konsultasi.html#konsultasi-layanan" class="text-white/80 hover:text-white transition">Audit &amp; Desain Kandang</a></li>
-                        <li><a href="dampak-sosial.html#program-csr" class="text-white/80 hover:text-white transition">Kemitraan &amp; Kolaborasi CSR</a></li>
+                        <li><a href="domba.html#pricelist" class="text-white/80 hover:text-white transition">Qurban
+                                Domba Unggul</a></li>
+                        <li><a href="domba.html#tabungan" class="text-white/80 hover:text-white transition">Tabungan
+                                Qurban &amp; Aqiqah</a></li>
+                        <li><a href="konsultasi.html#konsultasi-layanan"
+                                class="text-white/80 hover:text-white transition">Formulasi Pakan Nutrisi</a></li>
+                        <li><a href="konsultasi.html#konsultasi-layanan"
+                                class="text-white/80 hover:text-white transition">Audit &amp; Desain Kandang</a></li>
+                        <li><a href="dampak-sosial.html#program-csr"
+                                class="text-white/80 hover:text-white transition">Kemitraan &amp; Kolaborasi CSR</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -283,7 +348,8 @@
                     <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Kontak &amp; Lokasi</h4>
                     <ul class="space-y-3 text-xs">
                         <li>
-                            <a href="https://maps.google.com/?q=Kecamatan+Parung+Bogor" target="_blank" rel="noopener noreferrer"
+                            <a href="https://maps.google.com/?q=Kecamatan+Parung+Bogor" target="_blank"
+                                rel="noopener noreferrer"
                                 class="flex items-start gap-2.5 text-white/80 hover:text-white transition group">
                                 <span class="shrink-0 text-emerald-400">📍</span>
                                 <span class="leading-relaxed">Kecamatan Parung, Kabupaten Bogor, Jawa Barat.</span>
@@ -312,10 +378,12 @@
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60 font-light">
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60 font-light">
                 <p>&copy; 2026 Kandang Kang Iky. All Rights Reserved. Parung, Bogor.</p>
                 <div class="flex items-center gap-6 text-white/70">
-                    <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Bantuan Cepat</a>
+                    <a href="https://wa.me/6287729727309" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-white transition">Bantuan Cepat</a>
                     <span>•</span>
                     <a href="index.html#kontak" class="hover:text-white transition">Hubungi Kami</a>
                     <span>•</span>
