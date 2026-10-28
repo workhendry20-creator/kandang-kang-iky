@@ -50,16 +50,16 @@ kandang-kang-iky/
 │   ├── calculator.js       # Logika kalkulator tabungan & integrasi URL parameter
 │   └── admin-panel.js      # Logika form admin panel, toast notifikasi, & ekspor JSON
 └── assets/                 # Berkas gambar & media resmi
-    ├── hero.jpeg           # Foto banner utama kandang
-    ├── logo.jpg            # Logo lingkaran resmi Kandang Kang Iky
-    ├── pict1.jpg           # Dokumentasi aktivitas domba 1
-    ├── pict2.jpg           # Dokumentasi aktivitas domba 2
-    ├── pict3.jpg           # Dokumentasi aktivitas domba 3
-    ├── PL1.png             # Pricelist Domba Cross Texel & Dorper
-    ├── PL2.png             # Pricelist Domba Tanduk Garut
-    ├── bea1.jpg            # Dokumentasi kemitraan warga 1
-    ├── bea2.jpg            # Dokumentasi kemitraan warga 2
-    └── bea3.jpg            # Dokumentasi kemitraan warga 3
+    ├── hero.webp           # Foto banner utama kandang
+    ├── logo.webp           # Logo lingkaran resmi Kandang Kang Iky
+    ├── pict1.webp          # Dokumentasi aktivitas domba 1
+    ├── pict2.webp          # Dokumentasi aktivitas domba 2
+    ├── pict3.webp          # Dokumentasi aktivitas domba 3
+    ├── PL1.webp            # Pricelist Domba Cross Texel & Dorper
+    ├── PL2.webp            # Pricelist Domba Tanduk Garut
+    ├── bea1.webp           # Dokumentasi kemitraan warga 1
+    ├── bea2.webp           # Dokumentasi kemitraan warga 2
+    └── bea3.webp           # Dokumentasi kemitraan warga 3
 ```
 
 ---
