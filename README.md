@@ -43,10 +43,14 @@ kandang-kang-iky/
 ├── index.html              # Halaman beranda utama website
 ├── simulasi.html           # Halaman kalkulator simulator tabungan qurban
 ├── admin.html              # Panel kendali admin & pembaruan data
+├── components/             # Komponen modular reusable
+│   ├── navbar.html         # Floating pill navbar
+│   └── footer.html         # 4-column footer resmi
 ├── css/
 │   └── styles.css          # CSS kustom (animasi marquee, scrollbar, modal, dsb.)
 ├── js/
 │   ├── config.js           # Konfigurasi terpusat (kontak, paket domba, storage helper)
+│   ├── components.js       # Dynamic loader & active nav highlighter
 │   ├── calculator.js       # Logika kalkulator tabungan & integrasi URL parameter
 │   └── admin-panel.js      # Logika form admin panel, toast notifikasi, & ekspor JSON
 └── assets/                 # Berkas gambar & media resmi
