@@ -224,14 +224,24 @@
             if (trackingForm && trackingInput) {
                 trackingForm.addEventListener('submit', function (event) {
                     event.preventDefault();
-                    const kodeDomba = trackingInput.value.trim().toUpperCase();
+                    const rawCode = trackingInput.value.trim().toUpperCase();
 
-                    if (!kodeDomba) {
+                    if (!rawCode) {
                         trackingInput.focus();
                         return;
                     }
 
-                    window.location.href = 'https://kandangkangiky.vercel.app/track/' + encodeURIComponent(kodeDomba);
+                    // Format cleaned uppercase value in input field
+                    trackingInput.value = rawCode;
+
+                    const targetUrl = `https://kandangkangiky.vercel.app/track/${rawCode}`;
+
+                    // Device-based redirection: same tab for mobile, new tab for desktop
+                    if (window.innerWidth < 768) {
+                        window.location.href = targetUrl;
+                    } else {
+                        window.open(targetUrl, "_blank", "noopener,noreferrer");
+                    }
                 });
             }
         });
